@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innova AI - Asistentes Virtuales Inteligentes para tu Negocio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #06b6d4;
+            --accent: #8b5cf6;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --success: #10b981;
+            --whatsapp: #25d366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 4px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-whatsapp {
+            background: var(--whatsapp);
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+        }
+
+        .btn-large {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 50%, #f5f3ff 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(99,102,241,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 3rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--dark), var(--primary-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-content h1 span {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .hero-icons {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-icon-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gray);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .hero-icon-item i {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .section {
+            padding: 6rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .section-header p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1);
+            border-color: var(--primary);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+
+        .feature-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .problem-section {
+            background: var(--dark);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .problem-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(99,102,241,0.2) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 50%, rgba(139,92,246,0.2) 0%, transparent 50%);
+        }
+
+        .problem-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .problem-section h2 {
+            color: white;
+        }
+
+        .problem-section .section-header p {
+            color: #94a3b8;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            color: #94a3b8;
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .step p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .pricing-section {
+            background: linear-gradient(135deg, #f0f4ff 0%, #f5f3ff 100%);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--primary);
+            transform: scale(1.03);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.03) translateY(-5px);
+        }
+
+        .badge {
+            position: absolute;
+            top: -12px;
+            right: 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .pricing-header {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .pricing-header h3 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-header .setup-fee {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--dark);
+            line-height: 1;
+        }
+
+        .pricing-header .setup-fee span {
+            font-size: 1rem;
+            color: var(--gray);
+            font-weight: 400;
+        }
+
+        .pricing-header .monthly-fee {
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .pricing-header .monthly-fee span {
+            color: var(--gray);
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+
+        .pricing-header p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-top: 0.75rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .pricing-features li {
+            padding: 0.85rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            color: var(--gray);
+            font-size: 0.95rem;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .pricing-features li i {
+            color: var(--success);
+            font-size: 1.1rem;
+            margin-top: 0.15rem;
+            flex-shrink: 0;
+        }
+
+        .pricing-features li.missing {
+            color: #cbd5e1;
+        }
+
+        .pricing-features li.missing i {
+            color: #cbd5e1;
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .industry-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .industry-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px -10px rgba(99,102,241,0.2);
+        }
+
+        .industry-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .industry-content h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .industry-content p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-section .btn-white {
+            background: white;
+            color: var(--primary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-section .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .cta-section .btn-outline-white {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-section .btn-outline-white:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand .logo {
+            margin-bottom: 1rem;
+            -webkit-text-fill-color: white;
+        }
+
+        .footer-brand p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .footer-links h4 {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #1e293b;
+            padding-top: 2rem;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: var(--whatsapp);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7); }
+        }
+
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 70px;
+            background: white;
+            color: var(--dark);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+            right: 75px;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            cursor: pointer;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 968px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .pricing-card.featured:hover {
+                transform: scale(1) translateY(-5px);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.75rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                bottom: 1.5rem;
+                right: 1.5rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Estadisticas destacadas con animacion */
+        .stat-card {
+            /* estilo destacado para todas */
+            background: linear-gradient(135deg, rgba(99,102,241,0.25), rgba(139,92,246,0.25));
+            border: 2px solid var(--primary);
+            transform: scale(1.03);
+            animation: glow 2.5s ease-in-out infinite;
+        }
+        .stat-card .stat-number {
+            font-size: 4.5rem;
+            background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: bounce-num 2s ease-in-out infinite;
+        }
+        .stat-card .stat-label {
+            color: #e0e7ff;
+            font-weight: 600;
+        }
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(99,102,241,0.3); }
+            50% { box-shadow: 0 0 40px rgba(139,92,246,0.6); }
+        }
+        @keyframes bounce-num {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        @media (max-width: 640px) {
+            .stat-card .stat-number { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                Innova AI
+            </div>
+            <ul class="nav-links">
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#proceso">Proceso</a></li>
+                <li><a href="#planes">Planes</a></li>
+                <li><a href="#industrias">Industrias</a></li>
+                <li><a href="https://wa.me/573054110761" class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Contáctanos
+                </a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Asistentes Virtuales con <span>Inteligencia Artificial</span> para tu Negocio</h1>
+                <p>Deja de perder clientes por no responder a tiempo. Automatiza tu atención en WhatsApp e Instagram, organiza tus oportunidades de venta y haz crecer tu negocio con un asistente personalizado.</p>
+                <div class="hero-buttons">
+                    <a href="#planes" class="btn btn-primary btn-large">
+                        <i class="fas fa-rocket"></i> Ver Planes
+                    </a>
+                    <a href="https://wa.me/573054110761" class="btn btn-whatsapp btn-large" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Escribir por WhatsApp
+                    </a>
+                </div>
+                <div class="hero-icons">
+                    <div class="hero-icon-item">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </div>
+                    <div class="hero-icon-item">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </div>
+                    <div class="hero-icon-item">
+                        <i class="fas fa-clock"></i> 24/7
+                    </div>
+                    <div class="hero-icon-item">
+                        <i class="fas fa-shield-alt"></i> IA Personalizada
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="servicios">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>¿Qué hacemos por tu empresa?</h2>
+                <p>No creamos simples chatbots. Diseñamos asistentes virtuales inteligentes que se adaptan a tu negocio y trabajan 24/7.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Atención al Cliente 24/7</h3>
+                    <p>Tus clientes reciben respuestas instantáneas en WhatsApp e Instagram, incluso cuando tu equipo no está disponible. Nunca más pierdas una oportunidad por no responder a tiempo.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <h3>Identificación de Oportunidades</h3>
+                    <p>El asistente detecta automáticamente cuando un cliente tiene alta intención de compra, recopila la información clave y avisa a tu equipo para que cierren la venta.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Agendamiento de Citas</h3>
+                    <p>Facilita a tus clientes agendar citas o consultas directamente desde la conversación, sincronizando con tu calendario y reduciendo llamadas telefónicas.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Evaluación de Experiencia</h3>
+                    <p>Al finalizar cada conversación, el asistente solicita una calificación para que conozcas la opinión real de tus clientes y mejores continuamente.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Respuestas Instantáneas</h3>
+                    <p>Olvídate de las preguntas repetitivas sobre precios, horarios y disponibilidad. El asistente responde al instante y libera a tu equipo para tareas de mayor valor.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Informes y Métricas</h3>
+                    <p>Accede a estadísticas de conversaciones, satisfacción del cliente, oportunidades detectadas y más, para tomar decisiones basadas en datos reales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section problem-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>¿Por qué necesitas un asistente virtual?</h2>
+                <p>Cada mensaje sin respuesta es una oportunidad de venta perdida. La atención tradicional tiene límites que la IA puede superar.</p>
+            </div>
+            <div class="stats-grid fade-in">
+                <div class="stat-card">
+                    <div class="stat-number">70%</div>
+                    <div class="stat-label">de los clientes esperan respuesta inmediata</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24h</div>
+                    <div class="stat-label">de atención continua sin descanso</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">-60%</div>
+                    <div class="stat-label">reducción en tiempo de respuesta</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3x</div>
+                    <div class="stat-label">más oportunidades de venta captadas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="proceso">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>¿Cómo trabajamos?</h2>
+                <p>Cada asistente se construye pensando en tu empresa, no al revés. Un proceso simple pero personalizado.</p>
+            </div>
+            <div class="steps">
+                <div class="step fade-in">
+                    <div class="step-number">1</div>
+                    <h3>Conocemos tu Negocio</h3>
+                    <p>Analizamos cómo funciona tu empresa, qué productos o servicios ofreces, qué preguntas reciben tus clientes y cuáles son tus principales desafíos.</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-number">2</div>
+                    <h3>Diseñamos tu Asistente</h3>
+                    <p>Creamos un flujo de conversación personalizado con la información, tono y personalidad que represente a tu marca.</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-number">3</div>
+                    <h3>Configuración e Integración</h3>
+                    <p>Conectamos el asistente a tus canales (WhatsApp, Instagram) y lo configuramos según tus procesos de venta y atención.</p>
+                </div>
+                <div class="step fade-in">
+                    <div class="step-number">4</div>
+                    <h3>Lanzamiento y Mejora</h3>
+                    <p>Ponemos el asistente en marcha y realizamos ajustes continuos basados en el feedback y los resultados obtenidos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="industrias">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Adaptado a tu Industria</h2>
+                <p>Ya sea que tengas una agencia de viajes, una inmobiliaria o una clínica, creamos un asistente a tu medida.</p>
+            </div>
+            <div class="industries-grid">
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="industry-content">
+                        <h4>Agencias de Viajes</h4>
+                        <p>Captura destinos, fechas, número de viajeros y presupuesto. Orienta al cliente y pasa las oportunidades reales a un asesor.</p>
+                    </div>
+                </div>
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="industry-content">
+                        <h4>Inmobiliarias</h4>
+                        <p>Filtra propiedades según tipo, presupuesto, ubicación y características. Pre-califica clientes antes de la visita.</p>
+                    </div>
+                </div>
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">
+                        <i class="fas fa-clinic-medical"></i>
+                    </div>
+                    <div class="industry-content">
+                        <h4>Clínicas y Salud</h4>
+                        <p>Informa sobre servicios, especialidades y facilita el agendamiento de citas médicas de forma automática.</p>
+                    </div>
+                </div>
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div class="industry-content">
+                        <h4>E-commerce y Retail</h4>
+                        <p>Responde sobre productos, stock, precios y guía durante todo el proceso de compra hasta el checkout.</p>
+                    </div>
+                </div>
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="industry-content">
+                        <h4>Restaurantes</h4>
+                        <p>Toma reservas, responde sobre menú, horarios y promociones. Reduce llamadas telefónicas repetitivas.</p>
+                    </div>
+                </div>
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="industry-content">
+                        <h4>Educación</h4>
+                        <p>Atiende consultas sobre cursos, horarios, precios y proceso de inscripción de forma inmediata.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section pricing-section" id="planes">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Planes y Precios</h2>
+                <p>Elige el plan que mejor se adapte a las necesidades de tu negocio. Ambos incluyen configuración personalizada.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card fade-in">
+                    <div class="pricing-header">
+                        <h3>Plan Esencial</h3>
+                        <div class="setup-fee">$800 <span>USD</span></div>
+                        <div class="monthly-fee">+ $100 <span>USD / mes</span></div>
+                        <p>Pago único de configuración + mensualidad</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Para negocios que empiezan a automatizar su atención</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check-circle"></i> Asistente en WhatsApp que responde al instante</li>
+                        <li><i class="fas fa-check-circle"></i> Contesta precios, horarios y preguntas frecuentes</li>
+                        <li><i class="fas fa-check-circle"></i> No deja mensajes sin responder</li>
+                        <li><i class="fas fa-check-circle"></i> Tú tomas el chat cuando es necesario</li>
+                        <li><i class="fas fa-check-circle"></i> Configuración personalizada inicial</li>
+                    </ul>
+                    <a href="https://wa.me/573054110761" class="btn btn-outline" style="width: 100%; justify-content: center;" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+                    </a>
+                </div>
+
+                <div class="pricing-card featured fade-in">
+                    <span class="badge">Más Popular</span>
+                    <div class="pricing-header">
+                        <h3>Plan Profesional</h3>
+                        <div class="setup-fee">$1,600 <span>USD</span></div>
+                        <div class="monthly-fee">+ $240 <span>USD / mes</span></div>
+                        <p>Pago único de configuración + mensualidad</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Para negocios que quieren atender y vender más</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check-circle"></i> <strong>Todo lo del plan Esencial</strong></li>
+                        <li><i class="fas fa-check-circle"></i> Presente en WhatsApp e Instagram</li>
+                        <li><i class="fas fa-check-circle"></i> Filtra a los clientes serios y te los pasa listos</li>
+                        <li><i class="fas fa-check-circle"></i> Agenda citas automáticamente</li>
+                        <li><i class="fas fa-check-circle"></i> Te avisa cuando un cliente quiere comprar</li>
+                        <li><i class="fas fa-check-circle"></i> Mejoras y ajustes cada mes</li>
+                        <li><i class="fas fa-check-circle"></i> Soporte prioritario</li>
+                        <li><i class="fas fa-check-circle"></i> Evaluación de experiencia del cliente</li>
+                    </ul>
+                    <a href="https://wa.me/573054110761" class="btn btn-primary" style="width: 100%; justify-content: center;" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 2rem; color: var(--gray); font-size: 0.95rem;">
+                ¿Necesitas un plan personalizado para tu empresa? <a href="https://wa.me/573054110761" style="color: var(--primary); font-weight: 600;" target="_blank">Hablemos por WhatsApp</a>
+            </p>
+        </div>
+    </section>
+
+    <section class="section cta-section">
+        <div class="container">
+            <h2 class="fade-in">¿Listo para transformar la atención de tu empresa?</h2>
+            <p class="fade-in">Únete a las empresas que ya no pierden clientes por no responder a tiempo. Tu asistente virtual personalizado está a un clic de distancia.</p>
+            <div class="cta-buttons fade-in">
+                <a href="https://wa.me/573054110761" class="btn btn-white btn-large" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Escríbenos por WhatsApp
+                </a>
+                <a href="#planes" class="btn btn-outline-white btn-large">
+                    <i class="fas fa-rocket"></i> Ver Planes
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-robot"></i>
+                        Innova AI
+                    </div>
+                    <p>Creamos asistentes virtuales con inteligencia artificial personalizados para empresas. Mejoramos tu atención al cliente, organizamos tus oportunidades comerciales y aumentamos tus ventas.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Atención al Cliente</a></li>
+                        <li><a href="#servicios">Captación de Leads</a></li>
+                        <li><a href="#servicios">Agendamiento</a></li>
+                        <li><a href="#servicios">Evaluación de Experiencia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#proceso">Cómo Trabajamos</a></li>
+                        <li><a href="#industrias">Industrias</a></li>
+                        <li><a href="#planes">Planes</a></li>
+                        <li><a href="https://wa.me/573054110761" target="_blank">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="https://wa.me/573054110761" target="_blank"><i class="fab fa-whatsapp"></i> +57 305 411 0761</a></li>
+                        <li><a href="mailto:innovaai34@gmail.com"><i class="fas fa-envelope"></i> innovaai34@gmail.com</a></li>
+                        <li><a href="https://instagram.com/innova_ai_chatbots" target="_blank"><i class="fab fa-instagram"></i> @innova_ai_chatbots</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p> 2026 Innova AI. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/573054110761" class="whatsapp-float" target="_blank" title="Contáctanos por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">¿Tienes dudas? Escríbenos</span>
+    </a>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 4px 30px rgba(0,0,0,0.1)';
+            } else {
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.05)';
+            }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            navLinks.style.position = 'absolute';
+            navLinks.style.top = '100%';
+            navLinks.style.left = '0';
+            navLinks.style.right = '0';
+            navLinks.style.background = 'white';
+            navLinks.style.flexDirection = 'column';
+            navLinks.style.padding = '1rem 2rem';
+            navLinks.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+        }
+    
+        // Animacion de contador para las estadisticas
+        function animateCounter(el) {
+            const text = el.textContent.trim();
+            const match = text.match(/^(-?)(\d+)(.*)$/);
+            if (!match) return;
+            const sign = match[1];
+            const target = parseInt(match[2]);
+            const suffix = match[3];
+            let current = 0;
+            const duration = 1500;
+            const stepTime = Math.max(20, Math.floor(duration / target));
+            const increment = Math.ceil(target / (duration / stepTime));
+            el.textContent = sign + '0' + suffix;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                el.textContent = sign + current + suffix;
+            }, stepTime);
+        }
+
+        const statObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.dataset.animated) {
+                    entry.target.dataset.animated = 'true';
+                    animateCounter(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat-number').forEach(el => statObserver.observe(el));
+
+    </script>
+</body>
+</html>
