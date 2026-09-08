@@ -3,726 +3,609 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innova AI Assistance- Asistentes Virtuales con Inteligencia Artificial para tu Negocio</title>
-    <meta name="description" content="Innova AI Assistance crea asistentes virtuales con inteligencia artificial para WhatsApp e Instagram. Atiende a tus clientes 24/7, para cualquier tipo de negocio o uso personal.">
+    <title>Innova AI Assistance - Asistentes Virtuales con Inteligencia Artificial para tu Negocio</title>
+    <meta name="description" content="Innova AI Assistance crea asistentes virtuales con inteligencia artificial 100% personalizados para WhatsApp e Instagram. Atiende a tus clientes 24/7, para cualquier tipo de negocio.">
     <link rel="icon" type="image/png" href="data:image/png;base64,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">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --bg: #070b18;
-            --bg-2: #0a1226;
-            --bg-3: #050813;
-            --card: rgba(255,255,255,0.045);
-            --card-hover: rgba(255,255,255,0.075);
-            --border: rgba(255,255,255,0.1);
-            --border-strong: rgba(255,255,255,0.16);
-            --cyan: #22d3ee;
-            --blue: #3b82f6;
-            --white: #f5f7fb;
-            --muted: #93a0bd;
-            --muted-2: #6b7896;
-            --whatsapp: #25d366;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg);
-            color: var(--white);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--bg-3); }
-        ::-webkit-scrollbar-thumb { background: var(--cyan); border-radius: 4px; }
-
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        .section { padding: 6rem 0; }
-
-        .section-header { text-align: center; margin-bottom: 4rem; }
-        .section-header .tag {
-            display: inline-block;
-            color: var(--cyan);
-            font-weight: 700;
-            font-size: 0.82rem;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            margin-bottom: 0.9rem;
-        }
-        .section-header h2 { font-size: 2.4rem; font-weight: 800; margin-bottom: 1rem; }
-        .section-header p { color: var(--muted); font-size: 1.08rem; max-width: 640px; margin: 0 auto; line-height: 1.75; }
-
-        a { text-decoration: none; }
-
-        /* ---------- BUTTONS ---------- */
-        .btn {
-            padding: 0.9rem 1.7rem;
-            border-radius: 50px;
-            border: none;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            font-size: 0.95rem;
-        }
-        .btn-large { padding: 1.05rem 2.3rem; font-size: 1.02rem; }
-
-        .btn-primary {
-            background: linear-gradient(90deg, var(--cyan), var(--blue));
-            color: #06121f;
-            box-shadow: 0 0 26px rgba(34,211,238,0.4), 0 8px 18px rgba(0,0,0,0.3);
-        }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 36px rgba(34,211,238,0.55), 0 10px 22px rgba(0,0,0,0.35); }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--cyan);
-            border: 1.5px solid rgba(34,211,238,0.5);
-        }
-        .btn-outline:hover { background: rgba(34,211,238,0.1); border-color: var(--cyan); box-shadow: 0 0 20px rgba(34,211,238,0.3); }
-
-        .btn-whatsapp {
-            background: var(--whatsapp);
-            color: white;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
-        }
-        .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5); }
-
-        .btn-white { background: var(--white); color: var(--bg); box-shadow: 0 4px 15px rgba(0,0,0,0.25); }
-        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
-
-        .btn-outline-white { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,0.4); }
-        .btn-outline-white:hover { background: rgba(255,255,255,0.08); border-color: var(--white); }
-
-        /* ---------- NAV ---------- */
-        nav#navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(7,11,24,0.85);
-            backdrop-filter: blur(14px);
-            z-index: 1000;
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--border);
-            transition: all 0.3s ease;
-        }
-        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.35rem; font-weight: 800; color: var(--white); display: flex; align-items: center; gap: 0.6rem; letter-spacing: 0.03em; }
-        .logo-badge { width: 34px; height: 34px; border-radius: 9px; background: rgba(34,211,238,0.1); border: 1px solid rgba(34,211,238,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-        .logo-badge img { width: 20px; height: 20px; display: block; }
-        .footer-brand .logo-badge { background: rgba(255,255,255,0.05); border: 1px solid var(--border); }
-
-        .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
-        .nav-links a { text-decoration: none; color: var(--muted); font-weight: 500; transition: color 0.3s; font-size: 0.95rem; }
-        .nav-links a:hover { color: var(--cyan); }
-        .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.4rem; color: var(--white); cursor: pointer; }
-
-        /* ---------- HERO ---------- */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding-top: 90px;
-            position: relative;
-            overflow: hidden;
-            background:
-                radial-gradient(ellipse 900px 500px at 12% 15%, rgba(34,211,238,0.10) 0%, transparent 60%),
-                radial-gradient(ellipse 700px 500px at 88% 55%, rgba(59,130,246,0.13) 0%, transparent 60%),
-                linear-gradient(180deg, #070b18 0%, #0a1226 100%);
-        }
-        .hero-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 2rem 4rem;
-            display: grid;
-            grid-template-columns: 1.05fr 0.95fr;
-            gap: 3rem;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
-        .hero-eyebrow {
-            display: inline-flex; align-items: center; gap: 0.5rem;
-            background: rgba(34,211,238,0.08); border: 1px solid rgba(34,211,238,0.3);
-            color: var(--cyan); padding: 0.4rem 1rem; border-radius: 999px;
-            font-size: 0.8rem; font-weight: 600; margin-bottom: 1.5rem;
-        }
-        .hero-eyebrow i { font-size: 0.65rem; }
-        .hero-content h1 { font-size: 3.1rem; font-weight: 900; line-height: 1.12; margin-bottom: 1.4rem; letter-spacing: -0.01em; }
-        .hero-content h1 span {
-            background: linear-gradient(90deg, var(--cyan), var(--blue));
-            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
-        }
-        .hero-content p { font-size: 1.1rem; color: var(--muted); margin-bottom: 2rem; line-height: 1.8; max-width: 540px; }
-        .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
-        .hero-icons { display: flex; gap: 1.8rem; margin-top: 2rem; flex-wrap: wrap; }
-        .hero-icon-item { display: flex; align-items: center; gap: 0.5rem; color: var(--muted); font-size: 0.92rem; font-weight: 500; }
-        .hero-icon-item i { color: var(--cyan); font-size: 1.05rem; }
-
-        /* hero visual: network + phone */
-        .hero-visual { position: relative; height: 480px; }
-        .net-svg { position: absolute; inset: -40px -20px; width: calc(100% + 40px); height: calc(100% + 80px); z-index: 1; opacity: 0.9; }
-        .net-svg .line { fill: none; stroke-width: 1.4; filter: drop-shadow(0 0 6px rgba(34,211,238,0.65)); }
-        .net-svg .dot { filter: drop-shadow(0 0 5px rgba(34,211,238,0.8)); }
-
-        .phone {
-            position: relative; z-index: 2; width: 300px; margin: 0 auto;
-            background: linear-gradient(160deg, #101a34, #0a1226);
-            border: 1px solid rgba(255,255,255,0.12);
-            border-radius: 30px;
-            box-shadow: 0 30px 70px rgba(0,0,0,0.55), 0 0 60px rgba(34,211,238,0.18);
-            padding: 0.9rem;
-        }
-        .phone-head { display: flex; align-items: center; gap: 0.6rem; padding: 0.3rem 0.3rem 0.8rem; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 0.8rem; }
-        .phone-head img { width: 30px; height: 30px; border-radius: 50%; background: rgba(255,255,255,0.06); padding: 4px; }
-        .phone-head .who { flex: 1; }
-        .phone-head .who b { display: block; font-size: 0.85rem; }
-        .phone-head .who small { color: var(--muted); font-size: 0.7rem; }
-        .phone-head i { color: var(--muted); font-size: 0.85rem; }
-        .phone-body { display: flex; flex-direction: column; gap: 0.6rem; min-height: 300px; }
-        .bubble { max-width: 78%; padding: 0.6rem 0.85rem; border-radius: 14px; font-size: 0.78rem; line-height: 1.4; }
-        .bubble.in { align-self: flex-start; background: rgba(255,255,255,0.07); color: #dbe4f3; border-bottom-left-radius: 4px; }
-        .bubble.out { align-self: flex-end; background: linear-gradient(90deg, var(--cyan), var(--blue)); color: #06121f; font-weight: 600; border-bottom-right-radius: 4px; }
-        .phone-input { margin-top: 0.8rem; display: flex; align-items: center; gap: 0.6rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 0.5rem 0.5rem 0.5rem 1rem; }
-        .phone-input span { color: var(--muted); font-size: 0.75rem; flex: 1; }
-        .phone-input i { background: linear-gradient(90deg, var(--cyan), var(--blue)); color: #06121f; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; }
-
-        /* ---------- CARDS: features / stats / steps / industries ---------- */
-        .features-grid, .industries-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .industries-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-
-        .feature-card, .industry-card, .stat-card, .pricing-card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            transition: all 0.3s ease;
-        }
-        .feature-card { padding: 2.5rem; }
-        .feature-card:hover, .industry-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(34,211,238,0.4);
-            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.4), 0 0 26px rgba(34,211,238,0.1);
-        }
-
-        .feature-icon, .industry-icon, .step-number {
-            border-radius: 16px;
-            background: rgba(34,211,238,0.08);
-            border: 1px solid rgba(34,211,238,0.3);
-            display: flex; align-items: center; justify-content: center;
-            color: var(--cyan);
-        }
-        .feature-icon { width: 60px; height: 60px; font-size: 1.5rem; margin-bottom: 1.5rem; }
-        .feature-card h3 { font-size: 1.22rem; margin-bottom: 0.75rem; }
-        .feature-card p { color: var(--muted); font-size: 0.95rem; line-height: 1.7; }
-
-        .problem-section { background: var(--bg-2); position: relative; overflow: hidden; }
-        .problem-section::before {
-            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(circle at 50% 0%, rgba(34,211,238,0.06) 0%, transparent 60%);
-        }
-        .problem-section .container { position: relative; z-index: 1; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3rem; }
-        .stat-card { text-align: center; padding: 2rem; border-radius: 16px; }
-        .stat-number {
-            font-size: 3rem; font-weight: 800;
-            background: linear-gradient(90deg, var(--cyan), var(--blue));
-            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
-        }
-        .stat-label { color: var(--muted); margin-top: 0.5rem; font-size: 0.95rem; }
-
-        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; }
-        .step { text-align: center; padding: 2rem; position: relative; }
-        .step-number { width: 60px; height: 60px; border-radius: 50%; font-size: 1.5rem; font-weight: 700; margin: 0 auto 1.5rem; }
-        .step h3 { font-size: 1.2rem; margin-bottom: 0.75rem; }
-        .step p { color: var(--muted); font-size: 0.95rem; }
-
-        .industry-card { padding: 2rem; display: flex; align-items: flex-start; gap: 1rem; }
-        .industry-icon { width: 50px; height: 50px; border-radius: 12px; font-size: 1.25rem; flex-shrink: 0; }
-        .industry-content h4 { margin-bottom: 0.5rem; font-size: 1.1rem; }
-        .industry-content p { color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
-
-        /* ---------- PRICING ---------- */
-        .pricing-section { background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%); }
-        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto; }
-        .pricing-card { padding: 2.5rem; border: 1.5px solid var(--border); position: relative; display: flex; flex-direction: column; }
-        .pricing-card:hover { transform: translateY(-5px); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.4); }
-        .pricing-card.featured { border-color: rgba(34,211,238,0.5); box-shadow: 0 0 40px rgba(34,211,238,0.12); transform: scale(1.03); }
-        .pricing-card.featured:hover { transform: scale(1.03) translateY(-5px); }
-
-        .badge {
-            position: absolute; top: -12px; right: 2rem;
-            background: linear-gradient(90deg, var(--cyan), var(--blue));
-            color: #06121f; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700;
-        }
-        .pricing-header { margin-bottom: 2rem; text-align: center; }
-        .pricing-header h3 { font-size: 1.75rem; margin-bottom: 0.5rem; }
-        .pricing-header .setup-fee { font-size: 2.5rem; font-weight: 800; color: var(--white); line-height: 1; }
-        .pricing-header .setup-fee span { font-size: 1rem; color: var(--muted); font-weight: 400; }
-        .pricing-header .monthly-fee { font-size: 1.1rem; color: var(--cyan); font-weight: 600; margin-top: 0.5rem; }
-        .pricing-header .monthly-fee span { color: var(--muted); font-weight: 400; font-size: 0.95rem; }
-        .pricing-header p { color: var(--muted); font-size: 0.95rem; margin-top: 0.75rem; }
-
-        .pricing-features { list-style: none; margin-bottom: 2rem; flex-grow: 1; }
-        .pricing-features li { padding: 0.85rem 0; display: flex; align-items: flex-start; gap: 0.75rem; color: var(--muted); font-size: 0.95rem; border-bottom: 1px solid var(--border); }
-        .pricing-features li i { color: var(--cyan); font-size: 1.1rem; margin-top: 0.15rem; flex-shrink: 0; }
-        .pricing-features li strong { color: var(--white); }
-
-        /* ---------- CTA SECTION ---------- */
-        .cta-section {
-            background:
-                radial-gradient(ellipse 700px 400px at 30% 20%, rgba(34,211,238,0.14) 0%, transparent 65%),
-                radial-gradient(ellipse 600px 400px at 80% 80%, rgba(59,130,246,0.14) 0%, transparent 65%),
-                var(--bg-3);
-            color: white; text-align: center; position: relative; overflow: hidden;
-        }
-        .cta-section .container { position: relative; z-index: 1; }
-        .cta-section h2 { font-size: 2.4rem; margin-bottom: 1rem; font-weight: 800; }
-        .cta-section p { font-size: 1.15rem; color: var(--muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
-        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-
-        /* ---------- FOOTER ---------- */
-        footer { background: var(--bg-3); color: white; padding: 4rem 0 2rem; border-top: 1px solid var(--border); }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
-        .footer-brand .logo { margin-bottom: 1rem; }
-        .footer-brand p { color: var(--muted); font-size: 0.95rem; line-height: 1.7; }
-        .footer-links h4 { font-size: 1rem; margin-bottom: 1.5rem; color: white; }
-        .footer-links ul { list-style: none; }
-        .footer-links li { margin-bottom: 0.75rem; }
-        .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
-        .footer-links a:hover { color: var(--cyan); }
-        .footer-bottom { border-top: 1px solid var(--border); padding-top: 2rem; text-align: center; color: var(--muted-2); font-size: 0.9rem; }
-
-        /* ---------- WHATSAPP FLOAT ---------- */
-        .whatsapp-float {
-            position: fixed; bottom: 2rem; right: 2rem; width: 60px; height: 60px;
-            background: var(--whatsapp); color: white; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center; font-size: 1.75rem;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 999;
-            transition: all 0.3s ease; text-decoration: none; animation: pulse 2s infinite;
-        }
-        .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6); }
-        @keyframes pulse {
-            0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
-            50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7); }
-        }
-        .whatsapp-tooltip {
-            position: absolute; right: 70px; background: var(--white); color: var(--bg);
-            padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.85rem; font-weight: 500;
-            white-space: nowrap; opacity: 0; visibility: hidden; transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        }
-        .whatsapp-float:hover .whatsapp-tooltip { opacity: 1; visibility: visible; right: 75px; }
-
-        .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-        /* ---------- RESPONSIVE ---------- */
-        @media (max-width: 980px) {
-            .hero-container { grid-template-columns: 1fr; text-align: center; }
-            .hero-content p { margin-left: auto; margin-right: auto; }
-            .hero-buttons { justify-content: center; }
-            .hero-icons { justify-content: center; }
-            .hero-visual { height: 420px; margin-top: 1rem; }
-        }
-        @media (max-width: 968px) {
-            .hero-content h1 { font-size: 2.5rem; }
-            .footer-grid { grid-template-columns: 1fr 1fr; }
-            .pricing-card.featured { transform: scale(1); }
-            .pricing-card.featured:hover { transform: scale(1) translateY(-5px); }
-        }
-        @media (max-width: 640px) {
-            .nav-links { display: none; }
-            .mobile-menu-btn { display: block; }
-            .hero-content h1 { font-size: 2rem; }
-            .section-header h2 { font-size: 1.75rem; }
-            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-            .stat-number { font-size: 2rem; }
-            .whatsapp-float { width: 50px; height: 50px; font-size: 1.5rem; bottom: 1.5rem; right: 1.5rem; }
-            .pricing-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+:root {
+    --bg: #070b18; --bg-2: #0a1226; --bg-3: #050813;
+    --card: rgba(255,255,255,0.045); --card-hover: rgba(255,255,255,0.075);
+    --border: rgba(255,255,255,0.1); --border-strong: rgba(255,255,255,0.16);
+    --cyan: #22d3ee; --blue: #3b82f6; --white: #f5f7fb;
+    --muted: #93a0bd; --muted-2: #6b7896; --whatsapp: #25d366;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--white); line-height: 1.6; overflow-x: hidden; }
+::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: var(--bg-3); } ::-webkit-scrollbar-thumb { background: var(--cyan); border-radius: 4px; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+.section { padding: 6rem 0; }
+.section-header { text-align: center; margin-bottom: 4rem; }
+.section-header .tag { display: inline-block; color: var(--cyan); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.9rem; }
+.section-header h2 { font-size: 2.4rem; font-weight: 800; margin-bottom: 1rem; }
+.section-header p { color: var(--muted); font-size: 1.08rem; max-width: 680px; margin: 0 auto; line-height: 1.75; }
+a { text-decoration: none; }
+.btn { padding: 0.9rem 1.7rem; border-radius: 50px; border: none; font-weight: 600; cursor: pointer; transition: all 0.3s ease; text-decoration: none; display: inline-flex; align-items: center; gap: 0.6rem; font-size: 0.95rem; }
+.btn-large { padding: 1.05rem 2.3rem; font-size: 1.02rem; }
+.btn-primary { background: linear-gradient(90deg, var(--cyan), var(--blue)); color: #06121f; box-shadow: 0 0 26px rgba(34,211,238,0.4), 0 8px 18px rgba(0,0,0,0.3); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 36px rgba(34,211,238,0.55), 0 10px 22px rgba(0,0,0,0.35); }
+.btn-outline { background: transparent; color: var(--cyan); border: 1.5px solid rgba(34,211,238,0.5); }
+.btn-outline:hover { background: rgba(34,211,238,0.1); border-color: var(--cyan); box-shadow: 0 0 20px rgba(34,211,238,0.3); }
+.btn-whatsapp { background: var(--whatsapp); color: white; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35); }
+.btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5); }
+.btn-outline-white { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,0.4); }
+.btn-outline-white:hover { background: rgba(255,255,255,0.08); border-color: var(--white); }
+nav#navbar { position: fixed; top: 0; width: 100%; background: rgba(7,11,24,0.85); backdrop-filter: blur(14px); z-index: 1000; padding: 1rem 0; border-bottom: 1px solid var(--border); transition: all 0.3s ease; }
+.nav-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.2rem; font-weight: 800; color: var(--white); display: flex; align-items: center; gap: 0.6rem; letter-spacing: 0.01em; white-space: nowrap; }
+.logo-badge { width: 34px; height: 34px; border-radius: 9px; background: rgba(34,211,238,0.1); border: 1px solid rgba(34,211,238,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; }
+.logo-badge img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.footer-brand .logo-badge { background: rgba(255,255,255,0.05); border: 1px solid var(--border); }
+.nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+.nav-links a { text-decoration: none; color: var(--muted); font-weight: 500; transition: color 0.3s; font-size: 0.95rem; }
+.nav-links a:hover { color: var(--cyan); }
+.mobile-menu-btn { display: none; background: none; border: none; font-size: 1.4rem; color: var(--white); cursor: pointer; }
+.hero { min-height: 100vh; display: flex; align-items: center; padding-top: 90px; position: relative; overflow: hidden;
+    background: radial-gradient(ellipse 900px 500px at 12% 15%, rgba(34,211,238,0.10) 0%, transparent 60%), radial-gradient(ellipse 700px 500px at 88% 55%, rgba(59,130,246,0.13) 0%, transparent 60%), linear-gradient(180deg, #070b18 0%, #0a1226 100%); }
+.hero-container { max-width: 1200px; margin: 0 auto; padding: 2rem 2rem 4rem; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 3rem; align-items: center; position: relative; z-index: 2; }
+.hero-eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(34,211,238,0.08); border: 1px solid rgba(34,211,238,0.3); color: var(--cyan); padding: 0.4rem 1rem; border-radius: 999px; font-size: 0.8rem; font-weight: 600; margin-bottom: 1.5rem; }
+.hero-eyebrow i { font-size: 0.65rem; }
+.hero-content h1 { font-size: 3rem; font-weight: 900; line-height: 1.12; margin-bottom: 1.4rem; letter-spacing: -0.01em; }
+.hero-content h1 span { background: linear-gradient(90deg, var(--cyan), var(--blue)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-content p { font-size: 1.1rem; color: var(--muted); margin-bottom: 2rem; line-height: 1.8; max-width: 560px; }
+.hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+.hero-icons { display: flex; gap: 1.8rem; margin-top: 2rem; flex-wrap: wrap; }
+.hero-icon-item { display: flex; align-items: center; gap: 0.5rem; color: var(--muted); font-size: 0.92rem; font-weight: 500; }
+.hero-icon-item i { color: var(--cyan); font-size: 1.05rem; }
+.hero-visual { position: relative; height: 480px; }
+.net-svg { position: absolute; inset: -40px -20px; width: calc(100% + 40px); height: calc(100% + 80px); z-index: 1; opacity: 0.9; }
+.net-svg .line { fill: none; stroke-width: 1.4; filter: drop-shadow(0 0 6px rgba(34,211,238,0.65)); }
+.net-svg .dot { filter: drop-shadow(0 0 5px rgba(34,211,238,0.8)); }
+.phone { position: relative; z-index: 2; width: 300px; margin: 0 auto; background: linear-gradient(160deg, #101a34, #0a1226); border: 1px solid rgba(255,255,255,0.12); border-radius: 30px; box-shadow: 0 30px 70px rgba(0,0,0,0.55), 0 0 60px rgba(34,211,238,0.18); padding: 0.9rem; }
+.phone-head { display: flex; align-items: center; gap: 0.6rem; padding: 0.3rem 0.3rem 0.8rem; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 0.8rem; }
+.phone-head img { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; }
+.phone-head .who { flex: 1; }
+.phone-head .who b { display: block; font-size: 0.8rem; }
+.phone-head .who small { color: var(--muted); font-size: 0.7rem; }
+.phone-head i { color: var(--muted); font-size: 0.85rem; }
+.phone-body { display: flex; flex-direction: column; gap: 0.6rem; min-height: 300px; }
+.bubble { max-width: 78%; padding: 0.6rem 0.85rem; border-radius: 14px; font-size: 0.78rem; line-height: 1.4; }
+.bubble.in { align-self: flex-start; background: rgba(255,255,255,0.07); color: #dbe4f3; border-bottom-left-radius: 4px; }
+.bubble.out { align-self: flex-end; background: linear-gradient(90deg, var(--cyan), var(--blue)); color: #06121f; font-weight: 600; border-bottom-right-radius: 4px; }
+.phone-input { margin-top: 0.8rem; display: flex; align-items: center; gap: 0.6rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 0.5rem 0.5rem 0.5rem 1rem; }
+.phone-input span { color: var(--muted); font-size: 0.75rem; flex: 1; }
+.phone-input i { background: linear-gradient(90deg, var(--cyan), var(--blue)); color: #06121f; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; }
+.features-grid, .industries-grid, .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.industries-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+.why-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.75rem; }
+.feature-card, .industry-card, .stat-card, .pricing-card, .why-card { background: var(--card); border: 1px solid var(--border); border-radius: 20px; transition: all 0.3s ease; }
+.feature-card, .why-card { padding: 2.5rem; }
+.feature-card:hover, .industry-card:hover, .why-card:hover { transform: translateY(-5px); border-color: rgba(34,211,238,0.4); box-shadow: 0 20px 40px -10px rgba(0,0,0,0.4), 0 0 26px rgba(34,211,238,0.1); }
+.feature-icon, .industry-icon, .step-number { border-radius: 16px; background: rgba(34,211,238,0.08); border: 1px solid rgba(34,211,238,0.3); display: flex; align-items: center; justify-content: center; color: var(--cyan); }
+.feature-icon { width: 60px; height: 60px; font-size: 1.5rem; margin-bottom: 1.5rem; }
+.feature-card h3, .why-card h3 { font-size: 1.22rem; margin-bottom: 0.75rem; }
+.feature-card p, .why-card p { color: var(--muted); font-size: 0.95rem; line-height: 1.7; }
+.problem-section { background: var(--bg-2); position: relative; overflow: hidden; }
+.problem-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 50% 0%, rgba(34,211,238,0.06) 0%, transparent 60%); }
+.problem-section .container { position: relative; z-index: 1; }
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 3rem; }
+.stat-card { text-align: center; padding: 2.2rem 1.5rem; border-radius: 16px; }
+.stat-number { font-size: 2.1rem; font-weight: 800; background: linear-gradient(90deg, var(--cyan), var(--blue)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.stat-label { color: var(--muted); margin-top: 0.5rem; font-size: 0.95rem; }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; }
+.step { text-align: center; padding: 2rem; position: relative; }
+.step-number { width: 60px; height: 60px; border-radius: 50%; font-size: 1.5rem; font-weight: 700; margin: 0 auto 1.5rem; }
+.step h3 { font-size: 1.2rem; margin-bottom: 0.75rem; }
+.step p { color: var(--muted); font-size: 0.95rem; }
+.industry-card { padding: 2rem; display: flex; align-items: flex-start; gap: 1rem; }
+.industry-icon { width: 50px; height: 50px; border-radius: 12px; font-size: 1.25rem; flex-shrink: 0; }
+.industry-content h4 { margin-bottom: 0.5rem; font-size: 1.1rem; }
+.industry-content p { color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+.pricing-section { background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%); }
+.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1.75rem; max-width: 1280px; margin: 0 auto; }
+.pricing-card { padding: 2.2rem 1.8rem; border: 1.5px solid var(--border); position: relative; display: flex; flex-direction: column; }
+.pricing-card:hover { transform: translateY(-5px); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.4); }
+.pricing-card.featured { border-color: rgba(34,211,238,0.5); box-shadow: 0 0 40px rgba(34,211,238,0.12); }
+.badge { position: absolute; top: -12px; right: 1.6rem; background: linear-gradient(90deg, var(--cyan), var(--blue)); color: #06121f; padding: 0.4rem 1.1rem; border-radius: 50px; font-size: 0.78rem; font-weight: 700; }
+.pricing-header { margin-bottom: 1.6rem; text-align: center; }
+.pricing-header h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.pricing-header .setup-fee { font-size: 2.2rem; font-weight: 800; color: var(--white); line-height: 1; }
+.pricing-header .setup-fee span { font-size: 0.95rem; color: var(--muted); font-weight: 400; }
+.pricing-header .monthly-fee { font-size: 1.05rem; color: var(--cyan); font-weight: 600; margin-top: 0.5rem; }
+.pricing-header .monthly-fee span { color: var(--muted); font-weight: 400; font-size: 0.9rem; }
+.pricing-header p { color: var(--muted); font-size: 0.9rem; margin-top: 0.75rem; }
+.pricing-features { list-style: none; margin-bottom: 1.6rem; flex-grow: 1; }
+.pricing-features li { padding: 0.75rem 0; display: flex; align-items: flex-start; gap: 0.65rem; color: var(--muted); font-size: 0.9rem; border-bottom: 1px solid var(--border); }
+.pricing-features li i { color: var(--cyan); font-size: 1.05rem; margin-top: 0.15rem; flex-shrink: 0; }
+.pricing-features li strong { color: var(--white); }
+.cta-section { background: radial-gradient(ellipse 700px 400px at 30% 20%, rgba(34,211,238,0.14) 0%, transparent 65%), radial-gradient(ellipse 600px 400px at 80% 80%, rgba(59,130,246,0.14) 0%, transparent 65%), var(--bg-3); color: white; text-align: center; position: relative; overflow: hidden; }
+.cta-section .container { position: relative; z-index: 1; }
+.cta-section h2 { font-size: 2.4rem; margin-bottom: 1rem; font-weight: 800; }
+.cta-section p { font-size: 1.15rem; color: var(--muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+.cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+footer { background: var(--bg-3); color: white; padding: 4rem 0 2rem; border-top: 1px solid var(--border); }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+.footer-brand .logo { margin-bottom: 1rem; }
+.footer-brand p { color: var(--muted); font-size: 0.95rem; line-height: 1.7; }
+.footer-links h4 { font-size: 1rem; margin-bottom: 1.5rem; color: white; }
+.footer-links ul { list-style: none; }
+.footer-links li { margin-bottom: 0.75rem; }
+.footer-links a { color: var(--muted); text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
+.footer-links a:hover { color: var(--cyan); }
+.footer-bottom { border-top: 1px solid var(--border); padding-top: 2rem; text-align: center; color: var(--muted-2); font-size: 0.9rem; }
+.whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; width: 60px; height: 60px; background: var(--whatsapp); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 999; transition: all 0.3s ease; text-decoration: none; animation: pulse 2s infinite; }
+.whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6); }
+@keyframes pulse { 0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); } 50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7); } }
+.whatsapp-tooltip { position: absolute; right: 70px; background: var(--white); color: var(--bg); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.85rem; font-weight: 500; white-space: nowrap; opacity: 0; visibility: hidden; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+.whatsapp-float:hover .whatsapp-tooltip { opacity: 1; visibility: visible; right: 75px; }
+.fade-in { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+@media (max-width: 980px) {
+    .hero-container { grid-template-columns: 1fr; text-align: center; }
+    .hero-content p { margin-left: auto; margin-right: auto; }
+    .hero-buttons, .hero-icons { justify-content: center; }
+    .hero-visual { height: 420px; margin-top: 1rem; }
+}
+@media (max-width: 968px) {
+    .hero-content h1 { font-size: 2.4rem; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+    .nav-links { display: none; }
+    .mobile-menu-btn { display: block; }
+    .hero-content h1 { font-size: 2rem; }
+    .section-header h2 { font-size: 1.75rem; }
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .stat-number { font-size: 1.8rem; }
+    .whatsapp-float { width: 50px; height: 50px; font-size: 1.5rem; bottom: 1.5rem; right: 1.5rem; }
+}
+</style>
 </head>
 <body>
+<nav id="navbar">
+    <div class="nav-container">
+        <div class="logo"><span class="logo-badge"><img src="data:image/png;base64,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" alt="Innova AI Assistance"></span>Innova AI Assistance</div>
+        <ul class="nav-links">
+            <li><a href="#servicios" data-i18n="nav.services">Servicios</a></li>
+            <li><a href="#porque" data-i18n="nav.why">Por qué elegirnos</a></li>
+            <li><a href="#proceso" data-i18n="nav.process">Proceso</a></li>
+            <li><a href="#planes" data-i18n="nav.plans">Planes</a></li>
+            <li><a href="#industrias" data-i18n="nav.industries">Industrias</a></li>
+            <li><button class="btn-outline" style="background:transparent;border:1.5px solid rgba(255,255,255,0.3);color:var(--white);padding:0.5rem 0.9rem;border-radius:999px;cursor:pointer;font-weight:700;font-size:0.85rem;" onclick="toggleLang()" data-i18n="lang.switch">EN</button></li>
+            <li><a href="https://wa.me/573054110761" class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> <span data-i18n="nav.contact">Contáctanos</span></a></li>
+        </ul>
+        <button class="mobile-menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+    </div>
+</nav>
 
-    <nav id="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <span class="logo-badge"><img src="data:image/png;base64,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" alt="Innova AI"></span>
-                Innova AI
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <span class="hero-eyebrow"><i class="fa-solid fa-circle"></i> <span data-i18n="hero.eyebrow">Asistentes Virtuales con Inteligencia Artificial</span></span>
+            <h1><span data-i18n="hero.title1">Asistentes Virtuales </span><span data-i18n="hero.title2">100% Personalizados</span><span data-i18n="hero.title3"> para tu Negocio</span></h1>
+            <p data-i18n="hero.p">Deja de perder clientes por no responder a tiempo. Diseñamos un asistente entrenado con la información real de tu negocio para atender WhatsApp e Instagram, calificar interesados y avisarte cuando alguien está listo para comprar — las 24 horas, todos los días.</p>
+            <div class="hero-buttons">
+                <a href="#planes" class="btn btn-primary btn-large"><i class="fas fa-rocket"></i> <span data-i18n="hero.btn1">Ver Planes</span></a>
+                <a href="https://wa.me/573054110761" class="btn btn-whatsapp btn-large" target="_blank"><i class="fab fa-whatsapp"></i> <span data-i18n="hero.btn2">Escribir por WhatsApp</span></a>
             </div>
-            <ul class="nav-links">
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#proceso">Proceso</a></li>
-                <li><a href="#planes">Planes</a></li>
-                <li><a href="#industrias">Industrias</a></li>
-                <li><a href="https://wa.me/573054110761" class="btn btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Contáctanos
-                </a></li>
-            </ul>
-            <button class="mobile-menu-btn" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </nav>
-
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <span class="hero-eyebrow"><i class="fa-solid fa-circle"></i> Chatbots con Inteligencia Artificial</span>
-                <h1>Asistentes Virtuales con <span>Inteligencia Artificial</span> para tu Negocio</h1>
-                <p>Deja de perder clientes por no responder a tiempo. Automatiza tu atención en WhatsApp e Instagram, organiza tus oportunidades de venta y haz crecer tu negocio con un asistente personalizado.</p>
-                <div class="hero-buttons">
-                    <a href="#planes" class="btn btn-primary btn-large">
-                        <i class="fas fa-rocket"></i> Ver Planes
-                    </a>
-                    <a href="https://wa.me/573054110761" class="btn btn-whatsapp btn-large" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Escribir por WhatsApp
-                    </a>
-                </div>
-                <div class="hero-icons">
-                    <div class="hero-icon-item"><i class="fab fa-whatsapp"></i> WhatsApp</div>
-                    <div class="hero-icon-item"><i class="fab fa-instagram"></i> Instagram</div>
-                    <div class="hero-icon-item"><i class="fas fa-clock"></i> 24/7</div>
-                    <div class="hero-icon-item"><i class="fas fa-shield-alt"></i> IA Personalizada</div>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <svg class="net-svg" viewBox="0 0 500 560" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.9"/>
-                            <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.15"/>
-                        </linearGradient>
-                    </defs>
-                    <path class="line" d="M -20 120 C 100 60, 180 200, 300 140 S 480 40, 540 100" stroke="url(#lineGrad)"/>
-                    <path class="line" d="M -20 220 C 120 260, 200 160, 320 240 S 460 320, 540 260" stroke="url(#lineGrad)" opacity="0.7"/>
-                    <path class="line" d="M -20 380 C 110 340, 210 460, 330 400 S 470 460, 540 420" stroke="url(#lineGrad)" opacity="0.55"/>
-                    <path class="line" d="M -20 480 C 130 520, 230 440, 340 500 S 460 540, 540 500" stroke="url(#lineGrad)" opacity="0.4"/>
-                    <circle class="dot" cx="60" cy="105" r="3.5" fill="#22d3ee"/>
-                    <circle class="dot" cx="300" cy="140" r="4.5" fill="#22d3ee"/>
-                    <circle class="dot" cx="470" cy="70" r="3" fill="#3b82f6"/>
-                    <circle class="dot" cx="150" cy="245" r="3" fill="#22d3ee"/>
-                    <circle class="dot" cx="330" cy="240" r="4" fill="#3b82f6"/>
-                    <circle class="dot" cx="480" cy="290" r="3" fill="#22d3ee"/>
-                    <circle class="dot" cx="90" cy="360" r="3" fill="#3b82f6"/>
-                    <circle class="dot" cx="330" cy="400" r="4" fill="#22d3ee"/>
-                    <circle class="dot" cx="470" cy="440" r="3" fill="#22d3ee"/>
-                    <circle class="dot" cx="200" cy="470" r="3" fill="#3b82f6"/>
-                </svg>
-                <div class="phone">
-                    <div class="phone-head">
-                        <img src="data:image/png;base64,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" alt="">
-                        <div class="who"><b>Innova AI</b><small>en línea</small></div>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
-                    <div class="phone-body">
-                        <div class="bubble in">Hola! Quiero saber los horarios y precios de sus servicios 😊</div>
-                        <div class="bubble out">¡Hola! Con gusto te cuento. ¿Buscas algo para tu negocio o para uso personal?</div>
-                        <div class="bubble in">Para mi negocio, una tienda pequeña</div>
-                        <div class="bubble out">Perfecto, tenemos un plan desde $800 USD que responde por WhatsApp e Instagram 24/7. ¿Agendamos una cita?</div>
-                        <div class="bubble in">Sí, me interesa 🌟</div>
-                    </div>
-                    <div class="phone-input">
-                        <span>Escribe un mensaje...</span>
-                        <i class="fa-solid fa-paper-plane"></i>
-                    </div>
-                </div>
+            <div class="hero-icons">
+                <div class="hero-icon-item"><i class="fab fa-whatsapp"></i> <span data-i18n="hero.i1">WhatsApp</span></div>
+                <div class="hero-icon-item"><i class="fab fa-instagram"></i> <span data-i18n="hero.i2">Instagram</span></div>
+                <div class="hero-icon-item"><i class="fas fa-clock"></i> <span data-i18n="hero.i3">24/7</span></div>
+                <div class="hero-icon-item"><i class="fas fa-shield-alt"></i> <span data-i18n="hero.i4">IA Personalizada</span></div>
             </div>
         </div>
-    </section>
-
-    <section class="section" id="servicios">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="tag">Servicios</span>
-                <h2>¿Qué hacemos por tu empresa?</h2>
-                <p>No creamos simples chatbots. Diseñamos asistentes virtuales inteligentes que se adaptan a tu negocio y trabajan 24/7.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card fade-in">
-                    <div class="feature-icon"><i class="fas fa-headset"></i></div>
-                    <h3>Atención al Cliente 24/7</h3>
-                    <p>Tus clientes reciben respuestas instantáneas en WhatsApp e Instagram, incluso cuando tu equipo no está disponible. Nunca más pierdas una oportunidad por no responder a tiempo.</p>
+        <div class="hero-visual">
+            <svg class="net-svg" viewBox="0 0 500 560" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#22d3ee" stop-opacity="0.9"/><stop offset="100%" stop-color="#3b82f6" stop-opacity="0.15"/></linearGradient></defs>
+                <path class="line" d="M -20 120 C 100 60, 180 200, 300 140 S 480 40, 540 100" stroke="url(#lineGrad)"/>
+                <path class="line" d="M -20 220 C 120 260, 200 160, 320 240 S 460 320, 540 260" stroke="url(#lineGrad)" opacity="0.7"/>
+                <path class="line" d="M -20 380 C 110 340, 210 460, 330 400 S 470 460, 540 420" stroke="url(#lineGrad)" opacity="0.55"/>
+                <path class="line" d="M -20 480 C 130 520, 230 440, 340 500 S 460 540, 540 500" stroke="url(#lineGrad)" opacity="0.4"/>
+                <circle class="dot" cx="60" cy="105" r="3.5" fill="#22d3ee"/><circle class="dot" cx="300" cy="140" r="4.5" fill="#22d3ee"/><circle class="dot" cx="470" cy="70" r="3" fill="#3b82f6"/><circle class="dot" cx="150" cy="245" r="3" fill="#22d3ee"/><circle class="dot" cx="330" cy="240" r="4" fill="#3b82f6"/><circle class="dot" cx="480" cy="290" r="3" fill="#22d3ee"/><circle class="dot" cx="90" cy="360" r="3" fill="#3b82f6"/><circle class="dot" cx="330" cy="400" r="4" fill="#22d3ee"/><circle class="dot" cx="470" cy="440" r="3" fill="#22d3ee"/><circle class="dot" cx="200" cy="470" r="3" fill="#3b82f6"/>
+            </svg>
+            <div class="phone">
+                <div class="phone-head">
+                    <img src="data:image/png;base64,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" alt="">
+                    <div class="who"><b data-i18n="hero.who">Innova AI Assistance</b><small data-i18n="hero.online">en línea</small></div>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon"><i class="fas fa-filter"></i></div>
-                    <h3>Identificación de Oportunidades</h3>
-                    <p>El asistente detecta automáticamente cuando un cliente tiene alta intención de compra, recopila la información clave y avisa a tu equipo para que cierren la venta.</p>
+                <div class="phone-body">
+                    <div class="bubble in" data-i18n="hero.m1">Hola! Quiero saber los horarios y precios de sus servicios 😊</div>
+                    <div class="bubble out" data-i18n="hero.m2">¡Hola! Con gusto te cuento. ¿Buscas algo para tu negocio o para uso personal?</div>
+                    <div class="bubble in" data-i18n="hero.m3">Para mi negocio, una tienda pequeña</div>
+                    <div class="bubble out" data-i18n="hero.m4">Perfecto, tenemos un plan desde $200 USD que responde por WhatsApp 24/7. ¿Quieres ver todos los planes?</div>
+                    <div class="bubble in" data-i18n="hero.m5">Sí, me interesa 🌟</div>
                 </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon"><i class="fas fa-calendar-check"></i></div>
-                    <h3>Agendamiento de Citas</h3>
-                    <p>Facilita a tus clientes agendar citas o consultas directamente desde la conversación, sincronizando con tu calendario y reduciendo llamadas telefónicas.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon"><i class="fas fa-star"></i></div>
-                    <h3>Evaluación de Experiencia</h3>
-                    <p>Al finalizar cada conversación, el asistente solicita una calificación para que conozcas la opinión real de tus clientes y mejores continuamente.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
-                    <h3>Respuestas Instantáneas</h3>
-                    <p>Olvídate de las preguntas repetitivas sobre precios, horarios y disponibilidad. El asistente responde al instante y libera a tu equipo para tareas de mayor valor.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>Informes y Métricas</h3>
-                    <p>Accede a estadísticas de conversaciones, satisfacción del cliente, oportunidades detectadas y más, para tomar decisiones basadas en datos reales.</p>
-                </div>
+                <div class="phone-input"><span data-i18n="hero.placeholder">Escribe un mensaje...</span><i class="fa-solid fa-paper-plane"></i></div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="section problem-section">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="tag">Por qué un asistente</span>
-                <h2>¿Por qué necesitas un asistente virtual?</h2>
-                <p>Cada mensaje sin respuesta es una oportunidad de venta perdida. La atención tradicional tiene límites que la IA puede superar.</p>
+<section class="section" id="servicios">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="tag" data-i18n="serv.tag">Servicios</span>
+            <h2 data-i18n="serv.h2">¿Qué hacemos por tu empresa?</h2>
+            <p data-i18n="serv.p">Diseñamos asistentes virtuales inteligentes hechos a la medida de tu negocio — no una plantilla genérica. Cada uno se entrena con tu información real y trabaja para ti las 24 horas.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card fade-in"><div class="feature-icon"><i class="fas fa-headset"></i></div><h3 data-i18n="serv.c1t">Atención al Cliente 24/7</h3><p data-i18n="serv.c1p">Tus clientes reciben respuestas instantáneas en WhatsApp e Instagram, incluso cuando tu equipo no está disponible. Nunca más pierdas una oportunidad por no responder a tiempo.</p></div>
+            <div class="feature-card fade-in"><div class="feature-icon"><i class="fas fa-filter"></i></div><h3 data-i18n="serv.c2t">Identificación de Oportunidades</h3><p data-i18n="serv.c2p">El asistente detecta cuando un cliente tiene intención real de compra, recopila la información clave y avisa a tu equipo para que cierre la venta.</p></div>
+            <div class="feature-card fade-in"><div class="feature-icon"><i class="fas fa-calendar-check"></i></div><h3 data-i18n="serv.c3t">Agendamiento de Citas</h3><p data-i18n="serv.c3p">Facilita a tus clientes agendar citas o consultas directamente desde la conversación, reduciendo llamadas y mensajes repetidos.</p></div>
+            <div class="feature-card fade-in"><div class="feature-icon"><i class="fas fa-star"></i></div><h3 data-i18n="serv.c4t">Evaluación de Experiencia</h3><p data-i18n="serv.c4p">Al finalizar la conversación, el asistente puede pedir una calificación para que conozcas la opinión real de tus clientes.</p></div>
+            <div class="feature-card fade-in"><div class="feature-icon"><i class="fas fa-bolt"></i></div><h3 data-i18n="serv.c5t">Respuestas Instantáneas</h3><p data-i18n="serv.c5p">Olvídate de las preguntas repetitivas sobre precios, horarios y disponibilidad. El asistente responde al instante y libera a tu equipo para tareas de mayor valor.</p></div>
+            <div class="feature-card fade-in"><div class="feature-icon"><i class="fas fa-chart-line"></i></div><h3 data-i18n="serv.c6t">Panel de Control</h3><p data-i18n="serv.c6p">Accede a tus conversaciones, contactos interesados y reportes desde un panel simple, sin necesidad de saber programar.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="section problem-section" id="porque">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="tag" data-i18n="why.tag">Por qué elegir Innova AI</span>
+            <h2 data-i18n="why.h2">Un asistente 100% personalizado, no una plantilla genérica</h2>
+            <p data-i18n="why.p">No vendemos un bot armado en serie. Cada asistente se construye para tu negocio específico, con tu información, tu tono y tus reglas.</p>
+        </div>
+        <div class="why-grid fade-in">
+            <div class="why-card"><div class="feature-icon"><i class="fas fa-fingerprint"></i></div><h3 data-i18n="why.c1t">Hecho a tu medida</h3><p data-i18n="why.c1p">Configurado con tus precios, servicios, horarios y políticas reales — no respuestas genéricas.</p></div>
+            <div class="why-card"><div class="feature-icon"><i class="fas fa-user-shield"></i></div><h3 data-i18n="why.c2t">Tú mantienes el control</h3><p data-i18n="why.c2p">Puedes tomar cualquier conversación cuando quieras; el asistente se hace a un lado.</p></div>
+            <div class="why-card"><div class="feature-icon"><i class="fas fa-comments"></i></div><h3 data-i18n="why.c3t">En los canales que ya usas</h3><p data-i18n="why.c3p">WhatsApp, Instagram y más — donde tus clientes ya te escriben hoy.</p></div>
+            <div class="why-card"><div class="feature-icon"><i class="fas fa-wrench"></i></div><h3 data-i18n="why.c4t">Sin que tengas que programar</h3><p data-i18n="why.c4p">Nosotros configuramos, ajustamos y mantenemos tu asistente por ti.</p></div>
+        </div>
+        <div class="stats-grid fade-in">
+            <div class="stat-card"><div class="stat-number" data-i18n="stat1n">24/7</div><div class="stat-label" data-i18n="stat1l">Atención continua, sin turnos ni descansos</div></div>
+            <div class="stat-card"><div class="stat-number" data-i18n="stat2n">Al instante</div><div class="stat-label" data-i18n="stat2l">Respuestas sin hacer esperar a nadie</div></div>
+            <div class="stat-card"><div class="stat-number" data-i18n="stat3n">A tu medida</div><div class="stat-label" data-i18n="stat3l">Entrenado con la información real de tu negocio</div></div>
+            <div class="stat-card"><div class="stat-number" data-i18n="stat4n">Simple</div><div class="stat-label" data-i18n="stat4l">Menos preguntas repetidas, más tiempo para vender</div></div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="proceso">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="tag" data-i18n="proc.tag">Proceso</span>
+            <h2 data-i18n="proc.h2">¿Cómo trabajamos?</h2>
+            <p data-i18n="proc.p">Cada asistente se construye pensando en tu empresa, no al revés. Un proceso simple pero personalizado.</p>
+        </div>
+        <div class="steps">
+            <div class="step fade-in"><div class="step-number">1</div><h3 data-i18n="proc.s1t">Conocemos tu Negocio</h3><p data-i18n="proc.s1p">Analizamos cómo funciona tu empresa, qué ofreces, qué preguntas reciben tus clientes y cuáles son tus principales desafíos.</p></div>
+            <div class="step fade-in"><div class="step-number">2</div><h3 data-i18n="proc.s2t">Diseñamos tu Asistente</h3><p data-i18n="proc.s2p">Creamos un flujo de conversación personalizado con la información, tono y personalidad que representa a tu marca.</p></div>
+            <div class="step fade-in"><div class="step-number">3</div><h3 data-i18n="proc.s3t">Configuración e Integración</h3><p data-i18n="proc.s3p">Conectamos el asistente a tus canales (WhatsApp, Instagram) y lo configuramos según tus procesos reales.</p></div>
+            <div class="step fade-in"><div class="step-number">4</div><h3 data-i18n="proc.s4t">Lanzamiento y Mejora</h3><p data-i18n="proc.s4p">Ponemos el asistente en marcha y hacemos ajustes continuos según los resultados.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="industrias">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="tag" data-i18n="ind.tag">Industrias</span>
+            <h2 data-i18n="ind.h2">Para Cualquier Tipo de Negocio (y Hasta para Ti)</h2>
+            <p data-i18n="ind.p">No importa el tamaño ni el rubro de tu negocio: si atiendes clientes por WhatsApp o Instagram, un asistente de Innova AI se adapta. Estos son solo algunos ejemplos:</p>
+        </div>
+        <div class="industries-grid">
+            <div class="industry-card fade-in"><div class="industry-icon"><i class="fas fa-plane"></i></div><div class="industry-content"><h4 data-i18n="ind.1t">Agencias de Viajes</h4><p data-i18n="ind.1p">Captura destinos, fechas y presupuesto. Orienta al cliente y pasa oportunidades reales a un asesor.</p></div></div>
+            <div class="industry-card fade-in"><div class="industry-icon"><i class="fas fa-home"></i></div><div class="industry-content"><h4 data-i18n="ind.2t">Inmobiliarias</h4><p data-i18n="ind.2p">Filtra propiedades por tipo, presupuesto y ubicación. Pre-califica clientes antes de la visita.</p></div></div>
+            <div class="industry-card fade-in"><div class="industry-icon"><i class="fas fa-clinic-medical"></i></div><div class="industry-content"><h4 data-i18n="ind.3t">Clínicas y Salud</h4><p data-i18n="ind.3p">Informa sobre servicios y facilita el agendamiento de citas médicas.</p></div></div>
+            <div class="industry-card fade-in"><div class="industry-icon"><i class="fas fa-shopping-bag"></i></div><div class="industry-content"><h4 data-i18n="ind.4t">E-commerce y Retail</h4><p data-i18n="ind.4p">Responde sobre productos, stock y precios, y guía la compra hasta el final.</p></div></div>
+            <div class="industry-card fade-in"><div class="industry-icon"><i class="fas fa-utensils"></i></div><div class="industry-content"><h4 data-i18n="ind.5t">Restaurantes</h4><p data-i18n="ind.5p">Toma reservas, responde sobre menú y horarios, reduce llamadas repetitivas.</p></div></div>
+            <div class="industry-card fade-in"><div class="industry-icon"><i class="fas fa-graduation-cap"></i></div><div class="industry-content"><h4 data-i18n="ind.6t">Educación</h4><p data-i18n="ind.6p">Atiende consultas sobre cursos, precios e inscripción de forma inmediata.</p></div></div>
+            <div class="industry-card fade-in"><div class="industry-icon"><i class="fas fa-cut"></i></div><div class="industry-content"><h4 data-i18n="ind.7t">Belleza y Spa</h4><p data-i18n="ind.7p">Agenda citas, informa servicios y precios, y confirma turnos automáticamente.</p></div></div>
+            <div class="industry-card fade-in"><div class="industry-icon"><i class="fas fa-dumbbell"></i></div><div class="industry-content"><h4 data-i18n="ind.8t">Gimnasios y Fitness</h4><p data-i18n="ind.8p">Informa planes y horarios, y gestiona inscripciones sin esfuerzo.</p></div></div>
+            <div class="industry-card fade-in"><div class="industry-icon"><i class="fas fa-car"></i></div><div class="industry-content"><h4 data-i18n="ind.9t">Talleres y Concesionarios</h4><p data-i18n="ind.9p">Agenda mantenimientos y responde sobre disponibilidad de vehículos.</p></div></div>
+            <div class="industry-card fade-in"><div class="industry-icon"><i class="fas fa-scale-balanced"></i></div><div class="industry-content"><h4 data-i18n="ind.10t">Servicios Profesionales</h4><p data-i18n="ind.10p">Filtra consultas iniciales y agenda asesorías.</p></div></div>
+            <div class="industry-card fade-in"><div class="industry-icon"><i class="fas fa-paw"></i></div><div class="industry-content"><h4 data-i18n="ind.11t">Veterinarias</h4><p data-i18n="ind.11p">Agenda consultas y vacunas, e informa servicios.</p></div></div>
+            <div class="industry-card fade-in"><div class="industry-icon"><i class="fas fa-infinity"></i></div><div class="industry-content"><h4 data-i18n="ind.12t">Cualquier Otro Negocio</h4><p data-i18n="ind.12p">¿Tu rubro no está en la lista? Adaptamos el asistente a cómo funciona tu negocio, sin importar el sector.</p></div></div>
+        </div>
+    </div>
+</section>
+
+<section class="section pricing-section" id="planes">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="tag" data-i18n="plans.tag">Planes</span>
+            <h2 data-i18n="plans.h2">Planes y Precios</h2>
+            <p data-i18n="plans.p">Elige el plan que mejor se adapte al tamaño y las necesidades de tu negocio. Todos incluyen configuración personalizada.</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card fade-in">
+                <div class="pricing-header">
+                    <h3 data-i18n="p.basic.name">Plan Básico</h3>
+                    <div class="setup-fee">$200 <span>USD</span></div>
+                    <div class="monthly-fee">+ $25 <span>USD / mes</span></div>
+                    <p data-i18n="p.basic.tag">Tu primer paso hacia la automatización</p>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="p.basic.f1">1 línea de WhatsApp</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="p.basic.f2">Responde horarios, precios e información de tu negocio</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="p.basic.f3">Disponible 24/7</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="p.basic.f4">Ideal para negocios pequeños o emprendedores</span></li>
+                </ul>
+                <a href="https://wa.me/573054110761" class="btn btn-outline" style="width: 100%; justify-content: center;" target="_blank"><i class="fab fa-whatsapp"></i> <span data-i18n="plans.cta">Consultar</span></a>
             </div>
-            <div class="stats-grid fade-in">
-                <div class="stat-card"><div class="stat-number">70%</div><div class="stat-label">de los clientes esperan respuesta inmediata</div></div>
-                <div class="stat-card"><div class="stat-number">24h</div><div class="stat-label">de atención continua sin descanso</div></div>
-                <div class="stat-card"><div class="stat-number">-60%</div><div class="stat-label">reducción en tiempo de respuesta</div></div>
-                <div class="stat-card"><div class="stat-number">3x</div><div class="stat-label">más oportunidades de venta captadas</div></div>
+
+            <div class="pricing-card fade-in">
+                <div class="pricing-header">
+                    <h3 data-i18n="p.ess.name">Plan Esencial</h3>
+                    <div class="setup-fee">$800 <span>USD</span></div>
+                    <div class="monthly-fee">+ $150 <span>USD / mes</span></div>
+                    <p data-i18n="p.ess.tag">Para negocios que no quieren perder ni un mensaje</p>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="p.ess.f1">Asistente en WhatsApp e Instagram</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="p.ess.f2">Contesta precios, horarios y preguntas frecuentes</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="p.ess.f3">No deja mensajes sin responder</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="p.ess.f4">Tú tomas el chat cuando es necesario</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="p.ess.f5">2 líneas de WhatsApp incluidas</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="p.ess.f6">Reporte semanal de contactos</span></li>
+                </ul>
+                <a href="https://wa.me/573054110761" class="btn btn-outline" style="width: 100%; justify-content: center;" target="_blank"><i class="fab fa-whatsapp"></i> <span data-i18n="plans.cta">Consultar</span></a>
+            </div>
+
+            <div class="pricing-card featured fade-in">
+                <span class="badge" data-i18n="p.pro.badge">Más Popular</span>
+                <div class="pricing-header">
+                    <h3 data-i18n="p.pro.name">Plan Profesional</h3>
+                    <div class="setup-fee">$1,600 <span>USD</span></div>
+                    <div class="monthly-fee">+ $250 <span>USD / mes</span></div>
+                    <p data-i18n="p.pro.tag">Para negocios que quieren atender y vender más</p>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check-circle"></i> <strong><span data-i18n="p.pro.f1">Todo lo del Plan Esencial</span></strong></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="p.pro.f2">WhatsApp, Instagram y más plataformas</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="p.pro.f3">Cualifica leads 24/7 y deriva oportunidades</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="p.pro.f4">Agenda citas automáticamente</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="p.pro.f5">Te avisa cuando un cliente quiere comprar</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="p.pro.f6">Atiende en el idioma de cada cliente</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="p.pro.f7">Mejoras y ajustes cada mes</span></li>
+                </ul>
+                <a href="https://wa.me/573054110761" class="btn btn-primary" style="width: 100%; justify-content: center;" target="_blank"><i class="fab fa-whatsapp"></i> <span data-i18n="plans.cta">Consultar</span></a>
+            </div>
+
+            <div class="pricing-card fade-in">
+                <div class="pricing-header">
+                    <h3 data-i18n="p.corp.name">Plan Corporativo</h3>
+                    <div class="setup-fee">$4,000 <span>USD</span></div>
+                    <div class="monthly-fee">+ $500 <span>USD / mes</span></div>
+                    <p data-i18n="p.corp.tag">Para empresas con varios departamentos</p>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check-circle"></i> <strong><span data-i18n="p.corp.f1">Todo lo del Plan Profesional</span></strong></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="p.corp.f2">Hasta 8 números de WhatsApp en un solo asistente</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="p.corp.f3">Enrutamiento inteligente: avisa al correo del área correspondiente</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="p.corp.f4">Envío de documentos reales (PDF)</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="p.corp.f5">CRM: contacto, qué compró, qué preguntó y más</span></li>
+                </ul>
+                <a href="https://wa.me/573054110761" class="btn btn-outline" style="width: 100%; justify-content: center;" target="_blank"><i class="fab fa-whatsapp"></i> <span data-i18n="plans.cta">Consultar</span></a>
             </div>
         </div>
-    </section>
+        <p style="text-align: center; margin-top: 2rem; color: var(--muted); font-size: 0.95rem;"><span data-i18n="plans.custom">¿Necesitas un plan personalizado para tu empresa? </span><a href="https://wa.me/573054110761" style="color: var(--cyan); font-weight: 600;" target="_blank" data-i18n="plans.customLink">Hablemos por WhatsApp</a></p>
+    </div>
+</section>
 
-    <section class="section" id="proceso">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="tag">Proceso</span>
-                <h2>¿Cómo trabajamos?</h2>
-                <p>Cada asistente se construye pensando en tu empresa, no al revés. Un proceso simple pero personalizado.</p>
-            </div>
-            <div class="steps">
-                <div class="step fade-in"><div class="step-number">1</div><h3>Conocemos tu Negocio</h3><p>Analizamos cómo funciona tu empresa, qué productos o servicios ofreces, qué preguntas reciben tus clientes y cuáles son tus principales desafíos.</p></div>
-                <div class="step fade-in"><div class="step-number">2</div><h3>Diseñamos tu Asistente</h3><p>Creamos un flujo de conversación personalizado con la información, tono y personalidad que represente a tu marca.</p></div>
-                <div class="step fade-in"><div class="step-number">3</div><h3>Configuración e Integración</h3><p>Conectamos el asistente a tus canales (WhatsApp, Instagram) y lo configuramos según tus procesos de venta y atención.</p></div>
-                <div class="step fade-in"><div class="step-number">4</div><h3>Lanzamiento y Mejora</h3><p>Ponemos el asistente en marcha y realizamos ajustes continuos basados en el feedback y los resultados obtenidos.</p></div>
-            </div>
+<section class="section cta-section">
+    <div class="container">
+        <h2 class="fade-in" data-i18n="cta.h2">¿Listo para transformar la atención de tu empresa?</h2>
+        <p class="fade-in" data-i18n="cta.p">Únete a los negocios que ya no pierden clientes por no responder a tiempo. Tu asistente virtual personalizado está a una conversación de distancia.</p>
+        <div class="cta-buttons fade-in">
+            <a href="https://wa.me/573054110761" class="btn btn-whatsapp btn-large" target="_blank"><i class="fab fa-whatsapp"></i> <span data-i18n="cta.btn1">Escríbenos por WhatsApp</span></a>
+            <a href="#planes" class="btn btn-outline-white btn-large"><i class="fas fa-rocket"></i> <span data-i18n="cta.btn2">Ver Planes</span></a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="section" id="industrias">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="tag">Industrias</span>
-                <h2>Para Cualquier Tipo de Negocio (y Hasta para Ti)</h2>
-                <p>No importa el tamaño ni el rubro de tu negocio: si atiendes clientes por WhatsApp o Instagram, un asistente de Innova AI se adapta. Y si no tienes una empresa, también funciona para uso personal. Estos son solo algunos ejemplos:</p>
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo"><span class="logo-badge"><img src="data:image/png;base64,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" alt="Innova AI Assistance"></span>Innova AI Assistance</div>
+                <p data-i18n="footer.p">Creamos asistentes virtuales con inteligencia artificial personalizados para empresas. Mejoramos tu atención al cliente, organizamos tus oportunidades comerciales y te ayudamos a vender más.</p>
             </div>
-            <div class="industries-grid">
-                <div class="industry-card fade-in"><div class="industry-icon"><i class="fas fa-plane"></i></div><div class="industry-content"><h4>Agencias de Viajes</h4><p>Captura destinos, fechas, número de viajeros y presupuesto. Orienta al cliente y pasa las oportunidades reales a un asesor.</p></div></div>
-                <div class="industry-card fade-in"><div class="industry-icon"><i class="fas fa-home"></i></div><div class="industry-content"><h4>Inmobiliarias</h4><p>Filtra propiedades según tipo, presupuesto, ubicación y características. Pre-califica clientes antes de la visita.</p></div></div>
-                <div class="industry-card fade-in"><div class="industry-icon"><i class="fas fa-clinic-medical"></i></div><div class="industry-content"><h4>Clínicas y Salud</h4><p>Informa sobre servicios, especialidades y facilita el agendamiento de citas médicas de forma automática.</p></div></div>
-                <div class="industry-card fade-in"><div class="industry-icon"><i class="fas fa-shopping-bag"></i></div><div class="industry-content"><h4>E-commerce y Retail</h4><p>Responde sobre productos, stock, precios y guía durante todo el proceso de compra hasta el checkout.</p></div></div>
-                <div class="industry-card fade-in"><div class="industry-icon"><i class="fas fa-utensils"></i></div><div class="industry-content"><h4>Restaurantes</h4><p>Toma reservas, responde sobre menú, horarios y promociones. Reduce llamadas telefónicas repetitivas.</p></div></div>
-                <div class="industry-card fade-in"><div class="industry-icon"><i class="fas fa-graduation-cap"></i></div><div class="industry-content"><h4>Educación</h4><p>Atiende consultas sobre cursos, horarios, precios y proceso de inscripción de forma inmediata.</p></div></div>
-                <div class="industry-card fade-in"><div class="industry-icon"><i class="fas fa-cut"></i></div><div class="industry-content"><h4>Belleza y Spa</h4><p>Agenda citas de salón, barbería o spa, informa servicios y precios, y confirma turnos automáticamente.</p></div></div>
-                <div class="industry-card fade-in"><div class="industry-icon"><i class="fas fa-dumbbell"></i></div><div class="industry-content"><h4>Gimnasios y Fitness</h4><p>Informa sobre planes, horarios de clases y entrenadores, y gestiona inscripciones sin esfuerzo.</p></div></div>
-                <div class="industry-card fade-in"><div class="industry-icon"><i class="fas fa-car"></i></div><div class="industry-content"><h4>Talleres y Concesionarios</h4><p>Agenda mantenimientos, cotiza servicios y responde sobre disponibilidad de vehículos o repuestos.</p></div></div>
-                <div class="industry-card fade-in"><div class="industry-icon"><i class="fas fa-scale-balanced"></i></div><div class="industry-content"><h4>Servicios Legales y Profesionales</h4><p>Filtra consultas iniciales, agenda asesorías y responde preguntas frecuentes sobre tus servicios.</p></div></div>
-                <div class="industry-card fade-in"><div class="industry-icon"><i class="fas fa-paw"></i></div><div class="industry-content"><h4>Veterinarias y Mascotas</h4><p>Agenda consultas, vacunas y urgencias, e informa sobre servicios para tus pacientes peludos.</p></div></div>
-                <div class="industry-card fade-in"><div class="industry-icon"><i class="fas fa-infinity"></i></div><div class="industry-content"><h4>Cualquier Otro Negocio (o Uso Personal)</h4><p>¿Tu rubro no está en la lista? No hay problema. Adaptamos el asistente a cómo funciona tu negocio, sin importar el sector — incluso si solo quieres automatizar tu propia atención personal.</p></div></div>
-            </div>
+            <div class="footer-links"><h4 data-i18n="footer.h1">Servicios</h4><ul><li><a href="#servicios" data-i18n="footer.l1">Atención al Cliente</a></li><li><a href="#servicios" data-i18n="footer.l2">Captación de Leads</a></li><li><a href="#servicios" data-i18n="footer.l3">Agendamiento</a></li><li><a href="#porque" data-i18n="footer.l4">Por qué elegirnos</a></li></ul></div>
+            <div class="footer-links"><h4 data-i18n="footer.h2">Empresa</h4><ul><li><a href="#proceso" data-i18n="footer.l5">Cómo Trabajamos</a></li><li><a href="#industrias" data-i18n="footer.l6">Industrias</a></li><li><a href="#planes" data-i18n="footer.l7">Planes</a></li><li><a href="https://wa.me/573054110761" target="_blank" data-i18n="footer.l8">Contacto</a></li></ul></div>
+            <div class="footer-links"><h4 data-i18n="footer.h3">Contacto</h4><ul>
+                <li><a href="https://wa.me/573054110761" target="_blank"><i class="fab fa-whatsapp"></i> +57 305 411 0761</a></li>
+                <li><a href="mailto:innovaai34@gmail.com"><i class="fas fa-envelope"></i> innovaai34@gmail.com</a></li>
+                <li><a href="https://instagram.com/innova_ai_assistance" target="_blank"><i class="fab fa-instagram"></i> @innova_ai_assistance</a></li>
+            </ul></div>
         </div>
-    </section>
+        <div class="footer-bottom"><p data-i18n="footer.rights">© 2026 Innova AI Assistance. Todos los derechos reservados.</p></div>
+    </div>
+</footer>
 
-    <section class="section pricing-section" id="planes">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="tag">Planes</span>
-                <h2>Planes y Precios</h2>
-                <p>Elige el plan que mejor se adapte a las necesidades de tu negocio. Ambos incluyen configuración personalizada.</p>
-            </div>
-            <div class="pricing-grid">
-                <div class="pricing-card fade-in">
-                    <div class="pricing-header">
-                        <h3>Plan Esencial</h3>
-                        <div class="setup-fee">$800 <span>USD</span></div>
-                        <div class="monthly-fee">+ $150 <span>USD / mes</span></div>
-                        <p>Pago único de configuración + mensualidad</p>
-                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Para negocios que empiezan a automatizar su atención</p>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check-circle"></i> Asistente en WhatsApp e Instagram que responde al instante</li>
-                        <li><i class="fas fa-check-circle"></i> Contesta precios, horarios y preguntas frecuentes</li>
-                        <li><i class="fas fa-check-circle"></i> No deja mensajes sin responder</li>
-                        <li><i class="fas fa-check-circle"></i> Tú tomas el chat cuando es necesario</li>
-                        <li><i class="fas fa-check-circle"></i> Reporte semanal de cuántos leads llegaron y de qué se habló</li>
-                    </ul>
-                    <a href="https://wa.me/573054110761" class="btn btn-outline" style="width: 100%; justify-content: center;" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
-                    </a>
-                </div>
+<a href="https://wa.me/573054110761" class="whatsapp-float" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i><span class="whatsapp-tooltip" data-i18n="wa.tooltip">¿Tienes dudas? Escríbenos</span></a>
 
-                <div class="pricing-card featured fade-in">
-                    <span class="badge">Más Popular</span>
-                    <div class="pricing-header">
-                        <h3>Plan Profesional</h3>
-                        <div class="setup-fee">$1,600 <span>USD</span></div>
-                        <div class="monthly-fee">+ $250 <span>USD / mes</span></div>
-                        <p>Pago único de configuración + mensualidad</p>
-                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Para negocios que quieren atender y vender más</p>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check-circle"></i> <strong>Todo lo del plan Esencial</strong></li>
-                        <li><i class="fas fa-check-circle"></i> Presente en WhatsApp, Instagram y las plataformas que desees</li>
-                        <li><i class="fas fa-check-circle"></i> Cualifica leads 24/7 y deriva oportunidades de alto valor</li>
-                        <li><i class="fas fa-check-circle"></i> Agenda citas automáticamente</li>
-                        <li><i class="fas fa-check-circle"></i> Te avisa cuando un cliente quiere comprar</li>
-                        <li><i class="fas fa-check-circle"></i> Atiende en el idioma de cada cliente</li>
-                        <li><i class="fas fa-check-circle"></i> Mejoras y ajustes cada mes</li>
-                        <li><i class="fas fa-check-circle"></i> Soporte prioritario</li>
-                        <li><i class="fas fa-check-circle"></i> Evaluación de experiencia del cliente</li>
-                    <a href="https://wa.me/573054110761" class="btn btn-primary" style="width: 100%; justify-content: center;" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
-                    </a>
-                </div>
-            </div>
-            <p style="text-align: center; margin-top: 2rem; color: var(--muted); font-size: 0.95rem;">
-                ¿Necesitas un plan personalizado para tu empresa? <a href="https://wa.me/573054110761" style="color: var(--cyan); font-weight: 600;" target="_blank">Hablemos por WhatsApp</a>
-            </p>
-        </div>
-    </section>
+<script>
+window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    navbar.style.boxShadow = window.scrollY > 50 ? '0 4px 30px rgba(0,0,0,0.4)' : 'none';
+});
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+});
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    const open = navLinks.style.display === 'flex';
+    navLinks.style.display = open ? 'none' : 'flex';
+    navLinks.style.position = 'absolute'; navLinks.style.top = '100%'; navLinks.style.left = '0'; navLinks.style.right = '0';
+    navLinks.style.background = '#0a1226'; navLinks.style.flexDirection = 'column'; navLinks.style.padding = '1rem 2rem';
+    navLinks.style.borderTop = '1px solid rgba(255,255,255,0.1)'; navLinks.style.boxShadow = '0 10px 30px rgba(0,0,0,0.4)';
+}
+</script>
 
-    <section class="section cta-section">
-        <div class="container">
-            <h2 class="fade-in">¿Listo para transformar la atención de tu empresa?</h2>
-            <p class="fade-in">Únete a las empresas que ya no pierden clientes por no responder a tiempo. Tu asistente virtual personalizado está a un clic de distancia.</p>
-            <div class="cta-buttons fade-in">
-                <a href="https://wa.me/573054110761" class="btn btn-whatsapp btn-large" target="_blank"><i class="fab fa-whatsapp"></i> Escríbenos por WhatsApp</a>
-                <a href="#planes" class="btn btn-outline-white btn-large"><i class="fas fa-rocket"></i> Ver Planes</a>
-            </div>
-        </div>
-    </section>
+<script>const I18N = {
+es: {
+  "nav.services":"Servicios","nav.why":"Por qué elegirnos","nav.process":"Proceso","nav.plans":"Planes","nav.industries":"Industrias","nav.contact":"Contáctanos",
+  "hero.eyebrow":"Asistentes Virtuales con Inteligencia Artificial",
+  "hero.title1":"Asistentes Virtuales ","hero.title2":"100% Personalizados","hero.title3":" para tu Negocio",
+  "hero.p":"Deja de perder clientes por no responder a tiempo. Diseñamos un asistente entrenado con la información real de tu negocio para atender WhatsApp e Instagram, calificar interesados y avisarte cuando alguien está listo para comprar — las 24 horas, todos los días.",
+  "hero.btn1":"Ver Planes","hero.btn2":"Escribir por WhatsApp",
+  "hero.i1":"WhatsApp","hero.i2":"Instagram","hero.i3":"24/7","hero.i4":"IA Personalizada",
+  "hero.who":"Innova AI Assistance","hero.online":"en línea",
+  "hero.m1":"Hola! Quiero saber los horarios y precios de sus servicios 😊",
+  "hero.m2":"¡Hola! Con gusto te cuento. ¿Buscas algo para tu negocio o para uso personal?",
+  "hero.m3":"Para mi negocio, una tienda pequeña",
+  "hero.m4":"Perfecto, tenemos un plan desde $200 USD que responde por WhatsApp 24/7. ¿Quieres ver todos los planes?",
+  "hero.m5":"Sí, me interesa 🌟","hero.placeholder":"Escribe un mensaje...",
+  "serv.tag":"Servicios","serv.h2":"¿Qué hacemos por tu empresa?",
+  "serv.p":"Diseñamos asistentes virtuales inteligentes hechos a la medida de tu negocio — no una plantilla genérica. Cada uno se entrena con tu información real y trabaja para ti las 24 horas.",
+  "serv.c1t":"Atención al Cliente 24/7","serv.c1p":"Tus clientes reciben respuestas instantáneas en WhatsApp e Instagram, incluso cuando tu equipo no está disponible. Nunca más pierdas una oportunidad por no responder a tiempo.",
+  "serv.c2t":"Identificación de Oportunidades","serv.c2p":"El asistente detecta cuando un cliente tiene intención real de compra, recopila la información clave y avisa a tu equipo para que cierre la venta.",
+  "serv.c3t":"Agendamiento de Citas","serv.c3p":"Facilita a tus clientes agendar citas o consultas directamente desde la conversación, reduciendo llamadas y mensajes repetidos.",
+  "serv.c4t":"Evaluación de Experiencia","serv.c4p":"Al finalizar la conversación, el asistente puede pedir una calificación para que conozcas la opinión real de tus clientes.",
+  "serv.c5t":"Respuestas Instantáneas","serv.c5p":"Olvídate de las preguntas repetitivas sobre precios, horarios y disponibilidad. El asistente responde al instante y libera a tu equipo para tareas de mayor valor.",
+  "serv.c6t":"Panel de Control","serv.c6p":"Accede a tus conversaciones, contactos interesados y reportes desde un panel simple, sin necesidad de saber programar.",
+  "why.tag":"Por qué elegir Innova AI","why.h2":"Un asistente 100% personalizado, no una plantilla genérica",
+  "why.p":"No vendemos un bot armado en serie. Cada asistente se construye para tu negocio específico, con tu información, tu tono y tus reglas.",
+  "why.c1t":"Hecho a tu medida","why.c1p":"Configurado con tus precios, servicios, horarios y políticas reales — no respuestas genéricas.",
+  "why.c2t":"Tú mantienes el control","why.c2p":"Puedes tomar cualquier conversación cuando quieras; el asistente se hace a un lado.",
+  "why.c3t":"En los canales que ya usas","why.c3p":"WhatsApp, Instagram y más — donde tus clientes ya te escriben hoy.",
+  "why.c4t":"Sin que tengas que programar","why.c4p":"Nosotros configuramos, ajustamos y mantenemos tu asistente por ti.",
+  "stat1n":"24/7","stat1l":"Atención continua, sin turnos ni descansos",
+  "stat2n":"Al instante","stat2l":"Respuestas sin hacer esperar a nadie",
+  "stat3n":"A tu medida","stat3l":"Entrenado con la información real de tu negocio",
+  "stat4n":"Simple","stat4l":"Menos preguntas repetidas, más tiempo para vender",
+  "proc.tag":"Proceso","proc.h2":"¿Cómo trabajamos?","proc.p":"Cada asistente se construye pensando en tu empresa, no al revés. Un proceso simple pero personalizado.",
+  "proc.s1t":"Conocemos tu Negocio","proc.s1p":"Analizamos cómo funciona tu empresa, qué ofreces, qué preguntas reciben tus clientes y cuáles son tus principales desafíos.",
+  "proc.s2t":"Diseñamos tu Asistente","proc.s2p":"Creamos un flujo de conversación personalizado con la información, tono y personalidad que representa a tu marca.",
+  "proc.s3t":"Configuración e Integración","proc.s3p":"Conectamos el asistente a tus canales (WhatsApp, Instagram) y lo configuramos según tus procesos reales.",
+  "proc.s4t":"Lanzamiento y Mejora","proc.s4p":"Ponemos el asistente en marcha y hacemos ajustes continuos según los resultados.",
+  "ind.tag":"Industrias","ind.h2":"Para Cualquier Tipo de Negocio (y Hasta para Ti)",
+  "ind.p":"No importa el tamaño ni el rubro de tu negocio: si atiendes clientes por WhatsApp o Instagram, un asistente de Innova AI se adapta. Estos son solo algunos ejemplos:",
+  "ind.1t":"Agencias de Viajes","ind.1p":"Captura destinos, fechas y presupuesto. Orienta al cliente y pasa oportunidades reales a un asesor.",
+  "ind.2t":"Inmobiliarias","ind.2p":"Filtra propiedades por tipo, presupuesto y ubicación. Pre-califica clientes antes de la visita.",
+  "ind.3t":"Clínicas y Salud","ind.3p":"Informa sobre servicios y facilita el agendamiento de citas médicas.",
+  "ind.4t":"E-commerce y Retail","ind.4p":"Responde sobre productos, stock y precios, y guía la compra hasta el final.",
+  "ind.5t":"Restaurantes","ind.5p":"Toma reservas, responde sobre menú y horarios, reduce llamadas repetitivas.",
+  "ind.6t":"Educación","ind.6p":"Atiende consultas sobre cursos, precios e inscripción de forma inmediata.",
+  "ind.7t":"Belleza y Spa","ind.7p":"Agenda citas, informa servicios y precios, y confirma turnos automáticamente.",
+  "ind.8t":"Gimnasios y Fitness","ind.8p":"Informa planes y horarios, y gestiona inscripciones sin esfuerzo.",
+  "ind.9t":"Talleres y Concesionarios","ind.9p":"Agenda mantenimientos y responde sobre disponibilidad de vehículos.",
+  "ind.10t":"Servicios Profesionales","ind.10p":"Filtra consultas iniciales y agenda asesorías.",
+  "ind.11t":"Veterinarias","ind.11p":"Agenda consultas y vacunas, e informa servicios.",
+  "ind.12t":"Cualquier Otro Negocio","ind.12p":"¿Tu rubro no está en la lista? Adaptamos el asistente a cómo funciona tu negocio, sin importar el sector.",
+  "plans.tag":"Planes","plans.h2":"Planes y Precios","plans.p":"Elige el plan que mejor se adapte al tamaño y las necesidades de tu negocio. Todos incluyen configuración personalizada.",
+  "plans.cta":"Consultar","plans.custom":"¿Necesitas un plan personalizado para tu empresa? ","plans.customLink":"Hablemos por WhatsApp",
+  "p.basic.name":"Plan Básico","p.basic.tag":"Tu primer paso hacia la automatización",
+  "p.basic.f1":"1 línea de WhatsApp","p.basic.f2":"Responde horarios, precios e información de tu negocio","p.basic.f3":"Disponible 24/7","p.basic.f4":"Ideal para negocios pequeños o emprendedores",
+  "p.ess.name":"Plan Esencial","p.ess.tag":"Para negocios que no quieren perder ni un mensaje",
+  "p.ess.f1":"Asistente en WhatsApp e Instagram","p.ess.f2":"Contesta precios, horarios y preguntas frecuentes","p.ess.f3":"No deja mensajes sin responder","p.ess.f4":"Tú tomas el chat cuando es necesario","p.ess.f5":"2 líneas de WhatsApp incluidas","p.ess.f6":"Reporte semanal de contactos",
+  "p.pro.badge":"Más Popular","p.pro.name":"Plan Profesional","p.pro.tag":"Para negocios que quieren atender y vender más",
+  "p.pro.f1":"Todo lo del Plan Esencial","p.pro.f2":"WhatsApp, Instagram y más plataformas","p.pro.f3":"Cualifica leads 24/7 y deriva oportunidades","p.pro.f4":"Agenda citas automáticamente","p.pro.f5":"Te avisa cuando un cliente quiere comprar","p.pro.f6":"Atiende en el idioma de cada cliente","p.pro.f7":"Mejoras y ajustes cada mes",
+  "p.corp.name":"Plan Corporativo","p.corp.tag":"Para empresas con varios departamentos",
+  "p.corp.f1":"Todo lo del Plan Profesional","p.corp.f2":"Hasta 8 números de WhatsApp en un solo asistente","p.corp.f3":"Enrutamiento inteligente: avisa al correo del área correspondiente","p.corp.f4":"Envío de documentos reales (PDF)","p.corp.f5":"CRM: contacto, qué compró, qué preguntó y más",
+  "cta.h2":"¿Listo para transformar la atención de tu empresa?",
+  "cta.p":"Únete a los negocios que ya no pierden clientes por no responder a tiempo. Tu asistente virtual personalizado está a una conversación de distancia.",
+  "cta.btn1":"Escríbenos por WhatsApp","cta.btn2":"Ver Planes",
+  "footer.p":"Creamos asistentes virtuales con inteligencia artificial personalizados para empresas. Mejoramos tu atención al cliente, organizamos tus oportunidades comerciales y te ayudamos a vender más.",
+  "footer.h1":"Servicios","footer.l1":"Atención al Cliente","footer.l2":"Captación de Leads","footer.l3":"Agendamiento","footer.l4":"Por qué elegirnos",
+  "footer.h2":"Empresa","footer.l5":"Cómo Trabajamos","footer.l6":"Industrias","footer.l7":"Planes","footer.l8":"Contacto",
+  "footer.h3":"Contacto","footer.rights":"© 2026 Innova AI Assistance. Todos los derechos reservados.",
+  "wa.tooltip":"¿Tienes dudas? Escríbenos","lang.switch":"EN"
+},
+en: {
+  "nav.services":"Services","nav.why":"Why Us","nav.process":"Process","nav.plans":"Plans","nav.industries":"Industries","nav.contact":"Contact Us",
+  "hero.eyebrow":"AI-Powered Virtual Assistants",
+  "hero.title1":"","hero.title2":"100% Custom","hero.title3":" Virtual Assistants for your Business",
+  "hero.p":"Stop losing customers because you didn't reply in time. We design an assistant trained on your business's real information to handle WhatsApp and Instagram, qualify leads, and alert you the moment someone is ready to buy — 24 hours a day, every day.",
+  "hero.btn1":"See Plans","hero.btn2":"Message us on WhatsApp",
+  "hero.i1":"WhatsApp","hero.i2":"Instagram","hero.i3":"24/7","hero.i4":"Custom AI",
+  "hero.who":"Innova AI Assistance","hero.online":"online",
+  "hero.m1":"Hi! I'd like to know your hours and prices 😊",
+  "hero.m2":"Hi! Happy to help — is this for your business or personal use?",
+  "hero.m3":"For my business, a small shop",
+  "hero.m4":"Perfect, we have a plan from $200 USD that answers on WhatsApp 24/7. Want to see all the plans?",
+  "hero.m5":"Yes, I'm interested 🌟","hero.placeholder":"Type a message...",
+  "serv.tag":"Services","serv.h2":"What do we do for your business?",
+  "serv.p":"We design intelligent virtual assistants built for your business — not a generic template. Each one is trained on your real information and works for you around the clock.",
+  "serv.c1t":"24/7 Customer Care","serv.c1p":"Your customers get instant replies on WhatsApp and Instagram, even when your team is offline. Never lose an opportunity again because you replied too late.",
+  "serv.c2t":"Opportunity Detection","serv.c2p":"The assistant detects when a customer has real buying intent, gathers the key details, and alerts your team to close the sale.",
+  "serv.c3t":"Appointment Booking","serv.c3p":"Lets customers book appointments or consultations right in the conversation, cutting down on calls and repeated messages.",
+  "serv.c4t":"Experience Feedback","serv.c4p":"At the end of a conversation, the assistant can ask for a rating so you know your customers' real opinion.",
+  "serv.c5t":"Instant Answers","serv.c5p":"No more repetitive questions about prices, hours and availability. The assistant replies instantly and frees your team for higher-value work.",
+  "serv.c6t":"Control Panel","serv.c6p":"Access your conversations, interested contacts and reports from a simple dashboard — no coding needed.",
+  "why.tag":"Why Choose Innova AI","why.h2":"A 100% custom assistant, not a generic template",
+  "why.p":"We don't sell a mass-produced bot. Every assistant is built for your specific business, with your information, your tone, and your rules.",
+  "why.c1t":"Built for you","why.c1p":"Configured with your real prices, services, hours and policies — never generic answers.",
+  "why.c2t":"You stay in control","why.c2p":"Take over any conversation whenever you want; the assistant steps aside.",
+  "why.c3t":"On the channels you already use","why.c3p":"WhatsApp, Instagram and more — wherever your customers already message you.",
+  "why.c4t":"No coding required","why.c4p":"We configure, adjust and maintain your assistant for you.",
+  "stat1n":"24/7","stat1l":"Continuous coverage, no shifts or breaks",
+  "stat2n":"Instant","stat2l":"Replies without making anyone wait",
+  "stat3n":"Custom-built","stat3l":"Trained on your business's real information",
+  "stat4n":"Simple","stat4l":"Fewer repeated questions, more time to sell",
+  "proc.tag":"Process","proc.h2":"How do we work?","proc.p":"Every assistant is built around your business, not the other way around. A simple, personalized process.",
+  "proc.s1t":"We Learn Your Business","proc.s1p":"We look at how your business runs, what you offer, what customers ask, and your main challenges.",
+  "proc.s2t":"We Design Your Assistant","proc.s2p":"We create a custom conversation flow with the information, tone and personality that represents your brand.",
+  "proc.s3t":"Setup & Integration","proc.s3p":"We connect the assistant to your channels (WhatsApp, Instagram) and configure it around your real processes.",
+  "proc.s4t":"Launch & Improve","proc.s4p":"We launch the assistant and keep refining it based on real results.",
+  "ind.tag":"Industries","ind.h2":"For Any Type of Business (Even Just for You)",
+  "ind.p":"No matter your business's size or field: if you handle customers on WhatsApp or Instagram, an Innova AI assistant fits. Here are just a few examples:",
+  "ind.1t":"Travel Agencies","ind.1p":"Captures destinations, dates and budget. Guides the customer and passes real opportunities to an advisor.",
+  "ind.2t":"Real Estate","ind.2p":"Filters properties by type, budget and location. Pre-qualifies leads before the visit.",
+  "ind.3t":"Clinics & Healthcare","ind.3p":"Shares service information and books medical appointments.",
+  "ind.4t":"E-commerce & Retail","ind.4p":"Answers about products, stock and prices, and guides the purchase to checkout.",
+  "ind.5t":"Restaurants","ind.5p":"Takes reservations, answers about menu and hours, cuts down repetitive calls.",
+  "ind.6t":"Education","ind.6p":"Handles questions about courses, pricing and enrollment instantly.",
+  "ind.7t":"Beauty & Spa","ind.7p":"Books appointments, shares services and pricing, confirms slots automatically.",
+  "ind.8t":"Gyms & Fitness","ind.8p":"Shares plans and class schedules, manages sign-ups effortlessly.",
+  "ind.9t":"Auto Shops & Dealers","ind.9p":"Books maintenance and answers about vehicle availability.",
+  "ind.10t":"Professional Services","ind.10p":"Filters initial inquiries and books consultations.",
+  "ind.11t":"Veterinary Clinics","ind.11p":"Books consultations and vaccines, shares services.",
+  "ind.12t":"Any Other Business","ind.12p":"Not on the list? We adapt the assistant to how your business works, whatever your field.",
+  "plans.tag":"Plans","plans.h2":"Plans & Pricing","plans.p":"Choose the plan that best fits your business's size and needs. All include custom setup.",
+  "plans.cta":"Get in Touch","plans.custom":"Need a custom plan for your company? ","plans.customLink":"Let's talk on WhatsApp",
+  "p.basic.name":"Basic Plan","p.basic.tag":"Your first step into automation",
+  "p.basic.f1":"1 WhatsApp line","p.basic.f2":"Answers hours, prices and business information","p.basic.f3":"Available 24/7","p.basic.f4":"Great for small businesses or solo entrepreneurs",
+  "p.ess.name":"Essential Plan","p.ess.tag":"For businesses that can't afford to miss a message",
+  "p.ess.f1":"Assistant on WhatsApp and Instagram","p.ess.f2":"Answers prices, hours and FAQs","p.ess.f3":"Never leaves a message unanswered","p.ess.f4":"You take over the chat whenever needed","p.ess.f5":"2 WhatsApp lines included","p.ess.f6":"Weekly contact report",
+  "p.pro.badge":"Most Popular","p.pro.name":"Professional Plan","p.pro.tag":"For businesses ready to sell more, not just reply",
+  "p.pro.f1":"Everything in Essential","p.pro.f2":"WhatsApp, Instagram and more platforms","p.pro.f3":"Qualifies leads 24/7 and flags opportunities","p.pro.f4":"Books appointments automatically","p.pro.f5":"Alerts you when a customer is ready to buy","p.pro.f6":"Replies in each customer's own language","p.pro.f7":"Monthly improvements and adjustments",
+  "p.corp.name":"Corporate Plan","p.corp.tag":"For businesses with multiple departments",
+  "p.corp.f1":"Everything in Professional","p.corp.f2":"Up to 8 WhatsApp numbers on one assistant","p.corp.f3":"Smart routing: alerts the right department's inbox","p.corp.f4":"Sends real documents (PDF)","p.corp.f5":"CRM: contact, what they bought, what they asked, and more",
+  "cta.h2":"Ready to transform your business's customer care?",
+  "cta.p":"Join the businesses that no longer lose customers over a late reply. Your custom virtual assistant is one conversation away.",
+  "cta.btn1":"Message us on WhatsApp","cta.btn2":"See Plans",
+  "footer.p":"We build custom AI virtual assistants for businesses. We improve your customer care, organize your sales opportunities, and help you sell more.",
+  "footer.h1":"Services","footer.l1":"Customer Care","footer.l2":"Lead Capture","footer.l3":"Booking","footer.l4":"Why Choose Us",
+  "footer.h2":"Company","footer.l5":"How We Work","footer.l6":"Industries","footer.l7":"Plans","footer.l8":"Contact",
+  "footer.h3":"Contact","footer.rights":"© 2026 Innova AI Assistance. All rights reserved.",
+  "wa.tooltip":"Questions? Message us","lang.switch":"ES"
+}
+};
+function applyLang(lang){
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(function(el){
+    var key = el.getAttribute("data-i18n");
+    var val = I18N[lang][key];
+    if (val !== undefined) el.textContent = val;
+  });
+  localStorage.setItem("iai_lang", lang);
+}
+function toggleLang(){
+  var current = document.documentElement.lang === "en" ? "en" : "es";
+  var next = current === "es" ? "en" : "es";
+  applyLang(next);
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var saved = null;
+  try { saved = localStorage.getItem("iai_lang"); } catch(e) {}
+  applyLang(saved === "en" ? "en" : "es");
+});
+</script>
 
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <span class="logo-badge"><img src="data:image/png;base64,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" alt="Innova AI"></span>
-                        Innova AI
-                    </div>
-                    <p>Creamos asistentes virtuales con inteligencia artificial personalizados para empresas. Mejoramos tu atención al cliente, organizamos tus oportunidades comerciales y aumentamos tus ventas.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Servicios</h4>
-                    <ul>
-                        <li><a href="#servicios">Atención al Cliente</a></li>
-                        <li><a href="#servicios">Captación de Leads</a></li>
-                        <li><a href="#servicios">Agendamiento</a></li>
-                        <li><a href="#servicios">Evaluación de Experiencia</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Empresa</h4>
-                    <ul>
-                        <li><a href="#proceso">Cómo Trabajamos</a></li>
-                        <li><a href="#industrias">Industrias</a></li>
-                        <li><a href="#planes">Planes</a></li>
-                        <li><a href="https://wa.me/573054110761" target="_blank">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Contacto</h4>
-                    <ul>
-                        <li><a href="https://wa.me/573054110761" target="_blank"><i class="fab fa-whatsapp"></i> +57 305 411 0761</a></li>
-                        <li><a href="mailto:innovaai34@gmail.com"><i class="fas fa-envelope"></i> innovaai34@gmail.com</a></li>
-                        <li><a href="https://instagram.com/innova_ai_chatbots" target="_blank"><i class="fab fa-instagram"></i> @innova_ai_chatbots</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Innova AI. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
-    <a href="https://wa.me/573054110761" class="whatsapp-float" target="_blank" title="Contáctanos por WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-        <span class="whatsapp-tooltip">¿Tienes dudas? Escríbenos</span>
-    </a>
-
-    <script>
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.style.boxShadow = '0 4px 30px rgba(0,0,0,0.4)';
-            } else {
-                navbar.style.boxShadow = 'none';
-            }
-        });
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
-        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) { entry.target.classList.add('visible'); }
-            });
-        }, observerOptions);
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = '100%';
-            navLinks.style.left = '0';
-            navLinks.style.right = '0';
-            navLinks.style.background = '#0a1226';
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.padding = '1rem 2rem';
-            navLinks.style.borderTop = '1px solid rgba(255,255,255,0.1)';
-            navLinks.style.boxShadow = '0 10px 30px rgba(0,0,0,0.4)';
-        }
-
-        function animateCounter(el) {
-            const text = el.textContent.trim();
-            const match = text.match(/^(-?)(\d+)(.*)$/);
-            if (!match) return;
-            const sign = match[1];
-            const target = parseInt(match[2]);
-            const suffix = match[3];
-            let current = 0;
-            const duration = 1500;
-            const stepTime = Math.max(20, Math.floor(duration / target));
-            const increment = Math.ceil(target / (duration / stepTime));
-            el.textContent = sign + '0' + suffix;
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) { current = target; clearInterval(timer); }
-                el.textContent = sign + current + suffix;
-            }, stepTime);
-        }
-        const statObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !entry.target.dataset.animated) {
-                    entry.target.dataset.animated = 'true';
-                    animateCounter(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-        document.querySelectorAll('.stat-number').forEach(el => statObserver.observe(el));
-    </script>
 </body>
 </html>
