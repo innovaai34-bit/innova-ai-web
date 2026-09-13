@@ -94,6 +94,9 @@ nav#navbar { position: fixed; top: 0; width: 100%; background: rgba(7,11,24,0.85
 .stat-card { text-align: center; padding: 2.2rem 1.5rem; border-radius: 16px; }
 .stat-number { font-size: 2.1rem; font-weight: 800; background: linear-gradient(90deg, var(--cyan), var(--blue)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 .stat-label { color: var(--muted); margin-top: 0.5rem; font-size: 0.95rem; }
+.stat-source { color: var(--muted-2); margin-top: 0.6rem; font-size: 0.72rem; }
+.case-card { position: relative; }
+.case-badge { display: inline-block; color: var(--cyan); font-weight: 700; font-size: 0.72rem; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.4rem; }
 .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; }
 .step { text-align: center; padding: 2rem; position: relative; }
 .step-number { width: 60px; height: 60px; border-radius: 50%; font-size: 1.5rem; font-weight: 700; margin: 0 auto 1.5rem; }
@@ -254,7 +257,67 @@ footer { background: var(--bg-3); color: white; padding: 4rem 0 2rem; border-top
             <div class="stat-card"><div class="stat-number" data-i18n="stat1n">24/7</div><div class="stat-label" data-i18n="stat1l">Atención continua, sin turnos ni descansos</div></div>
             <div class="stat-card"><div class="stat-number" data-i18n="stat2n">Al instante</div><div class="stat-label" data-i18n="stat2l">Respuestas sin hacer esperar a nadie</div></div>
             <div class="stat-card"><div class="stat-number" data-i18n="stat3n">A tu medida</div><div class="stat-label" data-i18n="stat3l">Entrenado con la información real de tu negocio</div></div>
-            <div class="stat-card"><div class="stat-number" data-i18n="stat4n">Simple</div><div class="stat-label" data-i18n="stat4l">Menos preguntas repetidas, más tiempo para vender</div></div>
+            <div class="stat-card"><div class="stat-number" data-i18n="stat5n">61%</div><div class="stat-label" data-i18n="stat5l">De las empresas con IA en atención al cliente reportó más satisfacción de sus clientes</div><div class="stat-source" data-i18n="stat5s">Fuente: Capterra, Tendencias en Atención al Cliente 2025</div></div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="casos">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="tag" data-i18n="case.tag">Casos de uso</span>
+            <h2 data-i18n="case.h2">Así se vería en un negocio como el tuyo</h2>
+            <p data-i18n="case.p">Ejemplos de cómo funcionaría un asistente de Innova AI en el día a día, en distintos tipos de negocio. Son ejemplos ilustrativos para mostrar el funcionamiento — no son clientes reales.</p>
+        </div>
+        <div class="industries-grid">
+            <div class="industry-card fade-in case-card">
+                <div class="industry-icon"><i class="fas fa-clinic-medical"></i></div>
+                <div class="industry-content">
+                    <span class="case-badge" data-i18n="case.badge">Ejemplo ilustrativo</span>
+                    <h4 data-i18n="case.1t">Clínica que deja de perder citas</h4>
+                    <p data-i18n="case.1p">Antes: la recepción se satura con llamadas y los mensajes del fin de semana quedan sin responder hasta el lunes. Con el asistente: confirma horarios disponibles, agenda la cita directo en la conversación y avisa al equipo solo cuando un caso necesita atención humana.</p>
+                </div>
+            </div>
+            <div class="industry-card fade-in case-card">
+                <div class="industry-icon"><i class="fas fa-utensils"></i></div>
+                <div class="industry-content">
+                    <span class="case-badge" data-i18n="case.badge">Ejemplo ilustrativo</span>
+                    <h4 data-i18n="case.2t">Restaurante que no pierde reservas</h4>
+                    <p data-i18n="case.2p">Antes: las reservas de la hora pico se pierden porque nadie contesta el teléfono. Con el asistente: toma la reserva por WhatsApp o Instagram al instante, confirma el menú y horarios, y libera al equipo para atender el salón.</p>
+                </div>
+            </div>
+            <div class="industry-card fade-in case-card">
+                <div class="industry-icon"><i class="fas fa-user-doctor"></i></div>
+                <div class="industry-content">
+                    <span class="case-badge" data-i18n="case.badge">Ejemplo ilustrativo</span>
+                    <h4 data-i18n="case.3t">Médico particular que no pierde pacientes</h4>
+                    <p data-i18n="case.3p">Antes: la agenda se maneja por teléfono, las cancelaciones de último momento no quedan registradas y los mensajes fuera de horario preguntando por citas o resultados se acumulan. Con el asistente: confirma horarios disponibles, recuerda la cita un día antes y responde qué documentos llevar, sin que el médico tenga que estar pendiente del chat.</p>
+                </div>
+            </div>
+            <div class="industry-card fade-in case-card">
+                <div class="industry-icon"><i class="fas fa-plane"></i></div>
+                <div class="industry-content">
+                    <span class="case-badge" data-i18n="case.badge">Ejemplo ilustrativo</span>
+                    <h4 data-i18n="case.4t">Agencia de viajes que no pierde horas cotizando</h4>
+                    <p data-i18n="case.4p">Antes: el asesor pasa horas armando cotizaciones para gente que solo estaba curioseando. Con el asistente: pregunta destino, fechas y presupuesto, arma una primera propuesta al instante y solo pasa al asesor los contactos que ya están listos para reservar.</p>
+                </div>
+            </div>
+            <div class="industry-card fade-in case-card">
+                <div class="industry-icon"><i class="fas fa-briefcase"></i></div>
+                <div class="industry-content">
+                    <span class="case-badge" data-i18n="case.badge">Ejemplo ilustrativo</span>
+                    <h4 data-i18n="case.5t">Empresa de servicios que filtra antes de agendar</h4>
+                    <p data-i18n="case.5p">Antes: las consultas iniciales llegan por WhatsApp a cualquier hora y se pierden entre el resto de mensajes del equipo. Con el asistente: identifica qué necesita el contacto, agenda una llamada inicial y le entrega al equipo solo los casos que ya calificaron.</p>
+                </div>
+            </div>
+            <div class="industry-card fade-in case-card">
+                <div class="industry-icon"><i class="fas fa-shopping-bag"></i></div>
+                <div class="industry-content">
+                    <span class="case-badge" data-i18n="case.badge">Ejemplo ilustrativo</span>
+                    <h4 data-i18n="case.6t">Tienda que no deja preguntas sin responder</h4>
+                    <p data-i18n="case.6p">Antes: las preguntas repetidas sobre stock, tallas o tiempos de envío saturan el chat y muchas quedan sin respuesta. Con el asistente: responde al instante sobre disponibilidad y envíos, y acompaña al cliente hasta que confirma la compra.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -471,7 +534,16 @@ es: {
   "stat1n":"24/7","stat1l":"Atención continua, sin turnos ni descansos",
   "stat2n":"Al instante","stat2l":"Respuestas sin hacer esperar a nadie",
   "stat3n":"A tu medida","stat3l":"Entrenado con la información real de tu negocio",
-  "stat4n":"Simple","stat4l":"Menos preguntas repetidas, más tiempo para vender",
+  "stat5n":"61%","stat5l":"De las empresas con IA en atención al cliente reportó más satisfacción de sus clientes","stat5s":"Fuente: Capterra, Tendencias en Atención al Cliente 2025",
+  "case.tag":"Casos de uso","case.h2":"Así se vería en un negocio como el tuyo",
+  "case.p":"Ejemplos de cómo funcionaría un asistente de Innova AI en el día a día, en distintos tipos de negocio. Son ejemplos ilustrativos para mostrar el funcionamiento — no son clientes reales.",
+  "case.badge":"Ejemplo ilustrativo",
+  "case.1t":"Clínica que deja de perder citas","case.1p":"Antes: la recepción se satura con llamadas y los mensajes del fin de semana quedan sin responder hasta el lunes. Con el asistente: confirma horarios disponibles, agenda la cita directo en la conversación y avisa al equipo solo cuando un caso necesita atención humana.",
+  "case.2t":"Restaurante que no pierde reservas","case.2p":"Antes: las reservas de la hora pico se pierden porque nadie contesta el teléfono. Con el asistente: toma la reserva por WhatsApp o Instagram al instante, confirma el menú y horarios, y libera al equipo para atender el salón.",
+  "case.3t":"Médico particular que no pierde pacientes","case.3p":"Antes: la agenda se maneja por teléfono, las cancelaciones de último momento no quedan registradas y los mensajes fuera de horario preguntando por citas o resultados se acumulan. Con el asistente: confirma horarios disponibles, recuerda la cita un día antes y responde qué documentos llevar, sin que el médico tenga que estar pendiente del chat.",
+  "case.4t":"Agencia de viajes que no pierde horas cotizando","case.4p":"Antes: el asesor pasa horas armando cotizaciones para gente que solo estaba curioseando. Con el asistente: pregunta destino, fechas y presupuesto, arma una primera propuesta al instante y solo pasa al asesor los contactos que ya están listos para reservar.",
+  "case.5t":"Empresa de servicios que filtra antes de agendar","case.5p":"Antes: las consultas iniciales llegan por WhatsApp a cualquier hora y se pierden entre el resto de mensajes del equipo. Con el asistente: identifica qué necesita el contacto, agenda una llamada inicial y le entrega al equipo solo los casos que ya calificaron.",
+  "case.6t":"Tienda que no deja preguntas sin responder","case.6p":"Antes: las preguntas repetidas sobre stock, tallas o tiempos de envío saturan el chat y muchas quedan sin respuesta. Con el asistente: responde al instante sobre disponibilidad y envíos, y acompaña al cliente hasta que confirma la compra.",
   "proc.tag":"Proceso","proc.h2":"¿Cómo trabajamos?","proc.p":"Cada asistente se construye pensando en tu empresa, no al revés. Un proceso simple pero personalizado.",
   "proc.s1t":"Conocemos tu Negocio","proc.s1p":"Analizamos cómo funciona tu empresa, qué ofreces, qué preguntas reciben tus clientes y cuáles son tus principales desafíos.",
   "proc.s2t":"Diseñamos tu Asistente","proc.s2p":"Creamos un flujo de conversación personalizado con la información, tono y personalidad que representa a tu marca.",
@@ -540,7 +612,16 @@ en: {
   "stat1n":"24/7","stat1l":"Continuous coverage, no shifts or breaks",
   "stat2n":"Instant","stat2l":"Replies without making anyone wait",
   "stat3n":"Custom-built","stat3l":"Trained on your business's real information",
-  "stat4n":"Simple","stat4l":"Fewer repeated questions, more time to sell",
+  "stat5n":"61%","stat5l":"Of businesses using AI in customer service reported higher customer satisfaction","stat5s":"Source: Capterra, 2025 Customer Service Trends",
+  "case.tag":"Use Cases","case.h2":"How it would look for a business like yours",
+  "case.p":"Examples of how an Innova AI assistant would work day to day, across different types of businesses. These are illustrative examples to show how it functions — not real clients.",
+  "case.badge":"Illustrative example",
+  "case.1t":"A clinic that stops losing appointments","case.1p":"Before: the front desk is swamped with calls and weekend messages go unanswered until Monday. With the assistant: it confirms open time slots, books the appointment right in the conversation, and only alerts the team when a case needs a human.",
+  "case.2t":"A restaurant that stops losing reservations","case.2p":"Before: peak-hour reservations are lost because no one picks up the phone. With the assistant: it takes the reservation on WhatsApp or Instagram instantly, confirms the menu and hours, and frees the team to run the floor.",
+  "case.3t":"A private doctor who stops losing patients","case.3p":"Before: scheduling is handled by phone, last-minute cancellations go unrecorded, and after-hours messages asking about appointments or results pile up. With the assistant: it confirms open slots, sends a reminder the day before, and answers what documents to bring — without the doctor having to watch the chat.",
+  "case.4t":"A travel agency that stops wasting hours quoting","case.4p":"Before: the advisor spends hours building quotes for people who were just browsing. With the assistant: it asks for destination, dates and budget, puts together a first proposal instantly, and only passes along the contacts who are ready to book.",
+  "case.5t":"A services firm that qualifies before booking","case.5p":"Before: initial inquiries arrive on WhatsApp at any hour and get lost among the rest of the team's messages. With the assistant: it figures out what the contact needs, books an initial call, and hands the team only the qualified cases.",
+  "case.6t":"A shop that never leaves a question unanswered","case.6p":"Before: repeated questions about stock, sizes or shipping times swamp the chat, and many go unanswered. With the assistant: it answers instantly about availability and shipping, and walks the customer through to checkout.",
   "proc.tag":"Process","proc.h2":"How do we work?","proc.p":"Every assistant is built around your business, not the other way around. A simple, personalized process.",
   "proc.s1t":"We Learn Your Business","proc.s1p":"We look at how your business runs, what you offer, what customers ask, and your main challenges.",
   "proc.s2t":"We Design Your Assistant","proc.s2p":"We create a custom conversation flow with the information, tone and personality that represents your brand.",
