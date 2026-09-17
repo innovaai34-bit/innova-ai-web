@@ -123,6 +123,9 @@ nav#navbar { position: fixed; top: 0; width: 100%; background: rgba(7,11,24,0.85
 .pricing-features li { padding: 0.75rem 0; display: flex; align-items: flex-start; gap: 0.65rem; color: var(--muted); font-size: 0.9rem; border-bottom: 1px solid var(--border); }
 .pricing-features li i { color: var(--cyan); font-size: 1.05rem; margin-top: 0.15rem; flex-shrink: 0; }
 .pricing-features li strong { color: var(--white); }
+.plans-custom-cta { text-align: center; margin-top: 3rem; padding: 2.4rem 2rem; border-radius: 20px; border: 1.5px solid rgba(34,211,238,0.3); background: radial-gradient(ellipse 700px 300px at 50% 0%, rgba(34,211,238,0.12) 0%, transparent 70%); }
+.plans-custom-cta p { font-size: 1.6rem; font-weight: 800; color: var(--white); margin-bottom: 1.6rem; line-height: 1.4; max-width: 720px; margin-left: auto; margin-right: auto; }
+@media (max-width: 640px) { .plans-custom-cta p { font-size: 1.25rem; } }
 .cta-section { background: radial-gradient(ellipse 700px 400px at 30% 20%, rgba(34,211,238,0.14) 0%, transparent 65%), radial-gradient(ellipse 600px 400px at 80% 80%, rgba(59,130,246,0.14) 0%, transparent 65%), var(--bg-3); color: white; text-align: center; position: relative; overflow: hidden; }
 .cta-section .container { position: relative; z-index: 1; }
 .cta-section h2 { font-size: 2.4rem; margin-bottom: 1rem; font-weight: 800; }
@@ -213,7 +216,7 @@ footer { background: var(--bg-3); color: white; padding: 4rem 0 2rem; border-top
                     <div class="bubble in" data-i18n="hero.m1">Hola! Quiero saber los horarios y precios de sus servicios 😊</div>
                     <div class="bubble out" data-i18n="hero.m2">¡Hola! Con gusto te cuento. ¿Buscas algo para tu negocio o para uso personal?</div>
                     <div class="bubble in" data-i18n="hero.m3">Para mi negocio, una tienda pequeña</div>
-                    <div class="bubble out" data-i18n="hero.m4">Perfecto, tenemos un plan desde $200 USD que responde por WhatsApp 24/7. ¿Quieres ver todos los planes?</div>
+                    <div class="bubble out" data-i18n="hero.m4">Perfecto, tenemos un plan desde $700 USD que responde por WhatsApp 24/7. ¿Quieres ver todos los planes?</div>
                     <div class="bubble in" data-i18n="hero.m5">Sí, me interesa 🌟</div>
                 </div>
                 <div class="phone-input"><span data-i18n="hero.placeholder">Escribe un mensaje...</span><i class="fa-solid fa-paper-plane"></i></div>
@@ -372,22 +375,6 @@ footer { background: var(--bg-3); color: white; padding: 4rem 0 2rem; border-top
         <div class="pricing-grid">
             <div class="pricing-card fade-in">
                 <div class="pricing-header">
-                    <h3 data-i18n="p.basic.name">Plan Básico</h3>
-                    <div class="setup-fee">$200 <span>USD</span></div>
-                    <div class="monthly-fee">+ $45 <span>USD / mes</span></div>
-                    <p data-i18n="p.basic.tag">Tu primer paso hacia la automatización</p>
-                </div>
-                <ul class="pricing-features">
-                    <li><i class="fas fa-check-circle"></i> <span data-i18n="p.basic.f1">1 línea de WhatsApp</span></li>
-                    <li><i class="fas fa-check-circle"></i> <span data-i18n="p.basic.f2">Responde horarios, precios e información de tu negocio</span></li>
-                    <li><i class="fas fa-check-circle"></i> <span data-i18n="p.basic.f3">Disponible 24/7</span></li>
-                    <li><i class="fas fa-check-circle"></i> <span data-i18n="p.basic.f4">Ideal para negocios pequeños o emprendedores</span></li>
-                </ul>
-                <a href="https://wa.me/573054110761" class="btn btn-outline" style="width: 100%; justify-content: center;" target="_blank"><i class="fab fa-whatsapp"></i> <span data-i18n="plans.cta">Consultar</span></a>
-            </div>
-
-            <div class="pricing-card fade-in">
-                <div class="pricing-header">
                     <h3 data-i18n="p.ess.name">Plan Esencial</h3>
                     <div class="setup-fee">$700 <span>USD</span></div>
                     <div class="monthly-fee">+ $180 <span>USD / mes</span></div>
@@ -443,7 +430,10 @@ footer { background: var(--bg-3); color: white; padding: 4rem 0 2rem; border-top
                 <a href="https://wa.me/573054110761" class="btn btn-outline" style="width: 100%; justify-content: center;" target="_blank"><i class="fab fa-whatsapp"></i> <span data-i18n="plans.cta">Consultar</span></a>
             </div>
         </div>
-        <p style="text-align: center; margin-top: 2rem; color: var(--muted); font-size: 0.95rem;"><span data-i18n="plans.custom">¿Necesitas un plan personalizado para tu empresa? </span><a href="https://wa.me/573054110761" style="color: var(--cyan); font-weight: 600;" target="_blank" data-i18n="plans.customLink">Hablemos por WhatsApp</a></p>
+        <div class="plans-custom-cta fade-in">
+            <p data-i18n="plans.custom">Si ninguno se adapta a lo que necesitas, escríbenos y personaliza tu plan.</p>
+            <a href="https://wa.me/573054110761" class="btn btn-primary btn-large" target="_blank"><i class="fab fa-whatsapp"></i> <span data-i18n="plans.customLink">Escríbenos por WhatsApp</span></a>
+        </div>
     </div>
 </section>
 
@@ -515,7 +505,7 @@ es: {
   "hero.m1":"Hola! Quiero saber los horarios y precios de sus servicios 😊",
   "hero.m2":"¡Hola! Con gusto te cuento. ¿Buscas algo para tu negocio o para uso personal?",
   "hero.m3":"Para mi negocio, una tienda pequeña",
-  "hero.m4":"Perfecto, tenemos un plan desde $200 USD que responde por WhatsApp 24/7. ¿Quieres ver todos los planes?",
+  "hero.m4":"Perfecto, tenemos un plan desde $700 USD que responde por WhatsApp 24/7. ¿Quieres ver todos los planes?",
   "hero.m5":"Sí, me interesa 🌟","hero.placeholder":"Escribe un mensaje...",
   "serv.tag":"Servicios","serv.h2":"¿Qué hacemos por tu empresa?",
   "serv.p":"Diseñamos asistentes virtuales inteligentes hechos a la medida de tu negocio — no una plantilla genérica. Cada uno se entrena con tu información real y trabaja para ti las 24 horas.",
@@ -564,9 +554,7 @@ es: {
   "ind.11t":"Veterinarias","ind.11p":"Agenda consultas y vacunas, e informa servicios.",
   "ind.12t":"Cualquier Otro Negocio","ind.12p":"¿Tu rubro no está en la lista? Adaptamos el asistente a cómo funciona tu negocio, sin importar el sector.",
   "plans.tag":"Planes","plans.h2":"Planes y Precios","plans.p":"Elige el plan que mejor se adapte al tamaño y las necesidades de tu negocio. Todos incluyen configuración personalizada.",
-  "plans.cta":"Consultar","plans.custom":"¿Necesitas un plan personalizado para tu empresa? ","plans.customLink":"Hablemos por WhatsApp",
-  "p.basic.name":"Plan Básico","p.basic.tag":"Tu primer paso hacia la automatización",
-  "p.basic.f1":"1 línea de WhatsApp","p.basic.f2":"Responde horarios, precios e información de tu negocio","p.basic.f3":"Disponible 24/7","p.basic.f4":"Ideal para negocios pequeños o emprendedores",
+  "plans.cta":"Consultar","plans.custom":"Si ninguno se adapta a lo que necesitas, escríbenos y personaliza tu plan.","plans.customLink":"Escríbenos por WhatsApp",
   "p.ess.name":"Plan Esencial","p.ess.tag":"Para negocios que no quieren perder ni un mensaje",
   "p.ess.f1":"Asistente en WhatsApp e Instagram","p.ess.f2":"Contesta precios, horarios y preguntas frecuentes","p.ess.f3":"No deja mensajes sin responder","p.ess.f4":"Tú tomas el chat cuando es necesario","p.ess.f5":"2 líneas de WhatsApp incluidas","p.ess.f6":"Reporte semanal de contactos","p.ess.f7":"Te avisa por correo cuando un cliente necesita hablar con un asesor",
   "p.pro.badge":"Más Popular","p.pro.name":"Plan Profesional","p.pro.tag":"Para negocios que quieren atender y vender más",
@@ -593,7 +581,7 @@ en: {
   "hero.m1":"Hi! I'd like to know your hours and prices 😊",
   "hero.m2":"Hi! Happy to help — is this for your business or personal use?",
   "hero.m3":"For my business, a small shop",
-  "hero.m4":"Perfect, we have a plan from $200 USD that answers on WhatsApp 24/7. Want to see all the plans?",
+  "hero.m4":"Perfect, we have a plan from $700 USD that answers on WhatsApp 24/7. Want to see all the plans?",
   "hero.m5":"Yes, I'm interested 🌟","hero.placeholder":"Type a message...",
   "serv.tag":"Services","serv.h2":"What do we do for your business?",
   "serv.p":"We design intelligent virtual assistants built for your business — not a generic template. Each one is trained on your real information and works for you around the clock.",
@@ -642,9 +630,7 @@ en: {
   "ind.11t":"Veterinary Clinics","ind.11p":"Books consultations and vaccines, shares services.",
   "ind.12t":"Any Other Business","ind.12p":"Not on the list? We adapt the assistant to how your business works, whatever your field.",
   "plans.tag":"Plans","plans.h2":"Plans & Pricing","plans.p":"Choose the plan that best fits your business's size and needs. All include custom setup.",
-  "plans.cta":"Get in Touch","plans.custom":"Need a custom plan for your company? ","plans.customLink":"Let's talk on WhatsApp",
-  "p.basic.name":"Basic Plan","p.basic.tag":"Your first step into automation",
-  "p.basic.f1":"1 WhatsApp line","p.basic.f2":"Answers hours, prices and business information","p.basic.f3":"Available 24/7","p.basic.f4":"Great for small businesses or solo entrepreneurs",
+  "plans.cta":"Get in Touch","plans.custom":"If none of these fit what you need, write to us and personalize your plan.","plans.customLink":"Write to us on WhatsApp",
   "p.ess.name":"Essential Plan","p.ess.tag":"For businesses that can't afford to miss a message",
   "p.ess.f1":"Assistant on WhatsApp and Instagram","p.ess.f2":"Answers prices, hours and FAQs","p.ess.f3":"Never leaves a message unanswered","p.ess.f4":"You take over the chat whenever needed","p.ess.f5":"2 WhatsApp lines included","p.ess.f6":"Weekly contact report","p.ess.f7":"Emails you when a customer needs to talk to an advisor",
   "p.pro.badge":"Most Popular","p.pro.name":"Professional Plan","p.pro.tag":"For businesses ready to sell more, not just reply",
