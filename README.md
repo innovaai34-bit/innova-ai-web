@@ -24,4 +24,4 @@ No necesita compilación: se edita y se publica tal cual.
 - **Formulario de contacto**: envía a `/contact` del bot (constante `CONTACT_ENDPOINT` en `site.js`).
   Si falla, ofrece WhatsApp con el mensaje ya escrito.
 
-La versión anterior del sitio quedó guardada en la etiqueta git `backup-antes-rediseno-2026-10`.
+La versión anterior del sitio quedó guardada en la rama `backup/antes-rediseno-2026-10`.
