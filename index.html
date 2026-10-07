@@ -3,489 +3,371 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Innova AI Assistance | Asistentes de IA a la medida de tu negocio</title>
-<meta name="description" content="Innova AI Assistance crea asistentes de inteligencia artificial hechos a la medida de tu negocio: atienden por WhatsApp, Instagram y Web, automatizan tareas repetitivas y te avisan cuando un cliente está listo para comprar.">
-<meta property="og:title" content="Innova AI Assistance">
-<meta property="og:description" content="Asistentes de IA a la medida que atienden, venden y automatizan las tareas de tu negocio.">
+<title>Asistentes de IA para empresas | Innova AI Assistance</title>
+<meta name="description" content="Creamos asistentes de inteligencia artificial para empresas, entrenados con la información real de tu negocio. Atienden por WhatsApp, Instagram y tu web, detectan oportunidades y se conectan con tus herramientas.">
+<link rel="canonical" href="https://innovaassistanceai.com.co/">
+<meta name="theme-color" content="#060b16">
+<meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#0a1222">
-<link rel="icon" type="image/png" href="data:image/png;base64,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">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-:root {
-  --bg: #0a1222; --bg-2: #0c1628; --surface: #101b30; --surface-2: #17243d;
-  --line: #213152; --line-2: #2a3c60;
-  --text: #eef2f8; --muted: #94a3bd; --muted-2: #7183a3;
-  --accent: #2f7bf0; --accent-ink: #f5f8ff; --accent-soft: rgba(47,123,240,0.14);
-  --wa: #25d366;
-  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
-  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
-  --r-lg: 24px; --r-md: 16px; --r-sm: 10px;
-  --z-nav: 100; --z-skip: 200;
+<meta property="og:site_name" content="Innova AI Assistance">
+<meta property="og:locale" content="es_CO">
+<meta property="og:url" content="https://innovaassistanceai.com.co/">
+<meta property="og:title" content="Innova AI Assistance | Asistentes de IA para empresas">
+<meta property="og:description" content="Un asistente de IA diseñado para aprender cómo funciona tu negocio: atiende clientes, detecta oportunidades y conecta tus procesos, 24/7.">
+<meta property="og:image" content="https://innovaassistanceai.com.co/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Innova AI Assistance: tu negocio nunca vuelve a quedarse sin responder.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Innova AI Assistance | Asistentes de IA para empresas">
+<meta name="twitter:description" content="Un asistente de IA diseñado para aprender cómo funciona tu negocio.">
+<meta name="twitter:image" content="https://innovaassistanceai.com.co/assets/img/og-image.png">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Innova AI Assistance",
+  "url": "https://innovaassistanceai.com.co/",
+  "logo": "https://innovaassistanceai.com.co/assets/img/logo.png",
+  "image": "https://innovaassistanceai.com.co/assets/img/og-image.png",
+  "description": "Asistentes de inteligencia artificial para empresas, entrenados con la información real de cada negocio para atender clientes, detectar oportunidades y automatizar procesos.",
+  "email": "innovaai34@gmail.com",
+  "telephone": "+57 305 411 0761",
+  "areaServed": "CO",
+  "knowsAbout": ["Asistentes de IA para empresas", "Inteligencia artificial para empresas", "Automatización de WhatsApp", "Automatización de atención al cliente", "Automatización empresarial"],
+  "sameAs": ["https://instagram.com/innova_ai_assistance"]
 }
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { font-family: 'Geist', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
-img { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
-button, input, select, textarea { font: inherit; color: inherit; }
-:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
-.skip { position: absolute; left: 1rem; top: -60px; z-index: var(--z-skip); background: var(--accent); color: var(--accent-ink); padding: .7rem 1rem; border-radius: var(--r-sm); font-weight: 600; transition: top .2s var(--ease-out); }
-.skip:focus { top: 1rem; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-.section { padding: 7rem 0 7.5rem; }
-.grain { position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: .06; mix-blend-mode: overlay;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>"); }
-main, nav, footer { position: relative; z-index: 2; }
-
-/* type */
-h1, h2, h3 { letter-spacing: -0.035em; line-height: 1.05; text-wrap: balance; }
-.h2 { font-size: clamp(2rem, 4.2vw, 3.1rem); font-weight: 700; max-width: 18ch; }
-.lead { color: var(--muted); font-size: 1.12rem; max-width: 58ch; margin-top: 1.1rem; text-wrap: pretty; }
-.accent { color: var(--accent); }
-.head { margin-bottom: 3.5rem; }
-
-/* buttons */
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: .6rem; padding: .95rem 1.6rem; border-radius: 999px; border: 0; font-weight: 600; font-size: .98rem; cursor: pointer; white-space: nowrap;
-  transition: transform .16s var(--ease-out), background-color .2s ease, border-color .2s ease; }
-.btn:active { transform: scale(.97); }
-.btn-primary { background: var(--accent); color: var(--accent-ink); }
-.btn-ghost { background: transparent; color: var(--text); border: 2px solid var(--line-2); }
-.btn-wa { background: var(--wa); color: #06210f; }
-@media (hover: hover) and (pointer: fine) {
-  .btn-primary:hover { background: #2369d6; }
-  .btn-ghost:hover { border-color: var(--muted-2); }
-  .btn-wa:hover { background: #1fbd5a; }
-}
-
-/* nav */
-nav#navbar { position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-nav); background: rgba(10,18,34,.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid transparent; transition: border-color .3s ease; }
-nav#navbar.scrolled { border-bottom-color: var(--line); }
-.nav-row { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-.brand { display: flex; align-items: center; gap: .6rem; font-weight: 700; letter-spacing: -0.02em; white-space: nowrap; }
-.brand img { width: 34px; height: 34px; border-radius: 10px; object-fit: cover; }
-.nav-links { display: flex; align-items: center; gap: 1.8rem; list-style: none; }
-.nav-links a.link { color: var(--muted); font-weight: 500; font-size: .95rem; transition: color .2s ease; }
-.nav-links a.link:hover { color: var(--text); }
-.nav-links .btn { padding: .65rem 1.15rem; font-size: .9rem; }
-.lang { background: none; border: 2px solid var(--line-2); border-radius: 999px; padding: .4rem .8rem; font-weight: 700; font-size: .8rem; cursor: pointer; }
-.wa-icon { width: 42px; height: 42px; border-radius: 50%; background: var(--wa); color: #06210f; display: grid; place-items: center; font-size: 1.2rem; }
-.menu-btn { display: none; background: none; border: 0; font-size: 1.35rem; cursor: pointer; padding: .4rem; }
-
-/* hero */
-.hero { min-height: 100dvh; display: flex; align-items: center; padding: 104px 0 4rem; }
-.hero-grid { display: grid; grid-template-columns: 1.08fr .92fr; gap: 3.5rem; align-items: center; }
-.hero h1 { font-size: clamp(2.5rem, 5.6vw, 4.4rem); font-weight: 700; letter-spacing: -0.045em; }
-.rotator { display: grid; color: var(--accent); }
-.rotator span { grid-area: 1 / 1; opacity: 0; transform: translateY(.45em); transition: opacity .35s var(--ease-out), transform .45s var(--ease-out); white-space: nowrap; }
-.rotator span.on { opacity: 1; transform: none; }
-.rotator span.off { opacity: 0; transform: translateY(-.45em); transition-duration: .18s, .3s; }
-.hero .lead { font-size: 1.18rem; }
-.hero-cta { display: flex; gap: .9rem; flex-wrap: wrap; margin-top: 2.2rem; }
-.channels { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2rem; }
-.channels span { display: inline-flex; align-items: center; gap: .45rem; padding: .45rem .85rem; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: .88rem; font-weight: 500; }
-.channels i { color: var(--accent); }
-
-/* phone demo */
-.demo { position: relative; }
-.phone { width: min(400px, 100%); margin-left: auto; background: var(--surface); border: 2px solid var(--line); border-radius: 30px; overflow: hidden; box-shadow: 0 40px 90px -30px rgba(2,6,16,.8); }
-.phone-head { display: flex; align-items: center; gap: .8rem; padding: 1rem 1.2rem; border-bottom: 2px solid var(--line); }
-.phone-av { width: 42px; height: 42px; border-radius: 12px; background: var(--surface-2); border: 2px solid var(--line-2); display: grid; place-items: center; font-weight: 700; font-size: .85rem; }
-.phone-head b { display: block; font-size: .95rem; font-weight: 600; }
-.status { position: relative; display: block; height: 1.2em; font-size: .78rem; }
-.status span { position: absolute; left: 0; top: 0; color: var(--muted); transition: opacity .2s ease; white-space: nowrap; }
-.status .typing { color: var(--accent); opacity: 0; }
-.phone.is-typing .status .online { opacity: 0; }
-.phone.is-typing .status .typing { opacity: 1; }
-.thread { height: 380px; padding: 1.1rem 1.1rem .6rem; display: flex; flex-direction: column; justify-content: flex-end; gap: .65rem; overflow: hidden; }
-.msg { max-width: 82%; padding: .7rem .95rem; border-radius: 18px; font-size: .9rem; line-height: 1.4; animation: pop .32s var(--ease-out) both; }
-.msg.in { align-self: flex-start; background: var(--surface-2); border-bottom-left-radius: 6px; }
-.msg.out { align-self: flex-end; background: var(--accent); color: var(--accent-ink); border-bottom-right-radius: 6px; }
-@keyframes pop { from { opacity: 0; transform: translateY(10px) scale(.96); } to { opacity: 1; transform: none; } }
-.composer { display: flex; align-items: center; gap: .6rem; padding: .8rem 1rem 1rem; border-top: 2px solid var(--line); }
-.field { flex: 1; min-width: 0; height: 44px; border-radius: 999px; background: var(--bg); border: 2px solid var(--line); display: flex; align-items: center; padding: 0 1rem; font-size: .88rem; overflow: hidden; white-space: nowrap; }
-.field .ph { color: var(--muted-2); }
-.caret { width: 2px; height: 1.1em; background: var(--accent); margin-left: 2px; animation: blink 1s steps(1) infinite; }
-@keyframes blink { 50% { opacity: 0; } }
-.send { width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; flex: none; }
-.alert { position: absolute; right: 26px; top: 78px; width: min(330px, 86%); background: var(--bg); border: 2px solid var(--accent); border-radius: 20px; padding: 1rem 1.1rem;
-  box-shadow: 0 30px 60px -20px rgba(2,6,16,.9); opacity: 0; transform: translateY(-14px) scale(.97); transition: opacity .35s var(--ease-out), transform .45s var(--ease-out); pointer-events: none; }
-.alert.show { opacity: 1; transform: none; }
-.alert small { display: block; color: var(--accent); font-weight: 700; font-size: .72rem; letter-spacing: .06em; }
-.alert p { font-weight: 600; font-size: .92rem; line-height: 1.35; margin-top: .3rem; }
-.demo-note { color: var(--muted-2); font-size: .82rem; margin-top: .9rem; text-align: right; }
-
-/* marquee */
-.marquee { border-block: 1px solid var(--line); overflow: hidden; padding: 1.1rem 0; background: var(--bg-2); }
-.track { display: flex; gap: 2.2rem; width: max-content; animation: slide 38s linear infinite; }
-.track span { color: var(--muted); font-weight: 600; font-size: 1.05rem; white-space: nowrap; display: inline-flex; align-items: center; gap: 2.2rem; }
-.track span::after { content: "/"; color: var(--line-2); font-weight: 400; }
-@keyframes slide { to { transform: translateX(-50%); } }
-
-/* statement */
-.statement { padding: 8rem 0; }
-.st-wrap { position: relative; min-height: 15rem; }
-.st-no, .st-yes { font-size: clamp(1.9rem, 8vw, 6.4rem); font-weight: 700; letter-spacing: -0.05em; line-height: 1; }
-.st-no { position: relative; display: inline-block; white-space: nowrap; color: var(--muted-2); transition: opacity .5s ease, transform .6s var(--ease-in-out); }
-.st-no::after { content: ""; position: absolute; left: -2%; right: -2%; top: 52%; height: .09em; background: var(--text); border-radius: 99px; transform: scaleX(0); transform-origin: 0 50%; transition: transform .55s var(--ease-in-out) .35s; }
-.st-yes { margin-top: .4rem; opacity: 0; transform: translateY(.3em); transition: opacity .5s var(--ease-out) 1.25s, transform .6s var(--ease-out) 1.25s; }
-.st-sub { color: var(--muted); font-size: 1.2rem; max-width: 46ch; margin-top: 1.4rem; opacity: 0; transition: opacity .5s ease 1.7s; }
-.statement.in .st-no::after { transform: scaleX(1); }
-.statement.in .st-no { opacity: .35; transform: translateY(.06em) rotate(-1.5deg); transition-delay: .95s; }
-.statement.in .st-yes, .statement.in .st-sub { opacity: 1; transform: none; }
-
-/* capabilities */
-.cap { display: grid; grid-template-columns: .9fr 1.1fr; gap: 2rem; align-items: start; }
-.tabs { display: grid; gap: .7rem; }
-.tab { text-align: left; background: transparent; border: 2px solid var(--line); border-radius: var(--r-md); padding: 1.15rem 1.25rem; cursor: pointer; position: relative; overflow: hidden; transition: border-color .25s ease, background-color .25s ease; }
-.tab b { display: flex; align-items: center; gap: .7rem; font-size: 1.1rem; font-weight: 600; }
-.tab b i { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; background: var(--surface-2); color: var(--accent); font-size: .95rem; }
-.tab small { display: block; color: var(--muted); font-size: .9rem; margin-top: .35rem; padding-left: 2.95rem; }
-.tab .bar { position: absolute; left: 0; bottom: 0; height: 3px; width: 100%; background: var(--accent); transform: scaleX(0); transform-origin: 0 50%; }
-.tab[aria-selected="true"] { border-color: var(--accent); background: var(--surface); }
-.tab[aria-selected="true"] .bar { animation: fill var(--dur, 6s) linear forwards; }
-.cap.paused .tab .bar { animation: none; transform: scaleX(0); }
-@keyframes fill { to { transform: scaleX(1); } }
-.board { background: var(--surface); border: 2px solid var(--line); border-radius: var(--r-lg); padding: 1.8rem; min-height: 100%; }
-.board-head { display: flex; align-items: center; gap: .8rem; padding-bottom: 1.2rem; margin-bottom: .6rem; border-bottom: 2px solid var(--line); }
-.spin { width: 30px; height: 30px; flex: none; border-radius: 50%; border: 4px solid var(--line-2); border-top-color: var(--accent); animation: spin 1s linear infinite; }
-.board.done .spin { animation: none; border-color: var(--accent); background: var(--accent); position: relative; }
-.board.done .spin::after { content: ""; position: absolute; left: 7px; top: 3px; width: 7px; height: 12px; border: solid var(--accent-ink); border-width: 0 3px 3px 0; transform: rotate(45deg); }
-@keyframes spin { to { transform: rotate(360deg); } }
-.board-head span { font-weight: 600; color: var(--muted); }
-.board.done .board-head span { color: var(--text); }
-.checks { list-style: none; }
-.checks li { display: flex; align-items: center; gap: .9rem; padding: .85rem 0; color: var(--muted); font-size: 1.04rem; font-weight: 500; transition: color .3s ease; animation: rise .4s var(--ease-out) both; animation-delay: calc(var(--i) * 55ms); }
-.checks li + li { border-top: 1px solid var(--line); }
-@keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
-.tick { width: 30px; height: 30px; flex: none; border-radius: 50%; border: 2px solid var(--line-2); display: grid; place-items: center; font-size: .78rem; font-weight: 700; color: var(--muted); position: relative; }
-.tick::after { content: ""; position: absolute; inset: -2px; border-radius: 50%; background: var(--accent); transform: scale(.5); opacity: 0; transition: transform .3s var(--ease-out), opacity .2s ease; }
-.tick::before { content: ""; position: absolute; z-index: 1; left: 10px; top: 6px; width: 6px; height: 11px; border: solid var(--accent-ink); border-width: 0 2.5px 2.5px 0; transform: rotate(45deg) scale(.4); opacity: 0; transition: transform .3s var(--ease-out) .05s, opacity .2s ease .05s; }
-.checks li.ok { color: var(--text); }
-.checks li.ok .tick { color: transparent; border-color: transparent; }
-.checks li.ok .tick::after { transform: scale(1); opacity: 1; }
-.checks li.ok .tick::before { transform: rotate(45deg) scale(1); opacity: 1; }
-.tools { margin-top: 3rem; }
-.tools p { color: var(--muted); font-weight: 600; margin-bottom: 1rem; }
-.tool-row { display: flex; flex-wrap: wrap; gap: .6rem; }
-.tool-row span { display: inline-flex; align-items: center; gap: .5rem; padding: .6rem 1rem; border-radius: 12px; background: var(--surface); border: 1px solid var(--line); font-weight: 500; font-size: .93rem; }
-.tool-row i { color: var(--muted); }
-
-/* origin + why */
-.why { background: var(--bg-2); border-block: 1px solid var(--line); }
-.origin { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-.origin-story p { color: var(--muted); font-size: 1.1rem; margin-top: 1.1rem; max-width: 52ch; text-wrap: pretty; }
-.origin-story p strong { color: var(--text); font-weight: 600; }
-.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; }
-.why-item { background: var(--surface); padding: 1.7rem; }
-.why-item i { color: var(--accent); font-size: 1.2rem; }
-.why-item h3 { font-size: 1.12rem; font-weight: 600; margin: .9rem 0 .45rem; letter-spacing: -0.02em; }
-.why-item p { color: var(--muted); font-size: .95rem; }
-.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 5rem; padding-top: 3rem; border-top: 1px solid var(--line); }
-.stat b { display: block; font-size: 2.2rem; font-weight: 700; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; }
-.stat > span { color: var(--muted); font-size: .95rem; display: block; margin-top: .3rem; }
-.stat small { color: var(--muted-2); font-size: .75rem; display: block; margin-top: .5rem; }
-
-/* cases */
-.cases { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
-.case { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 1.9rem; }
-.case:nth-child(4n+1), .case:nth-child(4n) { background: var(--surface-2); }
-.case-top { display: flex; align-items: center; gap: .8rem; margin-bottom: 1.1rem; }
-.case-top i { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); font-size: 1.1rem; }
-.case h3 { font-size: 1.18rem; font-weight: 600; letter-spacing: -0.02em; }
-.ba { display: grid; gap: .8rem; }
-.ba p { font-size: .96rem; color: var(--muted); }
-.ba p b { display: block; color: var(--text); font-size: .8rem; font-weight: 700; letter-spacing: .04em; margin-bottom: .2rem; }
-.ba p.after b { color: var(--accent); }
-.disclaimer { color: var(--muted-2); font-size: .88rem; margin-top: 1.5rem; }
-
-/* process */
-.steps { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
-.steps-line { position: absolute; top: 27px; left: 28px; right: 28px; height: 3px; background: var(--line); border-radius: 3px; overflow: hidden; }
-.steps-line::after { content: ""; position: absolute; inset: 0; background: var(--accent); transform: scaleX(0); transform-origin: 0 50%; transition: transform 1.6s var(--ease-in-out) .2s; }
-.steps.in .steps-line::after { transform: scaleX(1); }
-.step { position: relative; }
-.step-num { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; background: var(--bg); border: 3px solid var(--line-2); font-weight: 700; font-size: 1.1rem; position: relative; z-index: 1; transition: background-color .3s ease, border-color .3s ease, color .3s ease; }
-.steps.in .step-num { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); transition-delay: calc(.25s + var(--i) * .4s); }
-.step h3 { font-size: 1.15rem; font-weight: 600; margin: 1.3rem 0 .5rem; letter-spacing: -0.02em; }
-.step p { color: var(--muted); font-size: .95rem; }
-
-/* industries */
-.ind { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; }
-.ind div { background: var(--bg); padding: 1.5rem 1.6rem; transition: background-color .25s ease; }
-@media (hover: hover) and (pointer: fine) { .ind div:hover { background: var(--surface); } }
-.ind i { color: var(--accent); font-size: 1.15rem; }
-.ind h3 { font-size: 1.05rem; font-weight: 600; margin: .8rem 0 .35rem; letter-spacing: -0.015em; }
-.ind p { color: var(--muted); font-size: .92rem; }
-
-/* contact */
-.contact { background: var(--bg-2); border-top: 1px solid var(--line); }
-.contact-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 4rem; align-items: start; }
-.next { list-style: none; margin-top: 2.2rem; display: grid; gap: 1.2rem; }
-.next li { display: flex; gap: 1rem; align-items: flex-start; }
-.next li > span { width: 34px; height: 34px; flex: none; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: .9rem; }
-.next li p { color: var(--muted); }
-.next li p b { color: var(--text); font-weight: 600; display: block; }
-.next li p span { display: block; }
-.form { background: var(--surface); border: 2px solid var(--line); border-radius: var(--r-lg); padding: 2rem; }
-.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.fg { display: grid; gap: .45rem; margin-bottom: 1.15rem; }
-.fg label, .fg .lbl { font-weight: 600; font-size: .92rem; }
-.fg label em { color: var(--accent); font-style: normal; }
-.fg input, .fg select, .fg textarea { width: 100%; background: var(--bg); border: 2px solid var(--line); border-radius: 12px; padding: .8rem .95rem; font-size: 1rem; transition: border-color .2s ease; }
-.fg textarea { min-height: 130px; resize: vertical; line-height: 1.5; }
-.fg input::placeholder, .fg textarea::placeholder { color: var(--muted-2); }
-.fg input:focus, .fg select:focus, .fg textarea:focus { outline: none; border-color: var(--accent); }
-.fg.bad input, .fg.bad textarea { border-color: #e5484d; }
-.err { color: #ff8589; font-size: .85rem; min-height: 0; }
-.chips { display: flex; flex-wrap: wrap; gap: .5rem; }
-.chip { border: 2px solid var(--line); background: transparent; border-radius: 999px; padding: .5rem .9rem; font-size: .9rem; font-weight: 500; cursor: pointer; transition: border-color .2s ease, background-color .2s ease, transform .16s var(--ease-out); }
-.chip:active { transform: scale(.97); }
-.chip[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--text); }
-.consent { display: flex; gap: .7rem; align-items: flex-start; font-size: .92rem; color: var(--muted); margin: .3rem 0 1.3rem; }
-.consent input { width: 20px; height: 20px; margin-top: .15rem; accent-color: var(--accent); flex: none; }
-.consent a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
-.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-.form .btn { width: 100%; }
-.form .btn[disabled] { opacity: .7; cursor: progress; }
-.form-note { color: var(--muted-2); font-size: .85rem; text-align: center; margin-top: .9rem; }
-.form-msg { margin-top: 1rem; padding: 1rem 1.1rem; border-radius: 12px; font-size: .95rem; display: none; }
-.form-msg.error { display: block; background: rgba(229,72,77,.12); border: 1px solid rgba(229,72,77,.5); }
-.form-msg.error a { text-decoration: underline; font-weight: 600; }
-.sent { display: none; text-align: center; padding: 2.5rem 1rem; }
-.sent .big-tick { width: 72px; height: 72px; margin: 0 auto 1.4rem; border-radius: 50%; background: var(--accent); position: relative; animation: popin .5s var(--ease-out) both; }
-.sent .big-tick::after { content: ""; position: absolute; left: 27px; top: 17px; width: 14px; height: 26px; border: solid var(--accent-ink); border-width: 0 4px 4px 0; transform: rotate(45deg); }
-@keyframes popin { from { transform: scale(.6); opacity: 0; } to { transform: none; opacity: 1; } }
-.sent h3 { font-size: 1.6rem; font-weight: 700; }
-.sent p { color: var(--muted); margin-top: .6rem; }
-.form.is-sent .form-body { display: none; }
-.form.is-sent .sent { display: block; }
-
-/* final cta */
-.final { padding: 7rem 0; }
-.final-box { border: 2px solid var(--line); border-radius: 32px; padding: 4rem 3rem; background: var(--surface); display: grid; grid-template-columns: 1.2fr .8fr; gap: 2rem; align-items: center; }
-.final h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; }
-.final p { color: var(--muted); margin-top: .9rem; font-size: 1.1rem; }
-.final .hero-cta { margin-top: 0; justify-content: flex-end; }
-
-/* footer */
-footer { border-top: 1px solid var(--line); padding: 3.5rem 0 2rem; }
-.foot { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 3rem; }
-.foot p { color: var(--muted); font-size: .95rem; margin-top: 1rem; max-width: 40ch; }
-.foot h4 { font-size: .95rem; font-weight: 600; margin-bottom: 1rem; }
-.foot ul { list-style: none; display: grid; gap: .65rem; }
-.foot ul a { color: var(--muted); font-size: .95rem; transition: color .2s ease; }
-.foot ul a:hover { color: var(--text); }
-.foot ul i { width: 1.2rem; }
-.copy { border-top: 1px solid var(--line); margin-top: 3rem; padding-top: 1.6rem; color: var(--muted-2); font-size: .88rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
-.copy a { text-decoration: underline; text-underline-offset: 3px; }
-
-/* reveal */
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s var(--ease-out), transform .7s var(--ease-out); transition-delay: calc(var(--i, 0) * 70ms); }
-.reveal.in { opacity: 1; transform: none; }
-
-/* responsive */
-@media (max-width: 980px) {
-  .hero-grid, .cap, .origin, .contact-grid, .final-box { grid-template-columns: 1fr; }
-  .phone { margin: 0 auto; }
-  .demo-note { text-align: center; }
-  .alert { right: 50%; transform: translate(50%, -14px) scale(.97); }
-  .alert.show { transform: translate(50%, 0); }
-  .tabs { grid-auto-flow: column; grid-auto-columns: minmax(230px, 1fr); overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: .4rem; }
-  .tab { scroll-snap-align: start; }
-  .stats { grid-template-columns: 1fr 1fr; }
-  .cases { grid-template-columns: 1fr; }
-  .steps { grid-template-columns: 1fr 1fr; row-gap: 2.5rem; }
-  .steps-line { display: none; }
-  .ind { grid-template-columns: 1fr 1fr; }
-  .final-box { padding: 3rem 1.6rem; }
-  .final .hero-cta { justify-content: flex-start; }
-  .foot { grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 760px) {
-  .nav-links { display: none; position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: .6rem 1.5rem 1.4rem; background: var(--bg); border-bottom: 1px solid var(--line); }
-  .nav-links.open { display: flex; }
-  .nav-links li { padding: .55rem 0; }
-  .nav-links .btn { width: 100%; }
-  .menu-btn { display: block; }
-  .section { padding: 5rem 0 5.5rem; }
-  .row2, .ind, .steps, .stats, .foot, .why-grid { grid-template-columns: 1fr; }
-  .form { padding: 1.4rem; }
-  .thread { height: 340px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; transition-delay: 0s !important; }
-  .track { animation: none; }
-  .reveal { opacity: 1; transform: none; }
-}
-</style>
+</script>
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
-<div class="grain" aria-hidden="true"></div>
 
-<nav id="navbar" aria-label="Principal">
+<header class="nav" id="navbar">
   <div class="nav-row">
-    <a href="#top" class="brand"><img src="data:image/png;base64,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" alt="">Innova AI Assistance</a>
-    <ul class="nav-links" id="navLinks">
-      <li><a class="link" href="#servicios" data-i18n="nav.services">Lo que hacemos</a></li>
-      <li><a class="link" href="#porque" data-i18n="nav.why">Por qué nosotros</a></li>
-      <li><a class="link" href="#proceso" data-i18n="nav.process">Proceso</a></li>
-      <li><a class="link" href="#industrias" data-i18n="nav.industries">Industrias</a></li>
-      <li><button class="lang" type="button" onclick="toggleLang()" data-i18n="lang.switch" aria-label="Cambiar idioma">EN</button></li>
-      <li><a class="wa-icon" href="https://wa.me/573054110761" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
-      <li><a class="btn btn-primary" href="#contacto" data-i18n="cta.case">Cuéntanos tu caso</a></li>
-    </ul>
-    <button class="menu-btn" type="button" aria-label="Menú" aria-expanded="false" aria-controls="navLinks" onclick="toggleMenu(this)"><i class="fas fa-bars"></i></button>
+    <a href="#top" class="brand" aria-label="Innova AI Assistance"><img src="assets/img/logo-128.png" alt="" width="30" height="31"><span>Innova AI <span class="brand-sub">Assistance</span></span></a>
+    <nav aria-label="Principal">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#demo" data-i18n="nav.demo">Demo</a></li>
+        <li><a href="#como-funciona" data-i18n="nav.how">Cómo funciona</a></li>
+        <li><a href="#industrias" data-i18n="nav.industries">Industrias</a></li>
+        <li><a href="#proceso" data-i18n="nav.process">Proceso</a></li>
+        <li class="nav-cta-mobile"><a class="btn btn-primary" href="#contacto" data-i18n="cta.want">Quiero uno para mi negocio</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="lang" type="button" id="langBtn" data-i18n="lang.switch">EN</button>
+      <a class="btn btn-primary nav-cta" href="#contacto" data-i18n="cta.want">Quiero uno para mi negocio</a>
+      <button class="menu-btn" type="button" id="menuBtn" aria-label="Menú" aria-expanded="false" aria-controls="navLinks"><svg class="i"><use href="assets/icons.svg#list"></use></svg></button>
+    </div>
   </div>
-</nav>
+</header>
 
 <main id="main">
+
+<!-- HERO -->
 <section class="hero" id="top">
-  <div class="container hero-grid">
-    <div>
-      <h1><span data-i18n="hero.t1">Un asistente de IA que</span> <span class="rotator" id="rotator"></span> <span data-i18n="hero.t2">por tu negocio.</span></h1>
-      <p class="lead" data-i18n="hero.p">Lo hacemos a la medida de tu empresa: atiende por WhatsApp, Instagram y Web, automatiza las tareas repetitivas y te avisa cuando un cliente está listo para comprar. Las 24 horas.</p>
-      <div class="hero-cta">
-        <a href="#contacto" class="btn btn-primary"><span data-i18n="cta.case">Cuéntanos tu caso</span> <i class="fas fa-arrow-right"></i></a>
-        <a href="https://wa.me/573054110761" class="btn btn-ghost" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> <span data-i18n="cta.wa">Escribir por WhatsApp</span></a>
-      </div>
-      <div class="channels">
-        <span><i class="fab fa-whatsapp"></i> WhatsApp</span>
-        <span><i class="fab fa-instagram"></i> Instagram</span>
-        <span><i class="fas fa-globe"></i> Web</span>
-        <span><i class="fas fa-clock"></i> 24/7</span>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1 data-i18n="hero.h1">Tu negocio nunca vuelve a quedarse sin responder.</h1>
+      <p class="hero-sub" data-i18n="hero.sub">Un asistente de IA entrenado con la información real de tu empresa para atender clientes, detectar oportunidades y conectar tus procesos, 24/7.</p>
+      <div class="cta-row">
+        <a href="#demo" class="btn btn-primary btn-lg"><span data-i18n="cta.try">Probar el asistente</span><svg class="i"><use href="assets/icons.svg#arrow-right"></use></svg></a>
+        <a href="#contacto" class="btn btn-ghost btn-lg" data-i18n="cta.want">Quiero uno para mi negocio</a>
       </div>
     </div>
-    <div class="demo">
-      <div class="phone" id="phone" aria-label="Ejemplo de conversación">
-        <div class="phone-head">
-          <div class="phone-av">AV</div>
-          <div><b data-i18n="demo.who">Agencia de viajes</b><span class="status"><span class="online" data-i18n="demo.online">en línea</span><span class="typing" data-i18n="demo.typing">escribiendo…</span></span></div>
+
+    <div class="hero-demo" id="heroDemo">
+      <div class="window" id="heroWindow">
+        <div class="window-head">
+          <span class="avatar"><img src="assets/img/logo-128.png" alt="" width="18" height="19"></span>
+          <div class="who"><b data-i18n="hero.biz">Asistente de reservas</b><span class="status"><span class="st-online" data-i18n="chat.online">En línea</span><span class="st-typing" data-i18n="chat.typing">Escribiendo…</span></span></div>
+          <span class="window-tag"><svg class="i"><use href="assets/icons.svg#whatsapp-logo"></use></svg>WhatsApp</span>
         </div>
-        <div class="thread" id="thread"></div>
-        <div class="composer">
-          <div class="field" id="field"><span class="ph" data-i18n="demo.ph">Escribe un mensaje</span></div>
-          <div class="send" aria-hidden="true"><i class="fa-solid fa-paper-plane"></i></div>
+        <div class="thread" id="heroThread" aria-hidden="true"></div>
+        <p class="sr-only" data-i18n="hero.sr">Ejemplo de conversación: un cliente pregunta por disponibilidad para el sábado, el asistente ofrece tres horarios, toma la reserva y avisa al equipo que hay un cliente listo para reservar.</p>
+      </div>
+      <div class="opportunity" id="heroOpp" aria-hidden="true">
+        <div class="opp-top"><span class="opp-icon"><svg class="i"><use href="assets/icons.svg#bell-ringing"></use></svg></span><span class="opp-k" data-i18n="opp.k">Oportunidad detectada</span></div>
+        <p class="opp-t" data-i18n="opp.t">Cliente listo para reservar</p>
+        <p class="opp-s"><svg class="i"><use href="assets/icons.svg#headset"></use></svg><span data-i18n="opp.s">Intervención humana disponible</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap channels">
+    <p data-i18n="channels.p">Atiende donde ya te escriben tus clientes</p>
+    <ul>
+      <li><svg class="i"><use href="assets/icons.svg#whatsapp-logo"></use></svg>WhatsApp</li>
+      <li><svg class="i"><use href="assets/icons.svg#instagram-logo"></use></svg>Instagram</li>
+      <li><svg class="i"><use href="assets/icons.svg#globe"></use></svg><span data-i18n="ch.web">Tu web</span></li>
+      <li><svg class="i"><use href="assets/icons.svg#messenger-logo"></use></svg>Messenger</li>
+      <li><svg class="i"><use href="assets/icons.svg#telegram-logo"></use></svg>Telegram</li>
+    </ul>
+  </div>
+</section>
+
+<!-- NO ES UN CHATBOT -->
+<section class="section manifesto" id="servicios">
+  <div class="wrap">
+    <h2 class="mf-head" id="mfHead">
+      <span class="mf-no"><span data-i18n="mf.no">No vendemos chatbots.</span></span>
+      <span class="mf-yes" data-i18n="mf.yes">Construimos asistentes.</span>
+    </h2>
+    <div class="compare">
+      <div class="cmp cmp-old reveal">
+        <h3 data-i18n="cmp.oldT">Chatbot tradicional</h3>
+        <ul id="cmpOld"></ul>
+      </div>
+      <div class="cmp cmp-new reveal" style="--i:1">
+        <h3><img src="assets/img/logo-128.png" alt="" width="22" height="23"><span>Innova AI</span></h3>
+        <ul id="cmpNew"></ul>
+      </div>
+    </div>
+    <p class="mf-quote reveal" data-i18n-html="mf.quote">La diferencia no está en responder. <strong>Está en entender qué hacer después.</strong></p>
+  </div>
+</section>
+
+<!-- DEMO INTERACTIVA -->
+<section class="section demo" id="demo">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow" data-i18n="demo.eyebrow">Pruébalo ahora</p>
+      <h2 data-i18n="demo.h2">Habla con un asistente de Innova AI</h2>
+      <p class="sec-sub" data-i18n="demo.sub">Elige un tipo de negocio y escríbele como lo haría un cliente. Mira cómo entiende, decide y actúa.</p>
+    </div>
+
+    <div class="lab reveal" id="lab">
+      <div class="lab-inds" role="tablist" aria-label="Tipo de negocio" id="labInds"></div>
+
+      <div class="lab-chat" id="labChat">
+        <div class="window-head">
+          <span class="avatar" id="labAvatar"></span>
+          <div class="who"><b id="labBiz"></b><span class="status"><span class="st-online" data-i18n="chat.online">En línea</span><span class="st-typing" data-i18n="chat.typing">Escribiendo…</span></span></div>
+          <button class="lab-reset" type="button" id="labReset"><svg class="i"><use href="assets/icons.svg#arrows-clockwise"></use></svg><span data-i18n="demo.reset">Reiniciar</span></button>
+        </div>
+        <div class="thread lab-thread" id="labThread" aria-live="polite"></div>
+        <div class="lab-suggest" id="labSuggest"></div>
+        <form class="composer" id="labForm" autocomplete="off">
+          <label class="sr-only" for="labInput" data-i18n="demo.inputLbl">Escribe tu mensaje</label>
+          <input id="labInput" type="text" maxlength="240" data-i18n-ph="demo.ph" placeholder="Escribe como si fueras un cliente…">
+          <button class="send" type="submit" aria-label="Enviar"><svg class="i"><use href="assets/icons.svg#paper-plane-right"></use></svg></button>
+        </form>
+      </div>
+
+      <aside class="lab-brain" aria-label="Lo que está pensando el asistente">
+        <div class="brain-head"><svg class="i"><use href="assets/icons.svg#tree-structure"></use></svg><span data-i18n="brain.h">Lo que está pensando</span></div>
+        <dl class="brain-rows" id="brainRows">
+          <div><dt data-i18n="brain.intent">Intención</dt><dd id="bIntent">-</dd></div>
+          <div><dt data-i18n="brain.data">Información usada</dt><dd id="bData">-</dd></div>
+          <div><dt data-i18n="brain.decision">Decisión</dt><dd id="bDecision">-</dd></div>
+          <div><dt data-i18n="brain.human">¿Necesita una persona?</dt><dd id="bHuman">-</dd></div>
+        </dl>
+        <div class="brain-log-h" data-i18n="brain.log">Acciones ejecutadas</div>
+        <ol class="brain-log" id="brainLog"></ol>
+      </aside>
+    </div>
+    <p class="lab-note"><svg class="i"><use href="assets/icons.svg#flask"></use></svg><span data-i18n="demo.note">Demo con datos de ejemplo. Tu asistente se entrena con la información real de tu negocio.</span> <button type="button" class="linkish" id="openRealBot" data-i18n="demo.real">Hablar con el asistente real de Innova</button></p>
+  </div>
+</section>
+
+<!-- CÓMO PIENSA -->
+<section class="section mind" id="como-funciona">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 data-i18n="mind.h2">Así piensa Innova AI</h2>
+      <p class="sec-sub" data-i18n="mind.sub">Antes de responder, entiende. Antes de actuar, decide.</p>
+    </div>
+    <div class="flow" id="flow">
+      <div class="stage">
+        <span class="stage-k"><svg class="i"><use href="assets/icons.svg#chat-circle-text"></use></svg><span data-i18n="mind.s1">Cliente escribe</span></span>
+        <div class="bubble in" data-i18n="mind.msg">¿Tienen cupo el sábado para 4 personas? Es un cumpleaños.</div>
+      </div>
+      <div class="stage">
+        <span class="stage-k"><svg class="i"><use href="assets/icons.svg#magnifying-glass"></use></svg><span data-i18n="mind.s2">Analiza</span></span>
+        <ul class="checks" id="mindChecks"></ul>
+      </div>
+      <div class="stage">
+        <span class="stage-k"><svg class="i"><use href="assets/icons.svg#target"></use></svg><span data-i18n="mind.s3">Decide</span></span>
+        <p class="decision" data-i18n="mind.decision">Ofrecer los horarios libres del sábado, tomar la reserva y avisar al equipo del cumpleaños.</p>
+      </div>
+      <div class="stage">
+        <span class="stage-k"><svg class="i"><use href="assets/icons.svg#lightning"></use></svg><span data-i18n="mind.s4">Ejecuta</span></span>
+        <ul class="actions" id="mindActions"></ul>
+      </div>
+    </div>
+    <div class="flow-foot">
+      <button type="button" class="btn btn-ghost btn-sm" id="flowReplay"><svg class="i"><use href="assets/icons.svg#play"></use></svg><span data-i18n="mind.replay">Ver de nuevo</span></button>
+    </div>
+
+    <div class="caps reveal" id="caps"></div>
+  </div>
+</section>
+
+<!-- ADN DE TU EMPRESA -->
+<section class="section dna" id="adn">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <h2 data-i18n="dna.h2">Tu asistente aprende cómo funciona tu empresa</h2>
+    </div>
+    <div class="dna-map" id="dnaMap">
+      <ul class="dna-in" id="dnaIn"></ul>
+      <div class="dna-core" aria-hidden="true">
+        <span class="core-ring"></span><span class="core-ring r2"></span>
+        <img src="assets/img/logo-128.png" alt="" width="48" height="50">
+        <b>Innova AI</b>
+      </div>
+      <div class="dna-out">
+        <span class="dna-out-k" data-i18n="dna.outK">Respuestas personalizadas</span>
+        <div class="bubble in" data-i18n="dna.q">¿Cuánto cuesta la limpieza dental y atienden el sábado?</div>
+        <div class="bubble out" data-i18n="dna.a">La limpieza dental cuesta $120.000 y el sábado atendemos de 8:00 a. m. a 12:00 m. ¿Te reservo un espacio?</div>
+        <div class="src"><span data-i18n="dna.src1">Precios</span><span data-i18n="dna.src2">Horarios</span><span data-i18n="dna.src3">Agenda</span></div>
+      </div>
+    </div>
+    <p class="dna-statement reveal" data-i18n-html="dna.statement">No adaptamos tu empresa a nuestra tecnología. <strong>Adaptamos la tecnología a tu empresa.</strong></p>
+
+    <div class="shield reveal">
+      <div class="shield-copy">
+        <span class="shield-icon"><svg class="i"><use href="assets/icons.svg#shield-check"></use></svg></span>
+        <h3 data-i18n="shield.h">Blindado: si no lo sabe, no lo inventa.</h3>
+        <p data-i18n="shield.p">Responde solo con la información de tu empresa. Si un dato no está disponible, lo reconoce y, cuando corresponde, pasa la conversación a tu equipo. Nunca improvisa precios, políticas ni promesas.</p>
+      </div>
+      <div class="shield-chat">
+        <div class="bubble in" data-i18n="shield.q">¿Me pueden hacer un 30% de descuento?</div>
+        <div class="bubble out" data-i18n="shield.a">No tengo autorización para ofrecer ese descuento. Le paso tu solicitud a un asesor para que te responda hoy mismo.</div>
+        <span class="tag-escalate"><svg class="i"><use href="assets/icons.svg#user-circle"></use></svg><span data-i18n="shield.tag">Conversación pasada a una persona</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTEGRACIONES -->
+<section class="section integrations" id="integraciones">
+  <div class="wrap integ-grid">
+    <div class="integ-copy reveal">
+      <h2 data-i18n="int.h2">Una inteligencia. Todo tu negocio conectado.</h2>
+      <p class="sec-sub" data-i18n="int.sub">Tu asistente trabaja en tus canales y se conecta con las herramientas que ya usas. Conectamos solo lo que tu operación necesita.</p>
+      <p class="integ-live"><span class="live-icon" aria-hidden="true"><svg class="i"><use href="assets/icons.svg#lightning"></use></svg></span><span id="integLive"></span></p>
+    </div>
+    <div class="orbit" id="orbit">
+      <svg class="orbit-lines" viewBox="0 0 100 100" aria-hidden="true" id="orbitLines"></svg>
+      <div class="orbit-core"><img src="assets/img/logo-128.png" alt="" width="34" height="36"><b>Innova AI</b></div>
+      <ul class="orbit-nodes" id="orbitNodes"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIAS -->
+<section class="section industries" id="industrias">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow" data-i18n="ind.eyebrow">Industrias</p>
+      <h2 data-i18n="ind.h2">¿Qué haría Innova AI en tu negocio?</h2>
+    </div>
+    <div class="ind reveal" id="ind">
+      <div class="ind-list" role="tablist" aria-label="Industrias" id="indList"></div>
+      <div class="ind-panel" role="tabpanel" id="indPanel" tabindex="0"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ROI -->
+<section class="section roi" id="roi">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 data-i18n="roi.h2">¿Cuánto podría estar costándote no responder a tiempo?</h2>
+      <p class="sec-sub" data-i18n="roi.sub">Usa tus propios números. Los valores iniciales son solo un ejemplo.</p>
+    </div>
+    <div class="roi-grid reveal">
+      <form class="roi-form" id="roiForm">
+        <div class="rg"><label for="r-msgs" data-i18n="roi.msgs">Mensajes recibidos al mes</label><div class="rg-row"><input type="range" data-for="r-msgs" min="50" max="5000" step="50" aria-hidden="true" tabindex="-1"><input type="number" id="r-msgs" min="0" inputmode="numeric" value="600"></div></div>
+        <div class="rg"><label for="r-leads" data-i18n="roi.leads">Clientes potenciales al mes</label><div class="rg-row"><input type="range" data-for="r-leads" min="10" max="2000" step="10" aria-hidden="true" tabindex="-1"><input type="number" id="r-leads" min="0" inputmode="numeric" value="180"></div><small data-i18n="roi.leadsHelp">Personas que escriben interesadas en comprar o reservar.</small></div>
+        <div class="rg"><label for="r-ticket" data-i18n="roi.ticket">Ticket promedio (en tu moneda)</label><div class="rg-row"><input type="range" data-for="r-ticket" min="10000" max="3000000" step="10000" aria-hidden="true" tabindex="-1"><input type="number" id="r-ticket" min="0" inputmode="numeric" value="150000"></div></div>
+        <div class="rg"><label for="r-conv" data-i18n="roi.conv">Tasa de conversión (%)</label><div class="rg-row"><input type="range" data-for="r-conv" min="1" max="100" step="1" aria-hidden="true" tabindex="-1"><input type="number" id="r-conv" min="0" max="100" inputmode="decimal" value="20"></div><small data-i18n="roi.convHelp">De cada 100 clientes potenciales, cuántos terminan comprando.</small></div>
+        <div class="rg"><label for="r-lost" data-i18n="roi.lost">Mensajes que hoy no se responden a tiempo (%)</label><div class="rg-row"><input type="range" data-for="r-lost" min="0" max="100" step="1" aria-hidden="true" tabindex="-1"><input type="number" id="r-lost" min="0" max="100" inputmode="decimal" value="30"></div><small data-i18n="roi.lostHelp">Fuera de horario, en horas pico o fines de semana.</small></div>
+      </form>
+      <div class="roi-out">
+        <div class="ro ro-main"><span data-i18n="roi.oLostRev">Ingresos en riesgo al mes</span><b id="oLostRev">-</b></div>
+        <div class="ro-grid">
+          <div class="ro"><span data-i18n="roi.oLost">Oportunidades que podrías estar perdiendo</span><b id="oLost">-</b></div>
+          <div class="ro"><span data-i18n="roi.oOpp">Oportunidades potenciales al mes</span><b id="oOpp">-</b></div>
+          <div class="ro"><span data-i18n="roi.oRev">Ingresos potenciales al mes</span><b id="oRev">-</b></div>
+        </div>
+        <p class="roi-disc"><svg class="i"><use href="assets/icons.svg#warning-circle"></use></svg><span data-i18n="roi.disc">Estimación orientativa. No representa una garantía de resultados.</span></p>
+        <a href="#contacto" class="btn btn-primary btn-lg" id="roiCta" data-i18n="cta.want">Quiero uno para mi negocio</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO: para usar un video real, pon su URL en data-video-src (ej. assets/video/innova.mp4) y opcionalmente data-poster. -->
+<section class="section film" id="video">
+  <div class="wrap">
+    <div class="film-frame reveal" id="filmFrame" data-video-src="" data-poster="">
+      <div class="film-stage" id="filmStage" role="img" aria-label="Animación: a las 23:47 un cliente escribe, el negocio está cerrado e Innova AI responde y detecta una oportunidad.">
+        <div class="film-top">
+          <div class="film-clock"><svg class="i"><use href="assets/icons.svg#moon"></use></svg><span>23:47</span></div>
+          <div class="film-closed" data-i18n="film.closed">Negocio cerrado</div>
+        </div>
+        <div class="film-chat">
+          <div class="bubble in f1" data-i18n="film.m1">Hola, ¿todavía tienen disponibilidad?</div>
+          <div class="bubble out f2" data-i18n="film.m2">¡Hola! Sí, nos queda disponibilidad mañana a las 10:00 a. m. y a las 4:00 p. m. ¿Cuál prefieres?</div>
+          <div class="bubble in f3" data-i18n="film.m3">Perfecto. Quiero reservar.</div>
+          <div class="film-opp f4"><svg class="i"><use href="assets/icons.svg#bell-ringing"></use></svg><span data-i18n="opp.k">Oportunidad detectada</span></div>
         </div>
       </div>
-      <div class="alert" id="alert" role="status"><small data-i18n="demo.alertK">AVISO PARA EL DUEÑO</small><p data-i18n="demo.alert">Cliente listo para cerrar: Cartagena, 2 personas, diciembre.</p></div>
-      <p class="demo-note" data-i18n="demo.note">Ejemplo de cómo trabaja un asistente de Innova AI.</p>
-    </div>
-  </div>
-</section>
-
-<div class="marquee" aria-hidden="true"><div class="track" id="track"></div></div>
-
-<section class="statement" id="statement">
-  <div class="container st-wrap">
-    <div class="st-no" data-i18n="st.no">No es un chatbot.</div>
-    <div class="st-yes"><span data-i18n="st.yes1">Es un asistente</span> <span class="accent" data-i18n="st.yes2">real.</span></div>
-    <p class="st-sub" data-i18n="st.sub">Piensa, decide y actúa por tu negocio. Y te avisa cuando de verdad te necesita.</p>
-  </div>
-</section>
-
-<section class="section" id="servicios">
-  <div class="container">
-    <div class="head reveal">
-      <h2 class="h2" data-i18n="cap.h2">Todo lo que hacemos por tu negocio</h2>
-      <p class="lead" data-i18n="cap.p">No es una plantilla. Cada asistente se entrena con tu información real y se conecta a tu forma de trabajar.</p>
-    </div>
-    <div class="cap reveal" id="cap">
-      <div class="tabs" role="tablist" id="tabs"></div>
-      <div class="board" id="board" role="tabpanel" aria-live="polite">
-        <div class="board-head"><div class="spin" aria-hidden="true"></div><span id="boardStatus"></span></div>
-        <ul class="checks" id="checks"></ul>
-      </div>
-    </div>
-    <div class="tools reveal">
-      <p data-i18n="tools.p">Se conecta con las herramientas que ya usas</p>
-      <div class="tool-row">
-        <span><i class="fab fa-whatsapp"></i> WhatsApp</span>
-        <span><i class="fab fa-instagram"></i> Instagram</span>
-        <span><i class="fas fa-envelope"></i> Gmail</span>
-        <span><i class="fas fa-calendar-days"></i> Google Calendar</span>
-        <span><i class="fas fa-table"></i> Excel / Google Sheets</span>
-        <span><i class="fas fa-book-open"></i> Notion</span>
-        <span><i class="fab fa-hubspot"></i> HubSpot</span>
-        <span><i class="fab fa-slack"></i> Slack</span>
+      <div class="film-caption">
+        <h2 data-i18n-html="film.h2">Tu equipo duerme. <span>Tu negocio no tiene por qué dejar de atender.</span></h2>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section why" id="porque">
-  <div class="container">
-    <div class="origin">
-      <div class="origin-story reveal">
-        <h2 class="h2" data-i18n="why.h2">Por qué nació Innova</h2>
-        <p data-i18n-html="why.p1">Todo comenzó cuando una agencia de viajes nos contactó. Querían <strong>automatizar sus procesos y servicios</strong>, pero no tenían conocimiento sobre IA y no sabían por dónde empezar.</p>
-        <p data-i18n-html="why.p2">Pronto vimos que no eran los únicos: muchas empresas quieren automatizar, pero <strong>les falta alguien que lleve la IA a su negocio.</strong> Así nació Innova.</p>
-        <p data-i18n-html="why.p3">Por eso no usamos plantillas. Cada empresa tiene su propio enfoque y su propio objetivo, y <strong>trabajamos para que tu empresa lo logre.</strong></p>
-      </div>
-      <div class="why-grid reveal" style="--i:1">
-        <div class="why-item"><i class="fas fa-fingerprint"></i><h3 data-i18n="why.c1t">Hecho a tu medida</h3><p data-i18n="why.c1p">Configurado con tus precios, servicios, horarios y políticas reales, nunca con respuestas genéricas.</p></div>
-        <div class="why-item"><i class="fas fa-hand"></i><h3 data-i18n="why.c2t">Tú mantienes el control</h3><p data-i18n="why.c2p">Puedes tomar cualquier conversación cuando quieras y el asistente se hace a un lado.</p></div>
-        <div class="why-item"><i class="fas fa-comments"></i><h3 data-i18n="why.c3t">En los canales que ya usas</h3><p data-i18n="why.c3p">WhatsApp, Instagram y tu web, donde tus clientes ya te escriben hoy.</p></div>
-        <div class="why-item"><i class="fas fa-screwdriver-wrench"></i><h3 data-i18n="why.c4t">Sin que tengas que programar</h3><p data-i18n="why.c4p">Nosotros lo configuramos, lo ajustamos y lo mantenemos por ti.</p></div>
-      </div>
-    </div>
-    <div class="stats">
-      <div class="stat reveal"><b>24/7</b><span data-i18n="stat1l">Atención continua, sin turnos ni descansos</span></div>
-      <div class="stat reveal" style="--i:1"><b data-i18n="stat2n">Al instante</b><span data-i18n="stat2l">Respuestas sin hacer esperar a nadie</span></div>
-      <div class="stat reveal" style="--i:2"><b data-i18n="stat3n">A tu medida</b><span data-i18n="stat3l">Entrenado con la información real de tu negocio</span></div>
-      <div class="stat reveal" style="--i:3"><b><span class="count" data-to="61">0</span>%</b><span data-i18n="stat5l">De las empresas con IA en atención al cliente reportó más satisfacción de sus clientes</span><small data-i18n="stat5s">Fuente: Capterra, Tendencias en Atención al Cliente 2025</small></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="casos">
-  <div class="container">
-    <div class="head reveal">
-      <h2 class="h2" data-i18n="case.h2">Así se vería en un negocio como el tuyo</h2>
-      <p class="lead" data-i18n="case.p">Ejemplos de cómo funcionaría un asistente de Innova AI en el día a día.</p>
+<!-- CASOS -->
+<section class="section cases-sec" id="casos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 data-i18n="case.h2">Así se ve una implementación</h2>
+      <p class="sec-sub" data-i18n="case.sub">Estos son ejemplos de implementación, no clientes reales. Cuando publiquemos casos, mostraremos solo cifras reales y verificadas.</p>
     </div>
     <div class="cases" id="cases"></div>
-    <p class="disclaimer" data-i18n="case.disc">Son ejemplos ilustrativos para mostrar el funcionamiento, no clientes reales.</p>
   </div>
 </section>
 
-<section class="section" id="proceso">
-  <div class="container">
-    <div class="head reveal">
-      <h2 class="h2" data-i18n="proc.h2">Cómo trabajamos</h2>
-      <p class="lead" data-i18n="proc.p">Cada asistente se construye alrededor de tu empresa, no al revés.</p>
-    </div>
-    <div class="steps" id="steps">
-      <div class="steps-line" aria-hidden="true"></div>
-      <div class="step" style="--i:0"><div class="step-num">1</div><h3 data-i18n="proc.s1t">Conocemos tu negocio</h3><p data-i18n="proc.s1p">Entendemos cómo funciona tu empresa, qué ofreces, qué te preguntan tus clientes y qué te quita más tiempo.</p></div>
-      <div class="step" style="--i:1"><div class="step-num">2</div><h3 data-i18n="proc.s2t">Diseñamos tu asistente</h3><p data-i18n="proc.s2p">Creamos sus conversaciones y automatizaciones con tu información, tu tono y tus reglas.</p></div>
-      <div class="step" style="--i:2"><div class="step-num">3</div><h3 data-i18n="proc.s3t">Lo conectamos</h3><p data-i18n="proc.s3p">Lo integramos a tus canales y herramientas según tus procesos reales.</p></div>
-      <div class="step" style="--i:3"><div class="step-num">4</div><h3 data-i18n="proc.s4t">Lanzamos y mejoramos</h3><p data-i18n="proc.s4p">Lo ponemos en marcha y lo ajustamos cada mes según los resultados.</p></div>
+<!-- ORIGEN -->
+<section class="section origin" id="porque">
+  <div class="wrap origin-grid reveal">
+    <h2 data-i18n="why.h2">Por qué nació Innova</h2>
+    <div class="origin-copy">
+      <p data-i18n-html="why.p1">Todo comenzó cuando una agencia de viajes nos contactó. Querían <strong>automatizar sus procesos y servicios</strong>, pero no tenían conocimiento sobre IA y no sabían por dónde empezar.</p>
+      <p data-i18n-html="why.p2">Pronto vimos que no eran los únicos: muchas empresas quieren automatizar, pero <strong>les falta alguien que lleve la IA a su negocio.</strong> Así nació Innova.</p>
+      <p data-i18n-html="why.p3">Por eso no usamos plantillas. Cada empresa tiene su propio enfoque y su propio objetivo, y <strong>trabajamos para que tu empresa lo logre.</strong></p>
     </div>
   </div>
 </section>
 
-<section class="section" id="industrias">
-  <div class="container">
-    <div class="head reveal">
-      <h2 class="h2" data-i18n="ind.h2">Para cualquier tipo de negocio</h2>
-      <p class="lead" data-i18n="ind.p">Si atiendes clientes por WhatsApp, Instagram o tu web, un asistente de Innova AI se adapta a tu rubro.</p>
+<!-- PROCESO -->
+<section class="section process" id="proceso">
+  <div class="wrap process-grid">
+    <div class="process-head">
+      <h2 data-i18n="proc.h2">Así construimos tu asistente</h2>
+      <p class="sec-sub" data-i18n="proc.sub">Un proceso claro, de principio a fin. Tú pones el conocimiento de tu negocio y nosotros, la tecnología.</p>
     </div>
-    <div class="ind reveal" id="ind"></div>
+    <ol class="timeline" id="timeline"></ol>
   </div>
 </section>
 
+<!-- CONTACTO -->
 <section class="section contact" id="contacto">
   <span id="planes" aria-hidden="true"></span>
-  <div class="container contact-grid">
+  <div class="wrap contact-grid">
     <div class="reveal">
-      <h2 class="h2" data-i18n="form.h2">Cuéntanos qué quieres resolver</h2>
-      <p class="lead" data-i18n="form.p">Déjanos tus datos y lo que necesitas. Te contactamos para entender tu caso y proponerte un asistente hecho a tu medida.</p>
+      <h2 data-i18n="form.h2">Cuéntanos qué quieres resolver</h2>
+      <p class="sec-sub" data-i18n="form.p">Déjanos tus datos y lo que necesitas. Te contactamos para entender tu caso y proponerte un asistente diseñado para tu empresa.</p>
       <ol class="next">
         <li><span>1</span><p><b data-i18n="form.n1t">Revisamos tu caso</b><span data-i18n="form.n1p">Leemos lo que nos cuentas sobre tu negocio.</span></p></li>
         <li><span>2</span><p><b data-i18n="form.n2t">Te escribimos</b><span data-i18n="form.n2p">Por WhatsApp o correo, como prefieras.</span></p></li>
@@ -503,23 +385,23 @@ footer { border-top: 1px solid var(--line); padding: 3.5rem 0 2rem; }
             <select id="f-sector" name="sector">
               <option value="" data-i18n="f.choose">Elige una opción</option>
               <option data-i18n="s.1">Agencia de viajes</option><option data-i18n="s.2">Clínica o salud</option><option data-i18n="s.3">Tienda o e-commerce</option>
-              <option data-i18n="s.4">Restaurante</option><option data-i18n="s.5">Inmobiliaria</option><option data-i18n="s.6">Educación</option>
+              <option data-i18n="s.4">Restaurante</option><option data-i18n="s.10">Hotel</option><option data-i18n="s.5">Inmobiliaria</option><option data-i18n="s.6">Educación</option>
               <option data-i18n="s.7">Belleza y spa</option><option data-i18n="s.8">Servicios profesionales</option><option data-i18n="s.9">Otro</option>
             </select>
           </div>
           <div class="fg"><label for="f-contacto"><span data-i18n="f.contact">WhatsApp o correo</span> <em>*</em></label><input id="f-contacto" name="contacto" autocomplete="tel" maxlength="120" required data-i18n-ph="f.contactPh" placeholder="+57 300 000 0000"><span class="err" id="e-contacto"></span></div>
         </div>
         <div class="fg"><span class="lbl" data-i18n="f.topics">¿Qué te gustaría automatizar?</span><div class="chips" id="chips"></div></div>
-        <div class="fg"><label for="f-necesidad"><span data-i18n="f.need">¿Qué quieres resolver?</span> <em>*</em></label><textarea id="f-necesidad" name="necesidad" maxlength="2000" required data-i18n-ph="f.needPh" placeholder="Ej: pierdo clientes porque no alcanzo a responder por WhatsApp en la noche."></textarea><span class="err" id="e-necesidad"></span></div>
+        <div class="fg"><label for="f-necesidad"><span data-i18n="f.need">¿Qué quieres resolver?</span> <em>*</em></label><textarea id="f-necesidad" name="necesidad" maxlength="2000" required data-i18n-ph="f.needPh" placeholder="Ej.: pierdo clientes porque no alcanzo a responder por WhatsApp en la noche."></textarea><span class="err" id="e-necesidad"></span></div>
         <div class="hp" aria-hidden="true"><label for="f-web">Web</label><input id="f-web" name="website" tabindex="-1" autocomplete="off"></div>
         <label class="consent"><input type="checkbox" id="f-acepta" name="acepta"><span><span data-i18n="f.consent">Acepto la</span> <a href="https://docs.google.com/document/d/1T4-VCs_2mPrZiDKVwrcLGEiSVDM3TRTV/edit?usp=sharing" target="_blank" rel="noopener" data-i18n="f.policy">política de tratamiento de datos</a></span></label>
         <span class="err" id="e-acepta"></span>
-        <button class="btn btn-primary" type="submit" id="sendBtn"><span data-i18n="f.send">Enviar mi caso</span> <i class="fas fa-arrow-right"></i></button>
+        <button class="btn btn-primary btn-lg" type="submit" id="sendBtn"><span data-i18n="f.send">Enviar mi caso</span><svg class="i"><use href="assets/icons.svg#arrow-right"></use></svg></button>
         <p class="form-note" data-i18n="f.note">Te respondemos por WhatsApp o correo.</p>
         <div class="form-msg" id="formMsg" role="alert"></div>
       </div>
       <div class="sent" role="status">
-        <div class="big-tick" aria-hidden="true"></div>
+        <div class="big-tick" aria-hidden="true"><svg class="i"><use href="assets/icons.svg#check"></use></svg></div>
         <h3 data-i18n="f.okT">Recibimos tu caso</h3>
         <p data-i18n="f.okP">Te escribimos pronto para entender lo que necesitas y mostrarte cómo sería tu asistente.</p>
       </div>
@@ -527,44 +409,44 @@ footer { border-top: 1px solid var(--line); padding: 3.5rem 0 2rem; }
   </div>
 </section>
 
+<!-- CTA FINAL -->
 <section class="final">
-  <div class="container">
-    <div class="final-box reveal">
-      <div>
-        <h2 data-i18n="final.h2">¿Tu negocio todavía lo hace todo a mano?</h2>
-        <p data-i18n="final.p">Hablemos. Te mostramos cómo sería tu propio asistente.</p>
-      </div>
-      <div class="hero-cta">
-        <a href="#contacto" class="btn btn-primary" data-i18n="cta.case">Cuéntanos tu caso</a>
-        <a href="https://wa.me/573054110761" class="btn btn-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-      </div>
+  <div class="final-glow" aria-hidden="true"></div>
+  <div class="wrap final-inner reveal">
+    <h2 data-i18n="final.h2">Tu próximo asistente no tiene que dormir.</h2>
+    <p data-i18n="final.p">Construyamos un asistente de IA diseñado específicamente para tu empresa.</p>
+    <div class="cta-row center">
+      <a href="#contacto" class="btn btn-primary btn-lg" data-i18n="cta.create">Crear mi asistente</a>
+      <a href="https://wa.me/573054110761" class="btn btn-ghost btn-lg" target="_blank" rel="noopener"><svg class="i"><use href="assets/icons.svg#whatsapp-logo"></use></svg><span data-i18n="cta.talk">Hablar con Innova</span></a>
     </div>
   </div>
 </section>
 </main>
 
-<footer>
-  <div class="container">
+<footer class="footer">
+  <div class="wrap">
     <div class="foot">
       <div>
-        <a href="#top" class="brand"><img src="data:image/png;base64,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" alt="">Innova AI Assistance</a>
-        <p data-i18n="footer.p">Asistentes de inteligencia artificial a la medida para empresas. Atienden, venden y automatizan las tareas de tu negocio.</p>
+        <a href="#top" class="brand"><img src="assets/img/logo-128.png" alt="" width="30" height="31"><span>Innova AI <span class="brand-sub">Assistance</span></span></a>
+        <p data-i18n="footer.p">Asistentes de inteligencia artificial diseñados para cada empresa. Atienden, detectan oportunidades y conectan tus procesos.</p>
       </div>
       <div>
-        <h4 data-i18n="footer.h1">Empresa</h4>
+        <h3 data-i18n="footer.h1">Explora</h3>
         <ul>
-          <li><a href="#servicios" data-i18n="nav.services">Lo que hacemos</a></li>
-          <li><a href="#porque" data-i18n="nav.why">Por qué nosotros</a></li>
+          <li><a href="#demo" data-i18n="nav.demo">Demo</a></li>
+          <li><a href="#como-funciona" data-i18n="nav.how">Cómo funciona</a></li>
+          <li><a href="#integraciones" data-i18n="nav.integrations">Integraciones</a></li>
+          <li><a href="#industrias" data-i18n="nav.industries">Industrias</a></li>
+          <li><a href="#roi" data-i18n="nav.roi">Calculadora</a></li>
           <li><a href="#proceso" data-i18n="nav.process">Proceso</a></li>
-          <li><a href="#contacto" data-i18n="cta.case">Cuéntanos tu caso</a></li>
         </ul>
       </div>
       <div>
-        <h4 data-i18n="footer.h2">Contacto</h4>
+        <h3 data-i18n="footer.h2">Contacto</h3>
         <ul>
-          <li><a href="https://wa.me/573054110761" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> +57 305 411 0761</a></li>
-          <li><a href="mailto:innovaai34@gmail.com"><i class="fas fa-envelope"></i> innovaai34@gmail.com</a></li>
-          <li><a href="https://instagram.com/innova_ai_assistance" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> @innova_ai_assistance</a></li>
+          <li><a href="https://wa.me/573054110761" target="_blank" rel="noopener"><svg class="i"><use href="assets/icons.svg#whatsapp-logo"></use></svg>+57 305 411 0761</a></li>
+          <li><a href="mailto:innovaai34@gmail.com"><svg class="i"><use href="assets/icons.svg#envelope-simple"></use></svg>innovaai34@gmail.com</a></li>
+          <li><a href="https://instagram.com/innova_ai_assistance" target="_blank" rel="noopener"><svg class="i"><use href="assets/icons.svg#instagram-logo"></use></svg>@innova_ai_assistance</a></li>
         </ul>
       </div>
     </div>
@@ -575,424 +457,9 @@ footer { border-top: 1px solid var(--line); padding: 3.5rem 0 2rem; }
   </div>
 </footer>
 
-<script>
-var CONTACT_ENDPOINT = "https://forja-starter-71742d.innovaai34.workers.dev/contact";
-var WA_NUMBER = "573054110761";
-
-var I18N = {
-es: {
-  "skip":"Saltar al contenido","lang.switch":"EN",
-  "nav.services":"Lo que hacemos","nav.why":"Por qué nosotros","nav.process":"Proceso","nav.industries":"Industrias",
-  "cta.case":"Cuéntanos tu caso","cta.wa":"Escribir por WhatsApp",
-  "hero.t1":"Un asistente de IA que","hero.t2":"por tu negocio.",
-  "hero.p":"Lo hacemos a la medida de tu empresa: atiende por WhatsApp, Instagram y Web, automatiza las tareas repetitivas y te avisa cuando un cliente está listo para comprar. Las 24 horas.",
-  "verbs":["responde","agenda","cotiza","cobra","vende","reporta"],
-  "demo.who":"Agencia de viajes","demo.online":"en línea","demo.typing":"escribiendo…","demo.ph":"Escribe un mensaje",
-  "demo.alertK":"AVISO PARA EL DUEÑO","demo.alert":"Cliente listo para cerrar: Cartagena, 2 personas, diciembre.",
-  "demo.note":"Ejemplo de cómo trabaja un asistente de Innova AI.",
-  "chat":[["in","Hola, ¿tienen planes a Cartagena para 2 personas en diciembre?"],["out","¡Hola! Sí, tengo 3 opciones para esas fechas. ¿Prefieres hotel frente al mar o en la ciudad amurallada?"],["in","Frente al mar"],["out","Perfecto. Te aparto esa opción y le aviso a un asesor para confirmar disponibilidad."]],
-  "marquee":["Responde 24/7","Cotiza al instante","Agenda citas","Verifica pagos","Registra ventas en Excel","Envía recordatorios","Hace seguimiento","Te manda reportes","Avisa cuando te necesita"],
-  "st.no":"No es un chatbot.","st.yes1":"Es un asistente","st.yes2":"real.","st.sub":"Piensa, decide y actúa por tu negocio. Y te avisa cuando de verdad te necesita.",
-  "cap.h2":"Todo lo que hacemos por tu negocio","cap.p":"No es una plantilla. Cada asistente se entrena con tu información real y se conecta a tu forma de trabajar.",
-  "cap.working":"Tu asistente está trabajando…","cap.done":"Listo. Todo al día.",
-  "caps":[
-    {"icon":"fa-comments","t":"Atiende","d":"Responde a tus clientes al instante, a cualquier hora.","items":["Responde 24/7 por WhatsApp, Instagram y Web","Contesta precios, horarios y preguntas frecuentes","Atiende en el idioma de cada cliente","Recuerda lo que ya hablaron en el chat","Te pasa el chat cuando hace falta un humano"]},
-    {"icon":"fa-bullseye","t":"Vende","d":"Detecta oportunidades y te ayuda a cerrarlas.","items":["Detecta cuándo un cliente quiere comprar","Cotiza con tus precios reales","Consulta tu catálogo de productos o servicios","Hace seguimiento a quien no respondió","Te avisa cuando hay una venta lista para cerrar"]},
-    {"icon":"fa-gears","t":"Automatiza","d":"Se encarga de las tareas repetitivas del día a día.","items":["Agenda citas sin cruces de horario","Envía recordatorios automáticos","Verifica comprobantes de pago","Registra cada venta en tu Excel","Envía documentos (PDF) por WhatsApp"]},
-    {"icon":"fa-chart-line","t":"Conecta y reporta","d":"Une tus herramientas y te mantiene informado.","items":["Se conecta con Gmail, Calendar, Notion, HubSpot y Slack","Vigila tus datos y te alerta cuando algo cambia","Te manda reportes diarios y semanales","Panel con tus conversaciones y clientes interesados","Sistemas a la medida de tu operación"]}
-  ],
-  "tools.p":"Se conecta con las herramientas que ya usas",
-  "why.h2":"Por qué nació Innova",
-  "why.p1":"Todo comenzó cuando una agencia de viajes nos contactó. Querían <strong>automatizar sus procesos y servicios</strong>, pero no tenían conocimiento sobre IA y no sabían por dónde empezar.",
-  "why.p2":"Pronto vimos que no eran los únicos: muchas empresas quieren automatizar, pero <strong>les falta alguien que lleve la IA a su negocio.</strong> Así nació Innova.",
-  "why.p3":"Por eso no usamos plantillas. Cada empresa tiene su propio enfoque y su propio objetivo, y <strong>trabajamos para que tu empresa lo logre.</strong>",
-  "why.c1t":"Hecho a tu medida","why.c1p":"Configurado con tus precios, servicios, horarios y políticas reales, nunca con respuestas genéricas.",
-  "why.c2t":"Tú mantienes el control","why.c2p":"Puedes tomar cualquier conversación cuando quieras y el asistente se hace a un lado.",
-  "why.c3t":"En los canales que ya usas","why.c3p":"WhatsApp, Instagram y tu web, donde tus clientes ya te escriben hoy.",
-  "why.c4t":"Sin que tengas que programar","why.c4p":"Nosotros lo configuramos, lo ajustamos y lo mantenemos por ti.",
-  "stat1l":"Atención continua, sin turnos ni descansos","stat2n":"Al instante","stat2l":"Respuestas sin hacer esperar a nadie",
-  "stat3n":"A tu medida","stat3l":"Entrenado con la información real de tu negocio",
-  "stat5l":"De las empresas con IA en atención al cliente reportó más satisfacción de sus clientes","stat5s":"Fuente: Capterra, Tendencias en Atención al Cliente 2025",
-  "case.h2":"Así se vería en un negocio como el tuyo","case.p":"Ejemplos de cómo funcionaría un asistente de Innova AI en el día a día.",
-  "case.disc":"Son ejemplos ilustrativos para mostrar el funcionamiento, no clientes reales.","case.before":"ANTES","case.after":"CON EL ASISTENTE",
-  "cases":[
-    {"icon":"fa-clinic-medical","t":"Clínica que deja de perder citas","b":"La recepción se satura con llamadas y los mensajes del fin de semana quedan sin responder hasta el lunes.","a":"Confirma horarios disponibles, agenda la cita en la conversación y avisa al equipo solo cuando un caso necesita atención humana."},
-    {"icon":"fa-utensils","t":"Restaurante que no pierde reservas","b":"Las reservas de la hora pico se pierden porque nadie contesta el teléfono.","a":"Toma la reserva por WhatsApp o Instagram al instante, confirma el menú y los horarios, y libera al equipo para atender el salón."},
-    {"icon":"fa-user-doctor","t":"Médico particular que no pierde pacientes","b":"La agenda se maneja por teléfono, las cancelaciones no quedan registradas y los mensajes fuera de horario se acumulan.","a":"Confirma horarios, recuerda la cita un día antes y responde qué documentos llevar, sin que el médico esté pendiente del chat."},
-    {"icon":"fa-plane","t":"Agencia de viajes que no pierde horas cotizando","b":"El asesor pasa horas armando cotizaciones para gente que solo estaba curioseando.","a":"Pregunta destino, fechas y presupuesto, arma una primera propuesta al instante y solo pasa al asesor los contactos listos para reservar."},
-    {"icon":"fa-briefcase","t":"Empresa de servicios que filtra antes de agendar","b":"Las consultas llegan por WhatsApp a cualquier hora y se pierden entre el resto de mensajes del equipo.","a":"Identifica qué necesita el contacto, agenda una llamada inicial y le entrega al equipo solo los casos que ya calificaron."},
-    {"icon":"fa-shopping-bag","t":"Tienda que no deja preguntas sin responder","b":"Las preguntas repetidas sobre stock, tallas o envíos saturan el chat y muchas quedan sin respuesta.","a":"Responde al instante sobre disponibilidad y envíos, y acompaña al cliente hasta que confirma la compra."}
-  ],
-  "proc.h2":"Cómo trabajamos","proc.p":"Cada asistente se construye alrededor de tu empresa, no al revés.",
-  "proc.s1t":"Conocemos tu negocio","proc.s1p":"Entendemos cómo funciona tu empresa, qué ofreces, qué te preguntan tus clientes y qué te quita más tiempo.",
-  "proc.s2t":"Diseñamos tu asistente","proc.s2p":"Creamos sus conversaciones y automatizaciones con tu información, tu tono y tus reglas.",
-  "proc.s3t":"Lo conectamos","proc.s3p":"Lo integramos a tus canales y herramientas según tus procesos reales.",
-  "proc.s4t":"Lanzamos y mejoramos","proc.s4p":"Lo ponemos en marcha y lo ajustamos cada mes según los resultados.",
-  "ind.h2":"Para cualquier tipo de negocio","ind.p":"Si atiendes clientes por WhatsApp, Instagram o tu web, un asistente de Innova AI se adapta a tu rubro.",
-  "inds":[
-    ["fa-plane","Agencias de viajes","Captura destinos, fechas y presupuesto, y pasa oportunidades reales a un asesor."],
-    ["fa-home","Inmobiliarias","Filtra propiedades por tipo, presupuesto y ubicación, y precalifica antes de la visita."],
-    ["fa-clinic-medical","Clínicas y salud","Informa sobre servicios y agenda citas médicas."],
-    ["fa-shopping-bag","E-commerce y retail","Responde sobre productos, stock y precios, y guía la compra hasta el final."],
-    ["fa-utensils","Restaurantes","Toma reservas y pedidos, y responde sobre menú y horarios."],
-    ["fa-graduation-cap","Educación","Atiende consultas sobre cursos e inscripciones al instante."],
-    ["fa-cut","Belleza y spa","Agenda citas, informa servicios y confirma turnos."],
-    ["fa-dumbbell","Gimnasios y fitness","Informa planes y horarios, y gestiona inscripciones."],
-    ["fa-car","Talleres y concesionarios","Agenda mantenimientos y responde sobre disponibilidad."],
-    ["fa-scale-balanced","Servicios profesionales","Filtra consultas iniciales y agenda asesorías."],
-    ["fa-paw","Veterinarias","Agenda consultas y vacunas, e informa servicios."],
-    ["fa-infinity","Cualquier otro negocio","Adaptamos el asistente a cómo funciona tu negocio, sin importar el sector."]
-  ],
-  "form.h2":"Cuéntanos qué quieres resolver","form.p":"Déjanos tus datos y lo que necesitas. Te contactamos para entender tu caso y proponerte un asistente hecho a tu medida.",
-  "form.n1t":"Revisamos tu caso","form.n1p":"Leemos lo que nos cuentas sobre tu negocio.","form.n2t":"Te escribimos","form.n2p":"Por WhatsApp o correo, como prefieras.","form.n3t":"Diseñamos tu asistente","form.n3p":"A la medida de lo que quieres lograr.",
-  "f.name":"Tu nombre","f.company":"Empresa o negocio","f.sector":"Tipo de negocio","f.choose":"Elige una opción",
-  "s.1":"Agencia de viajes","s.2":"Clínica o salud","s.3":"Tienda o e-commerce","s.4":"Restaurante","s.5":"Inmobiliaria","s.6":"Educación","s.7":"Belleza y spa","s.8":"Servicios profesionales","s.9":"Otro",
-  "f.contact":"WhatsApp o correo","f.contactPh":"+57 300 000 0000","f.topics":"¿Qué te gustaría automatizar?",
-  "topics":["Responder mensajes","Agendar citas","Cotizar","Cobrar y verificar pagos","Registrar ventas","Seguimiento a clientes","Reportes","Otro"],
-  "f.need":"¿Qué quieres resolver?","f.needPh":"Ej: pierdo clientes porque no alcanzo a responder por WhatsApp en la noche.",
-  "f.consent":"Acepto la","f.policy":"política de tratamiento de datos","f.send":"Enviar mi caso","f.sending":"Enviando…","f.note":"Te respondemos por WhatsApp o correo.",
-  "f.okT":"Recibimos tu caso","f.okP":"Te escribimos pronto para entender lo que necesitas y mostrarte cómo sería tu asistente.",
-  "e.name":"Escribe tu nombre.","e.contact":"Déjanos un WhatsApp o correo válido.","e.need":"Cuéntanos qué quieres resolver.","e.consent":"Debes aceptar la política de tratamiento de datos.",
-  "e.send":"No pudimos enviar el formulario. Puedes enviarnos tu caso por WhatsApp:","e.sendLink":"abrir WhatsApp con tu mensaje",
-  "wa.intro":"Hola, quiero un asistente para mi negocio.",
-  "final.h2":"¿Tu negocio todavía lo hace todo a mano?","final.p":"Hablemos. Te mostramos cómo sería tu propio asistente.",
-  "footer.p":"Asistentes de inteligencia artificial a la medida para empresas. Atienden, venden y automatizan las tareas de tu negocio.",
-  "footer.h1":"Empresa","footer.h2":"Contacto","footer.rights":"© 2026 Innova AI Assistance. Todos los derechos reservados.","footer.policy":"Política de tratamiento de datos"
-},
-en: {
-  "skip":"Skip to content","lang.switch":"ES",
-  "nav.services":"What we do","nav.why":"Why us","nav.process":"Process","nav.industries":"Industries",
-  "cta.case":"Tell us your case","cta.wa":"Message us on WhatsApp",
-  "hero.t1":"An AI assistant that","hero.t2":"for your business.",
-  "hero.p":"Built around your business: it handles WhatsApp, Instagram and your website, automates repetitive tasks, and alerts you when a customer is ready to buy. Around the clock.",
-  "verbs":["replies","books","quotes","collects","sells","reports"],
-  "demo.who":"Travel agency","demo.online":"online","demo.typing":"typing…","demo.ph":"Type a message",
-  "demo.alertK":"ALERT FOR THE OWNER","demo.alert":"Customer ready to close: Cartagena, 2 people, December.",
-  "demo.note":"Example of how an Innova AI assistant works.",
-  "chat":[["in","Hi, do you have trips to Cartagena for 2 people in December?"],["out","Hi! Yes, I have 3 options for those dates. Do you prefer a beachfront hotel or the walled city?"],["in","Beachfront"],["out","Perfect. I'll hold that option and ask an advisor to confirm availability."]],
-  "marquee":["Replies 24/7","Quotes instantly","Books appointments","Verifies payments","Logs sales in Excel","Sends reminders","Follows up","Sends you reports","Alerts you when it needs you"],
-  "st.no":"It's not a chatbot.","st.yes1":"It's a","st.yes2":"real assistant.","st.sub":"It thinks, decides and acts for your business. And it alerts you when it truly needs you.",
-  "cap.h2":"Everything we do for your business","cap.p":"Not a template. Every assistant is trained on your real information and plugs into the way you work.",
-  "cap.working":"Your assistant is working…","cap.done":"Done. All caught up.",
-  "caps":[
-    {"icon":"fa-comments","t":"Serves","d":"Answers your customers instantly, at any hour.","items":["Replies 24/7 on WhatsApp, Instagram and Web","Answers prices, hours and FAQs","Speaks each customer's language","Remembers what was already said in the chat","Hands you the chat when a human is needed"]},
-    {"icon":"fa-bullseye","t":"Sells","d":"Spots opportunities and helps you close them.","items":["Detects when a customer wants to buy","Quotes with your real prices","Looks up your product or service catalog","Follows up with people who went quiet","Alerts you when a sale is ready to close"]},
-    {"icon":"fa-gears","t":"Automates","d":"Takes care of the repetitive daily tasks.","items":["Books appointments with no double bookings","Sends automatic reminders","Verifies payment receipts","Logs every sale in your Excel","Sends documents (PDF) on WhatsApp"]},
-    {"icon":"fa-chart-line","t":"Connects and reports","d":"Links your tools and keeps you informed.","items":["Connects with Gmail, Calendar, Notion, HubSpot and Slack","Watches your data and alerts you when something changes","Sends you daily and weekly reports","Dashboard with your conversations and leads","Custom systems built around your operation"]}
-  ],
-  "tools.p":"Connects with the tools you already use",
-  "why.h2":"Why Innova was born",
-  "why.p1":"It all started when a travel agency reached out to us. They wanted to <strong>automate their processes and services</strong>, but they had no knowledge of AI and didn't know where to start.",
-  "why.p2":"We soon saw they weren't alone: many businesses want to automate, but <strong>they need someone to bring AI into their business.</strong> That's how Innova was born.",
-  "why.p3":"That's why we don't use templates. Every business has its own focus and its own goal, and <strong>we work so your business reaches it.</strong>",
-  "why.c1t":"Built for you","why.c1p":"Configured with your real prices, services, hours and policies, never generic answers.",
-  "why.c2t":"You stay in control","why.c2p":"Take over any conversation whenever you want and the assistant steps aside.",
-  "why.c3t":"On the channels you already use","why.c3p":"WhatsApp, Instagram and your website, wherever your customers already message you.",
-  "why.c4t":"No coding required","why.c4p":"We configure, adjust and maintain it for you.",
-  "stat1l":"Continuous coverage, no shifts or breaks","stat2n":"Instant","stat2l":"Replies without making anyone wait",
-  "stat3n":"Custom-built","stat3l":"Trained on your business's real information",
-  "stat5l":"Of businesses using AI in customer service reported higher customer satisfaction","stat5s":"Source: Capterra, 2025 Customer Service Trends",
-  "case.h2":"How it would look for a business like yours","case.p":"Examples of how an Innova AI assistant would work day to day.",
-  "case.disc":"These are illustrative examples to show how it works, not real clients.","case.before":"BEFORE","case.after":"WITH THE ASSISTANT",
-  "cases":[
-    {"icon":"fa-clinic-medical","t":"A clinic that stops losing appointments","b":"The front desk is swamped with calls and weekend messages go unanswered until Monday.","a":"It confirms open slots, books the appointment in the conversation, and only alerts the team when a case needs a human."},
-    {"icon":"fa-utensils","t":"A restaurant that stops losing reservations","b":"Peak-hour reservations are lost because no one picks up the phone.","a":"It takes the reservation on WhatsApp or Instagram instantly, confirms the menu and hours, and frees the team to run the floor."},
-    {"icon":"fa-user-doctor","t":"A private doctor who stops losing patients","b":"Scheduling is by phone, cancellations go unrecorded, and after-hours messages pile up.","a":"It confirms open slots, sends a reminder the day before, and answers what documents to bring, without the doctor watching the chat."},
-    {"icon":"fa-plane","t":"A travel agency that stops wasting hours quoting","b":"The advisor spends hours building quotes for people who were just browsing.","a":"It asks for destination, dates and budget, puts together a first proposal instantly, and only passes along contacts ready to book."},
-    {"icon":"fa-briefcase","t":"A services firm that qualifies before booking","b":"Inquiries arrive on WhatsApp at any hour and get lost among the team's other messages.","a":"It figures out what the contact needs, books an initial call, and hands the team only the qualified cases."},
-    {"icon":"fa-shopping-bag","t":"A shop that never leaves a question unanswered","b":"Repeated questions about stock, sizes or shipping swamp the chat and many go unanswered.","a":"It answers instantly about availability and shipping, and walks the customer through to checkout."}
-  ],
-  "proc.h2":"How we work","proc.p":"Every assistant is built around your business, not the other way around.",
-  "proc.s1t":"We learn your business","proc.s1p":"We understand how your business runs, what you offer, what customers ask, and what takes up most of your time.",
-  "proc.s2t":"We design your assistant","proc.s2p":"We build its conversations and automations with your information, your tone and your rules.",
-  "proc.s3t":"We connect it","proc.s3p":"We plug it into your channels and tools around your real processes.",
-  "proc.s4t":"We launch and improve","proc.s4p":"We launch it and refine it every month based on results.",
-  "ind.h2":"For any type of business","ind.p":"If you serve customers on WhatsApp, Instagram or your website, an Innova AI assistant adapts to your field.",
-  "inds":[
-    ["fa-plane","Travel agencies","Captures destinations, dates and budget, and passes real opportunities to an advisor."],
-    ["fa-home","Real estate","Filters properties by type, budget and location, and pre-qualifies before the visit."],
-    ["fa-clinic-medical","Clinics and healthcare","Shares service information and books medical appointments."],
-    ["fa-shopping-bag","E-commerce and retail","Answers about products, stock and prices, and guides the purchase to checkout."],
-    ["fa-utensils","Restaurants","Takes reservations and orders, and answers about menu and hours."],
-    ["fa-graduation-cap","Education","Handles course and enrollment questions instantly."],
-    ["fa-cut","Beauty and spa","Books appointments, shares services and confirms slots."],
-    ["fa-dumbbell","Gyms and fitness","Shares plans and schedules, and manages sign-ups."],
-    ["fa-car","Auto shops and dealers","Books maintenance and answers about availability."],
-    ["fa-scale-balanced","Professional services","Filters initial inquiries and books consultations."],
-    ["fa-paw","Veterinary clinics","Books consultations and vaccines, and shares services."],
-    ["fa-infinity","Any other business","We adapt the assistant to how your business works, whatever your field."]
-  ],
-  "form.h2":"Tell us what you want to solve","form.p":"Leave your details and what you need. We'll reach out to understand your case and propose an assistant built around you.",
-  "form.n1t":"We review your case","form.n1p":"We read what you tell us about your business.","form.n2t":"We reach out","form.n2p":"On WhatsApp or email, whichever you prefer.","form.n3t":"We design your assistant","form.n3p":"Built around what you want to achieve.",
-  "f.name":"Your name","f.company":"Company or business","f.sector":"Type of business","f.choose":"Choose an option",
-  "s.1":"Travel agency","s.2":"Clinic or healthcare","s.3":"Shop or e-commerce","s.4":"Restaurant","s.5":"Real estate","s.6":"Education","s.7":"Beauty and spa","s.8":"Professional services","s.9":"Other",
-  "f.contact":"WhatsApp or email","f.contactPh":"+1 555 000 0000","f.topics":"What would you like to automate?",
-  "topics":["Replying to messages","Booking appointments","Quoting","Collecting and verifying payments","Logging sales","Customer follow-up","Reports","Other"],
-  "f.need":"What do you want to solve?","f.needPh":"E.g. I lose customers because I can't reply on WhatsApp at night.",
-  "f.consent":"I accept the","f.policy":"data processing policy","f.send":"Send my case","f.sending":"Sending…","f.note":"We'll reply on WhatsApp or email.",
-  "f.okT":"We got your case","f.okP":"We'll reach out soon to understand what you need and show you what your assistant would look like.",
-  "e.name":"Enter your name.","e.contact":"Leave a valid WhatsApp number or email.","e.need":"Tell us what you want to solve.","e.consent":"You must accept the data processing policy.",
-  "e.send":"We couldn't send the form. You can send us your case on WhatsApp:","e.sendLink":"open WhatsApp with your message",
-  "wa.intro":"Hi, I want an assistant for my business.",
-  "final.h2":"Is your business still doing everything by hand?","final.p":"Let's talk. We'll show you what your own assistant would look like.",
-  "footer.p":"Custom AI assistants for businesses. They serve, sell and automate your business's tasks.",
-  "footer.h1":"Company","footer.h2":"Contact","footer.rights":"© 2026 Innova AI Assistance. All rights reserved.","footer.policy":"Data processing policy"
-}
-};
-
-var LANG = "es";
-var REDUCED = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-function t(k) { return I18N[LANG][k]; }
-function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
-
-/* nav */
-function toggleMenu(btn) {
-  var links = document.getElementById("navLinks");
-  var open = links.classList.toggle("open");
-  btn.setAttribute("aria-expanded", open ? "true" : "false");
-}
-document.querySelectorAll("#navLinks a").forEach(function (a) {
-  a.addEventListener("click", function () {
-    document.getElementById("navLinks").classList.remove("open");
-    document.querySelector(".menu-btn").setAttribute("aria-expanded", "false");
-  });
-});
-new IntersectionObserver(function (e) {
-  document.getElementById("navbar").classList.toggle("scrolled", !e[0].isIntersecting);
-}, { rootMargin: "-80px 0px 0px 0px" }).observe(document.querySelector(".hero"));
-
-/* reveal */
-var revealObs = new IntersectionObserver(function (entries) {
-  entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); revealObs.unobserve(en.target); } });
-}, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
-function observeReveals(root) { (root || document).querySelectorAll(".reveal:not(.in)").forEach(function (n) { revealObs.observe(n); }); }
-
-/* hero verb rotator */
-var rotIdx = 0, rotTimer = null;
-function buildRotator() {
-  var r = document.getElementById("rotator"); r.textContent = "";
-  t("verbs").forEach(function (v, i) { var s = el("span", i === 0 ? "on" : "", v); if (i) s.setAttribute("aria-hidden", "true"); r.appendChild(s); });
-  rotIdx = 0;
-  clearInterval(rotTimer);
-  if (REDUCED) return;
-  rotTimer = setInterval(function () {
-    var spans = r.children, prev = spans[rotIdx];
-    rotIdx = (rotIdx + 1) % spans.length;
-    prev.className = "off"; prev.setAttribute("aria-hidden", "true");
-    spans[rotIdx].className = "on"; spans[rotIdx].removeAttribute("aria-hidden");
-    setTimeout(function () { if (prev.className === "off") prev.className = ""; }, 500);
-  }, 2200);
-}
-
-/* hero live chat */
-var chatRun = 0, chatVisible = false;
-function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
-function renderField(text) {
-  var f = document.getElementById("field"); f.textContent = "";
-  if (!text) { f.appendChild(el("span", "ph", t("demo.ph"))); return; }
-  f.appendChild(el("span", "", text.length > 34 ? "…" + text.slice(-33) : text));
-  f.appendChild(el("span", "caret"));
-}
-function addMsg(dir, text) { document.getElementById("thread").appendChild(el("div", "msg " + dir, text)); }
-async function playChat() {
-  var my = ++chatRun;
-  var phone = document.getElementById("phone"), thread = document.getElementById("thread"), alertBox = document.getElementById("alert");
-  var alive = function () { return my === chatRun; };
-  if (REDUCED) {
-    thread.textContent = ""; t("chat").forEach(function (m) { addMsg(m[0], m[1]); });
-    renderField(""); alertBox.classList.add("show"); return;
-  }
-  while (alive()) {
-    thread.textContent = ""; renderField(""); alertBox.classList.remove("show"); phone.classList.remove("is-typing");
-    await sleep(700);
-    for (var i = 0; i < t("chat").length && alive(); i++) {
-      var m = t("chat")[i];
-      while (!chatVisible && alive()) await sleep(300);
-      if (m[0] === "in") {
-        for (var c = 1; c <= m[1].length && alive(); c++) { renderField(m[1].slice(0, c)); await sleep(m[1].length > 20 ? 34 : 70); }
-        await sleep(250); renderField(""); addMsg("in", m[1]); await sleep(500);
-      } else {
-        phone.classList.add("is-typing"); await sleep(1300); phone.classList.remove("is-typing");
-        addMsg("out", m[1]); await sleep(1400);
-      }
-    }
-    if (!alive()) return;
-    await sleep(1400);
-    alertBox.classList.add("show");
-    await sleep(4200);
-  }
-}
-new IntersectionObserver(function (e) { chatVisible = e[0].isIntersecting; }, { threshold: 0.2 }).observe(document.getElementById("phone"));
-
-/* marquee */
-function buildMarquee() {
-  var tr = document.getElementById("track"); tr.textContent = "";
-  var items = t("marquee").concat(t("marquee"));
-  items.forEach(function (x) { tr.appendChild(el("span", "", x)); });
-}
-
-/* statement */
-new IntersectionObserver(function (e, o) {
-  if (e[0].isIntersecting) { document.getElementById("statement").classList.add("in"); o.disconnect(); }
-}, { threshold: 0.45 }).observe(document.getElementById("statement"));
-
-/* capabilities */
-var capIdx = 0, capTimers = [], capAuto = true, capVisible = false, CAP_MS = 6000;
-function clearCap() { capTimers.forEach(clearTimeout); capTimers = []; }
-function buildTabs() {
-  var tabs = document.getElementById("tabs"); tabs.textContent = "";
-  t("caps").forEach(function (c, i) {
-    var b = el("button", "tab"); b.type = "button"; b.setAttribute("role", "tab"); b.id = "tab-" + i;
-    var head = el("b"); var ic = el("i", "fas " + c.icon); head.appendChild(ic); head.appendChild(document.createTextNode(c.t));
-    b.appendChild(head); b.appendChild(el("small", "", c.d)); b.appendChild(el("span", "bar"));
-    b.style.setProperty("--dur", CAP_MS + "ms");
-    b.addEventListener("click", function () { capAuto = false; document.getElementById("cap").classList.add("paused"); showCap(i); });
-    tabs.appendChild(b);
-  });
-}
-function showCap(i) {
-  clearCap(); capIdx = i;
-  var caps = t("caps"), board = document.getElementById("board"), list = document.getElementById("checks");
-  document.querySelectorAll("#tabs .tab").forEach(function (b, k) {
-    b.setAttribute("aria-selected", k === i ? "true" : "false");
-    var bar = b.querySelector(".bar"); bar.style.animation = "none"; void bar.offsetWidth; bar.style.animation = "";
-  });
-  board.setAttribute("aria-labelledby", "tab-" + i);
-  board.classList.remove("done");
-  document.getElementById("boardStatus").textContent = t("cap.working");
-  list.textContent = "";
-  caps[i].items.forEach(function (txt, k) {
-    var li = el("li"); li.style.setProperty("--i", k);
-    li.appendChild(el("span", "tick", String(k + 1))); li.appendChild(document.createTextNode(txt));
-    list.appendChild(li);
-  });
-  var lis = list.children, step = REDUCED ? 0 : 750;
-  for (var k = 0; k < lis.length; k++) (function (li, k) {
-    capTimers.push(setTimeout(function () { li.classList.add("ok"); }, REDUCED ? 0 : 700 + k * step));
-  })(lis[k], k);
-  capTimers.push(setTimeout(function () {
-    board.classList.add("done"); document.getElementById("boardStatus").textContent = t("cap.done");
-  }, REDUCED ? 0 : 700 + lis.length * step));
-  if (capAuto && !REDUCED) capTimers.push(setTimeout(function () { if (capVisible) showCap((capIdx + 1) % caps.length); else capPending = true; }, CAP_MS));
-}
-var capPending = false;
-new IntersectionObserver(function (e) {
-  capVisible = e[0].isIntersecting;
-  if (capVisible && capPending && capAuto) { capPending = false; showCap((capIdx + 1) % t("caps").length); }
-}, { threshold: 0.3 }).observe(document.getElementById("cap"));
-
-/* cases, industries */
-function buildCases() {
-  var box = document.getElementById("cases"); box.textContent = "";
-  t("cases").forEach(function (c, i) {
-    var a = el("article", "case reveal"); a.style.setProperty("--i", i % 2);
-    var top = el("div", "case-top"); top.appendChild(el("i", "fas " + c.icon)); top.appendChild(el("h3", "", c.t)); a.appendChild(top);
-    var ba = el("div", "ba");
-    var pb = el("p", "before"); pb.appendChild(el("b", "", t("case.before"))); pb.appendChild(document.createTextNode(c.b));
-    var pa = el("p", "after"); pa.appendChild(el("b", "", t("case.after"))); pa.appendChild(document.createTextNode(c.a));
-    ba.appendChild(pb); ba.appendChild(pa); a.appendChild(ba); box.appendChild(a);
-  });
-}
-function buildInd() {
-  var box = document.getElementById("ind"); box.textContent = "";
-  t("inds").forEach(function (d) {
-    var c = el("div"); c.appendChild(el("i", "fas " + d[0])); c.appendChild(el("h3", "", d[1])); c.appendChild(el("p", "", d[2])); box.appendChild(c);
-  });
-}
-
-/* process + counter */
-new IntersectionObserver(function (e, o) {
-  if (e[0].isIntersecting) { document.getElementById("steps").classList.add("in"); o.disconnect(); }
-}, { threshold: 0.4 }).observe(document.getElementById("steps"));
-document.querySelectorAll(".count").forEach(function (n) {
-  new IntersectionObserver(function (e, o) {
-    if (!e[0].isIntersecting) return; o.disconnect();
-    var to = +n.dataset.to; if (REDUCED) { n.textContent = to; return; }
-    var t0 = performance.now(), dur = 1200;
-    (function tick(now) { var p = Math.min(1, (now - t0) / dur); n.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(tick); })(t0);
-  }, { threshold: 0.6 }).observe(n);
-});
-
-/* form */
-function buildChips() {
-  var box = document.getElementById("chips"); var pressed = {};
-  box.querySelectorAll(".chip").forEach(function (c, i) { pressed[i] = c.getAttribute("aria-pressed") === "true"; });
-  box.textContent = "";
-  t("topics").forEach(function (x, i) {
-    var b = el("button", "chip", x); b.type = "button"; b.setAttribute("aria-pressed", pressed[i] ? "true" : "false");
-    b.addEventListener("click", function () { b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") === "true" ? "false" : "true"); });
-    box.appendChild(b);
-  });
-}
-function setErr(id, msg) {
-  var e = document.getElementById("e-" + id); e.textContent = msg || "";
-  var fg = e.closest(".fg"); if (fg) fg.classList.toggle("bad", !!msg);
-}
-function collect() {
-  var f = document.getElementById("leadForm");
-  return {
-    nombre: f.nombre.value.trim(), empresa: f.empresa.value.trim(), sector: f.sector.value ? f.sector.options[f.sector.selectedIndex].text : "",
-    contacto: f.contacto.value.trim(), necesidad: f.necesidad.value.trim(), website: f.website.value,
-    temas: Array.prototype.map.call(document.querySelectorAll('#chips .chip[aria-pressed="true"]'), function (c) { return c.textContent; }),
-    acepta: f.acepta.checked
-  };
-}
-function validate(d) {
-  var ok = true;
-  setErr("nombre", d.nombre.length < 2 ? (ok = false, t("e.name")) : "");
-  var contactOk = /@/.test(d.contacto) || d.contacto.replace(/\D/g, "").length >= 7;
-  setErr("contacto", contactOk ? "" : (ok = false, t("e.contact")));
-  setErr("necesidad", d.necesidad.length < 5 ? (ok = false, t("e.need")) : "");
-  setErr("acepta", d.acepta ? "" : (ok = false, t("e.consent")));
-  return ok;
-}
-function waLink(d) {
-  var lines = [t("wa.intro"), d.nombre && ("Nombre: " + d.nombre), d.empresa && ("Empresa: " + d.empresa), d.sector && ("Negocio: " + d.sector),
-    d.contacto && ("Contacto: " + d.contacto), d.temas.length && ("Me interesa: " + d.temas.join(", ")), d.necesidad && ("Quiero resolver: " + d.necesidad)].filter(Boolean);
-  return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(lines.join("\n"));
-}
-document.getElementById("leadForm").addEventListener("submit", async function (ev) {
-  ev.preventDefault();
-  var d = collect(), msg = document.getElementById("formMsg"), btn = document.getElementById("sendBtn");
-  msg.className = "form-msg"; msg.textContent = "";
-  if (!validate(d)) { var bad = this.querySelector(".fg.bad input, .fg.bad textarea"); if (bad) bad.focus(); return; }
-  btn.disabled = true; var label = btn.querySelector("span"); label.textContent = t("f.sending");
-  try {
-    var res = await fetch(CONTACT_ENDPOINT, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(d) });
-    var data = await res.json().catch(function () { return {}; });
-    if (!res.ok || !data.ok) throw new Error(data.error || "http_" + res.status);
-    this.classList.add("is-sent");
-  } catch (err) {
-    msg.className = "form-msg error";
-    msg.appendChild(document.createTextNode(t("e.send") + " "));
-    var a = el("a", "", t("e.sendLink")); a.href = waLink(d); a.target = "_blank"; a.rel = "noopener"; msg.appendChild(a);
-  } finally {
-    btn.disabled = false; label.textContent = t("f.send");
-  }
-});
-["nombre", "contacto", "necesidad"].forEach(function (id) {
-  document.getElementById("f-" + id).addEventListener("input", function () { setErr(id, ""); });
-});
-document.getElementById("f-acepta").addEventListener("change", function () { setErr("acepta", ""); });
-
-/* i18n */
-function applyLang(lang) {
-  LANG = lang; document.documentElement.lang = lang;
-  document.querySelectorAll("[data-i18n]").forEach(function (n) { var v = I18N[lang][n.getAttribute("data-i18n")]; if (typeof v === "string") n.textContent = v; });
-  document.querySelectorAll("[data-i18n-html]").forEach(function (n) { var v = I18N[lang][n.getAttribute("data-i18n-html")]; if (typeof v === "string") n.innerHTML = v; });
-  document.querySelectorAll("[data-i18n-ph]").forEach(function (n) { var v = I18N[lang][n.getAttribute("data-i18n-ph")]; if (typeof v === "string") n.placeholder = v; });
-  buildRotator(); buildMarquee(); buildTabs(); showCap(capIdx); buildCases(); buildInd(); buildChips();
-  observeReveals();
-  playChat();
-  try { localStorage.setItem("iai_lang", lang); } catch (e) {}
-}
-function toggleLang() { applyLang(LANG === "es" ? "en" : "es"); }
-(function init() {
-  var saved = null; try { saved = localStorage.getItem("iai_lang"); } catch (e) {}
-  applyLang(saved === "en" ? "en" : "es");
-})();
-</script>
-
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/demo-engine.js"></script>
+<script src="assets/js/site.js"></script>
 <script src="https://forja-starter-71742d.innovaai34.workers.dev/widget.js"
         data-tema="oscuro"
         data-color="#2f7bf0"
