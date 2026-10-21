@@ -127,6 +127,7 @@ en: {
   "menu.aria": "Open menu",
   "skip": "Skip to content", "lang.switch": "ES",
   "nav.demo": "Demo", "nav.how": "How it works", "nav.industries": "Industries", "nav.process": "Process", "nav.integrations": "Integrations", "nav.roi": "Calculator",
+  "nav.login": "Log in", "nav.loginLong": "Log in to the command center", "footer.login": "Client login",
   "cta.want": "I want one for my business", "cta.try": "Try the assistant", "cta.create": "Create my assistant", "cta.talk": "Talk to Innova",
   "hero.h1": "Your business never goes unanswered again.",
   "hero.sub": "An AI assistant trained on your company's real information to serve customers, spot opportunities and connect your processes, 24/7.",
