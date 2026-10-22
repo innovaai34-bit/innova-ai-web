@@ -33,12 +33,19 @@
         w: window.innerWidth || 0,
         d: detalle || ""
       });
-      // sendBeacon sobrevive a que la persona cierre la pestaña; fetch es el
-      // respaldo para navegadores que no lo tienen.
+      // Se manda como text/plain, no como JSON, A PROPOSITO: con JSON el
+      // navegador exige una peticion de permiso previa (preflight), y
+      // sendBeacon la hace pidiendo enviar credenciales — lo que el servidor
+      // rechaza, con razon, porque esto es anonimo. Con text/plain no hay
+      // permiso previo que pedir: el golpe sale directo y el servidor lo lee
+      // igual. Comprobado en un navegador de verdad; con curl no se nota.
+      //
+      // sendBeacon ademas sobrevive a que la persona cierre la pestaña.
+      var tipo = "text/plain;charset=UTF-8";
       if (navigator.sendBeacon) {
-        navigator.sendBeacon(MEDIR, new Blob([cuerpo], { type: "application/json" }));
+        navigator.sendBeacon(MEDIR, new Blob([cuerpo], { type: tipo }));
       } else {
-        fetch(MEDIR, { method: "POST", headers: { "content-type": "application/json" }, body: cuerpo, keepalive: true }).catch(function () {});
+        fetch(MEDIR, { method: "POST", headers: { "content-type": tipo }, body: cuerpo, keepalive: true }).catch(function () {});
       }
     } catch (e) { /* medir nunca puede romper la página */ }
   }
