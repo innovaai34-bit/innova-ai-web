@@ -8,6 +8,41 @@
   var REDUCED = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var LANG = "es";
 
+  /* ---------- medición ----------
+     Sin cookies, sin terceros y sin guardar la IP: el servidor cuenta eventos,
+     no personas (ver centro-mando/src/web.ts). Por eso esta página no necesita
+     banner de consentimiento — y por eso no se manda NADA de lo que alguien
+     escriba: ni su mensaje a la demo, ni sus datos del formulario, ni los
+     números que ponga en la calculadora.
+
+     Lo que se mide es el embudo: entra, abre la demo, la usa, llega al
+     formulario, lo manda. "1.200 visitas" no se puede accionar; "de 1.200 que
+     entraron, 80 abrieron la demo y 3 mandaron el formulario" dice dónde está
+     el problema.
+
+     Si falla, falla en silencio: una página no se rompe por no poder contar. */
+  var MEDIR = "https://centro-mando-innova.innovaai34.workers.dev/t";
+  var medidos = {};
+  function medir(evento, detalle, repetible) {
+    try {
+      if (!repetible) { if (medidos[evento]) return; medidos[evento] = 1; }
+      var cuerpo = JSON.stringify({
+        e: evento,
+        p: location.pathname,
+        r: document.referrer || "",
+        w: window.innerWidth || 0,
+        d: detalle || ""
+      });
+      // sendBeacon sobrevive a que la persona cierre la pestaña; fetch es el
+      // respaldo para navegadores que no lo tienen.
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon(MEDIR, new Blob([cuerpo], { type: "application/json" }));
+      } else {
+        fetch(MEDIR, { method: "POST", headers: { "content-type": "application/json" }, body: cuerpo, keepalive: true }).catch(function () {});
+      }
+    } catch (e) { /* medir nunca puede romper la página */ }
+  }
+
   /* ---------- utilidades ---------- */
   function $(id) { return document.getElementById(id); }
   function t(k) { var v = I18N[LANG][k]; return v === undefined ? I18N.es[k] : v; }
@@ -125,7 +160,7 @@
       var b = el("button", "ind-btn"); b.type = "button"; b.setAttribute("role", "tab"); b.id = "lab-tab-" + key;
       b.setAttribute("aria-selected", key === lab.industry ? "true" : "false"); b.tabIndex = key === lab.industry ? 0 : -1;
       b.appendChild(icon(info.icon)); b.appendChild(el("span", "", info.label));
-      b.addEventListener("click", function () { selectIndustry(key, true); });
+      b.addEventListener("click", function () { medir("industria", key, true); selectIndustry(key, true); });
       b.addEventListener("keydown", function (e) { tabKeys(e, box, i); });
       box.appendChild(b);
     });
@@ -223,7 +258,8 @@
     labThread.appendChild(el("div", "bubble sys", DemoEngine.common(LANG).tryNow)); scrollThread();
     renderSuggestions();
   }
-  $("labForm").addEventListener("submit", function (e) { e.preventDefault(); send(labInput.value); });
+  // El evento, NO lo que escribió: lo que la gente le dice a la demo es suyo.
+  $("labForm").addEventListener("submit", function (e) { e.preventDefault(); medir("demo_mensaje", "", true); send(labInput.value); });
   $("labReset").addEventListener("click", function () { lab.engine = DemoEngine.create(); selectIndustry(lab.industry, true); });
   $("openRealBot").addEventListener("click", function () {
     var host = document.querySelector("[data-forja-widget]");
@@ -231,7 +267,7 @@
     if (btn) { btn.click(); return; }
     window.open("https://wa.me/" + WA_NUMBER, "_blank", "noopener");
   });
-  once($("lab"), function () { lab.started = true; selectIndustry(lab.industry, false); }, 0.25);
+  once($("lab"), function () { lab.started = true; medir("demo"); selectIndustry(lab.industry, false); }, 0.25);
 
   /* ---------- cómo piensa ---------- */
   var flowRun = 0;
@@ -363,6 +399,8 @@
     $("oLost").textContent = fmt(leads * lost);
     $("oLostRev").textContent = money(leads * lost * conv * ticket);
   }
+  // Solo que la tocó. Los números que ponga son de su negocio y no viajan.
+  $("roiForm").addEventListener("input", function () { medir("calculadora"); });
   document.querySelectorAll("#roiForm input[type=range]").forEach(function (r) {
     var input = $(r.dataset.for);
     r.value = input.value; syncRange(r);
@@ -491,6 +529,7 @@
       var res = await fetch(CONTACT_ENDPOINT, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(d) });
       var data = await res.json().catch(function () { return {}; });
       if (!res.ok || !data.ok) throw new Error(data.error || "http_" + res.status);
+      medir("formulario_enviado");
       form.classList.add("is-sent");
     } catch (err) {
       msg.className = "form-msg error";
@@ -512,6 +551,10 @@
       var info = DemoEngine.info(lab.industry, LANG), av = $("labAvatar");
       $("labBiz").textContent = info.biz; av.textContent = ""; av.appendChild(icon(info.icon));
     });
+  medir("vista");
+  // Cuando el formulario entra en pantalla: es el paso del embudo que dice
+  // cuántos LLEGARON a pedirlo, frente a cuántos lo mandaron.
+  if ($("leadForm")) once($("leadForm"), function () { medir("formulario_visto"); }, 0.2);
   captureSpanish();
   var saved = null; try { saved = localStorage.getItem("iai_lang"); } catch (e) {}
   setLang(saved === "en" ? "en" : "es");
