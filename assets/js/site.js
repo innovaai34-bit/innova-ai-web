@@ -562,6 +562,24 @@
   // Cuando el formulario entra en pantalla: es el paso del embudo que dice
   // cuántos LLEGARON a pedirlo, frente a cuántos lo mandaron.
   if ($("leadForm")) once($("leadForm"), function () { medir("formulario_visto"); }, 0.2);
+
+  // ── LOS CLICS A WHATSAPP, TODOS ──────────────────────────────────────
+  //
+  // Delegado en el documento y no botón por botón: hay enlaces a WhatsApp
+  // en la burbuja fija, en la portada, en el cierre y en el pie, y uno
+  // nuevo mañana no tendría por qué acordarse de medirse.
+  //
+  // `repetible` queda en falso: lo que se quiere saber es cuánta GENTE se
+  // va por ahí, no cuántas veces pulsó. Una persona que vuelve y pulsa
+  // otra vez sigue siendo una persona.
+  document.addEventListener(
+    "click",
+    function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a[href*="wa.me/"]') : null;
+      if (a) medir("whatsapp");
+    },
+    true,
+  );
   captureSpanish();
   var saved = null; try { saved = localStorage.getItem("iai_lang"); } catch (e) {}
   setLang(saved === "en" ? "en" : "es");

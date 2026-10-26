@@ -80,7 +80,10 @@
       <p class="hero-sub" data-i18n="hero.sub">Un asistente de IA entrenado con la información real de tu empresa para atender clientes, detectar oportunidades y conectar tus procesos, 24/7.</p>
       <div class="cta-row">
         <a href="#demo" class="btn btn-primary btn-lg"><span data-i18n="cta.try">Probar el asistente</span><svg class="i"><use href="assets/icons.svg#arrow-right"></use></svg></a>
-        <a href="#contacto" class="btn btn-ghost btn-lg" data-i18n="cta.want">Quiero uno para mi negocio</a>
+        <!-- VA A WHATSAPP, no al formulario. Antes era un ancla que bajaba al
+             76% de la página; de 13 visitas, ninguna llegó. -->
+        <a href="https://wa.me/573054110761?text=Hola%2C%20quiero%20un%20asistente%20para%20mi%20negocio."
+           class="btn btn-ghost btn-lg" target="_blank" rel="noopener" data-i18n="cta.want">Quiero uno para mi negocio</a>
       </div>
     </div>
 
@@ -484,6 +487,18 @@
     </div>
   </div>
 </footer>
+
+<!-- WHATSAPP SIEMPRE A LA VISTA
+     Abajo a la IZQUIERDA: la derecha la ocupa el asistente de la web, y dos
+     burbujas en la misma esquina se tapan. El texto del mensaje va aquí y no
+     en el JavaScript para que se pueda cambiar sin tocar código. -->
+<a class="wa-flota" id="waFlota"
+   href="https://wa.me/573054110761?text=Hola%2C%20vi%20la%20web%20de%20Innova%20y%20quiero%20saber%20si%20esto%20sirve%20para%20mi%20negocio."
+   target="_blank" rel="noopener"
+   aria-label="Escribir por WhatsApp">
+  <svg class="i" aria-hidden="true"><use href="assets/icons.svg#whatsapp-logo"></use></svg>
+  <span class="wa-flota-txt" data-i18n="cta.talk">Hablar con Innova</span>
+</a>
 
 <script src="assets/js/i18n.js"></script>
 <script src="assets/js/demo-engine.js"></script>

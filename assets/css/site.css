@@ -672,3 +672,29 @@ input[type=range]::-moz-range-thumb { width: 14px; height: 14px; border-radius: 
 @media (prefers-reduced-transparency: reduce) {
   .window, .opportunity, .form, .nav.scrolled { backdrop-filter: none; -webkit-backdrop-filter: none; background: var(--surface); }
 }
+
+/* ── WHATSAPP SIEMPRE A LA VISTA ──────────────────────────────────────────
+   Abajo a la izquierda: la derecha la ocupa el asistente de la web.
+   En móvil se queda el círculo solo — el texto al lado comería media
+   pantalla en la que, además, dos de cada tres visitantes están leyendo. */
+.wa-flota {
+  position: fixed; left: 16px; bottom: 16px; z-index: 90;
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 13px 18px 13px 15px; border-radius: 999px;
+  background: #25D366; color: #06220f; text-decoration: none;
+  font-weight: 600; font-size: 14.5px; line-height: 1;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, .38);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.wa-flota:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0, 0, 0, .46); }
+.wa-flota .i { width: 21px; height: 21px; flex: 0 0 auto; }
+@media (max-width: 760px) {
+  .wa-flota { padding: 0; width: 54px; height: 54px; justify-content: center; left: 14px; bottom: 14px; }
+  .wa-flota .wa-flota-txt { display: none; }
+  .wa-flota .i { width: 26px; height: 26px; }
+}
+/* Quien pide menos movimiento no quiere que un botón fijo se mueva solo. */
+@media (prefers-reduced-motion: reduce) {
+  .wa-flota { transition: none; }
+  .wa-flota:hover { transform: none; }
+}
