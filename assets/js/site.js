@@ -256,7 +256,7 @@
     if (btn) { btn.click(); return; }
     window.open("https://wa.me/" + WA_NUMBER, "_blank", "noopener");
   });
-  once($("lab"), function () { lab.started = true; medir("demo"); selectIndustry(lab.industry, false); }, 0.25);
+  // La demo abre con los agentes; el chat del asistente arranca cuando se elige su pestaña.
 
   /* ---------- cómo funciona ---------- */
   var flowRun = 0;
@@ -354,11 +354,13 @@
     res.appendChild(card); res.classList.add("show");
   }
   $("alabReplay").addEventListener("click", function () { playAgent(alab.idx); });
+  once($("agentLab"), function () { if (!alab.started) { medir("demo_agentes"); playAgent(alab.idx); } }, 0.25);
   function setMode(agent) {
     $("modeAsis").setAttribute("aria-selected", agent ? "false" : "true"); $("modeAsis").tabIndex = agent ? -1 : 0;
     $("modeAgent").setAttribute("aria-selected", agent ? "true" : "false"); $("modeAgent").tabIndex = agent ? 0 : -1;
     $("lab").hidden = agent; $("agentLab").hidden = !agent;
-    if (agent) { $("lab").classList.add("in"); medir("demo_agentes"); if (!alab.started) playAgent(alab.idx); }
+    if (agent) { medir("demo_agentes"); if (!alab.started) playAgent(alab.idx); }
+    else if (!lab.started) { lab.started = true; medir("demo"); selectIndustry(lab.industry, false); }
   }
   $("modeAsis").addEventListener("click", function () { setMode(false); });
   $("modeAgent").addEventListener("click", function () { setMode(true); });
@@ -434,14 +436,14 @@
     var head = el("div", "ip-head"); var av = el("span", "avatar"); av.appendChild(icon(d.icon)); head.appendChild(av); head.appendChild(el("h3", "", d.name)); p.appendChild(head);
     var g = el("div", "ip-grid");
     var b1 = el("div", "ip-block"); b1.appendChild(el("h4", "", t("ind.problem"))); b1.appendChild(el("p", "", d.problem)); g.appendChild(b1);
-    var b2 = el("div", "ip-block"); b2.appendChild(el("h4", "", t("ind.does"))); var ul = el("ul");
-    d.does.forEach(function (x) { var li = el("li"); li.appendChild(icon("check")); li.appendChild(el("span", "", x)); ul.appendChild(li); }); b2.appendChild(ul); g.appendChild(b2);
-    var b3 = el("div", "ip-block ip-chat"); b3.appendChild(el("h4", "", t("ind.chat")));
-    d.chat.forEach(function (m) { b3.appendChild(bubble(m[0], m[1])); }); g.appendChild(b3);
     if (d.agents && d.agents.length) {
       var b5 = el("div", "ip-block ip-agents"); b5.appendChild(el("h4", "", t("ind.agents"))); var ul2 = el("ul");
       d.agents.forEach(function (x) { var li = el("li"); li.appendChild(icon("brain")); li.appendChild(el("span", "", x)); ul2.appendChild(li); }); b5.appendChild(ul2); g.appendChild(b5);
     }
+    var b2 = el("div", "ip-block"); b2.appendChild(el("h4", "", t("ind.does"))); var ul = el("ul");
+    d.does.forEach(function (x) { var li = el("li"); li.appendChild(icon("check")); li.appendChild(el("span", "", x)); ul.appendChild(li); }); b2.appendChild(ul); g.appendChild(b2);
+    var b3 = el("div", "ip-block ip-chat"); b3.appendChild(el("h4", "", t("ind.chat")));
+    d.chat.forEach(function (m) { b3.appendChild(bubble(m[0], m[1])); }); g.appendChild(b3);
     var b4 = el("div", "ip-benefit"); var bp = el("p"); bp.appendChild(el("b", "", t("ind.benefit") + ":")); bp.appendChild(document.createTextNode(d.benefit)); b4.appendChild(bp);
     var tryBtn = el("a", "btn btn-ghost btn-sm"); tryBtn.href = "#demo"; tryBtn.appendChild(el("span", "", t("ind.try"))); tryBtn.appendChild(icon("arrow-right"));
     tryBtn.addEventListener("click", function () { setMode(false); lab.started = true; selectIndustry(d.key, true); });

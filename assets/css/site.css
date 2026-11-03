@@ -822,7 +822,7 @@ input[type=range]::-moz-range-thumb { width: 14px; height: 14px; border-radius: 
 .ar-msg .i { width: 17px; height: 17px; margin-top: .15rem; color: #7ee2b0; }
 
 /* sectores: los agentes por dentro */
-.ip-agents { grid-column: 1 / -1; padding: 1rem 1.1rem; border-radius: 14px; border: 1px dashed var(--line-2); }
+.ip-agents { order: -1; grid-column: 1 / -1; padding: 1rem 1.1rem; border-radius: 14px; border: 1px dashed var(--line-2); }
 .ip-agents li .i { color: var(--c-mkt); }
 .ip-agents li:nth-child(2) .i { color: var(--c-cont); }
 
