@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Política de tratamiento de datos personales | Innova AI Assistance</title>
-<meta name="description" content="Qué datos personales tratamos en Innova AI Assistance, para qué, cuánto tiempo los conservamos y cómo puedes pedir que los corrijamos o los borremos.">
+<meta name="description" content="Qué datos personales trata Innova AI Assistance, en qué papel, para qué, con qué proveedores, cuánto tiempo los conserva y cómo puedes conocerlos, corregirlos o pedir que se borren.">
 <link rel="canonical" href="https://innovaassistanceai.com.co/politica-de-datos.html">
 <meta name="theme-color" content="#060b16">
 <meta name="color-scheme" content="dark">
@@ -21,7 +21,7 @@
   .doc h2{font-size:19px;margin:38px 0 10px;}
   .doc h3{font-size:15.5px;margin:22px 0 6px;}
   .doc p,.doc li{font-size:15.5px;line-height:1.72;opacity:.92;}
-  .doc ul{padding-left:20px;margin:10px 0;}
+  .doc ul,.doc ol{padding-left:20px;margin:10px 0;}
   .doc li{margin:6px 0;}
   .doc table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px;}
   .doc th,.doc td{text-align:left;padding:9px 10px;border-bottom:1px solid rgba(255,255,255,.1);
@@ -30,7 +30,14 @@
   .doc a{color:#5b9cf0;}
   .doc .volver{display:inline-block;margin-bottom:28px;font-size:14px;opacity:.8;}
   .doc .caja{border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:16px 18px;margin:22px 0;}
-  @media(max-width:600px){.doc{padding:32px 18px 60px}.doc h1{font-size:25px}}
+  .doc .indice{border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:14px 18px;margin:22px 0;}
+  .doc .indice ol{margin:6px 0 0;columns:2;column-gap:28px;}
+  .doc .indice li{font-size:14.5px;margin:3px 0;break-inside:avoid;}
+  .doc .en{border-top:1px solid rgba(255,255,255,.14);margin-top:48px;padding-top:8px;}
+  /* Lo que Martín tiene que decidir antes de publicar. Se ve a propósito. */
+  .doc .pendiente{background:rgba(255,200,80,.16);border-bottom:1px dashed rgba(255,200,80,.7);padding:0 3px;}
+  @media(max-width:600px){.doc{padding:32px 18px 60px}.doc h1{font-size:25px}.doc .indice ol{columns:1}
+    .doc table{display:block;overflow-x:auto}}
 </style>
 </head>
 <body>
@@ -39,176 +46,465 @@
 <a class="volver" href="/">← Volver a Innova AI Assistance</a>
 
 <h1>Política de tratamiento de datos personales</h1>
-<div class="version">Versión 2026-10 · vigente desde el 21 de octubre de 2026</div>
+<div class="version">Versión 2026-11 · Vigente desde: <span class="pendiente">[fecha de publicación]</span> · <a href="#english">English summary</a></div>
 
 <p>
-  Esta política explica qué datos personales tratamos en <strong>Innova AI Assistance</strong>,
-  para qué los usamos, cuánto tiempo los guardamos y cómo puedes pedirnos que los corrijamos o
-  los borremos. Está escrita para entenderse, no para cubrirnos.
+  Esta política explica qué datos personales tratamos en <strong>Innova AI Assistance</strong>, en qué papel lo
+  hacemos, para qué, con quién, cuánto tiempo los guardamos y cómo puedes conocerlos, corregirlos o pedir que los
+  borremos. Está escrita para entenderse.
 </p>
 
 <div class="caja">
-  <strong>Lo esencial en cuatro líneas.</strong> Guardamos lo que nos escribes y cómo
-  contactarte, para poder atenderte. No vendemos tus datos a nadie. Los borramos al año de tu
-  último mensaje, o antes si nos lo pides. Puedes pedirnos en cualquier momento que te digamos
-  qué tenemos tuyo, que lo corrijamos o que lo borremos.
+  <strong>Lo esencial.</strong>
+  <ul>
+    <li><strong>Si nos escribes a nosotros</strong> (WhatsApp, Instagram, el chat o el formulario de esta web), o tienes
+        una cuenta en el Centro de Mando, somos los <strong>responsables</strong> de tus datos y esta política es la que
+        aplica.</li>
+    <li><strong>Si le escribiste a una empresa que usa nuestro servicio</strong>, la responsable de tus datos es esa
+        empresa; nosotros los tratamos solo por cuenta de ella, como <strong>encargados</strong>. Tus derechos los
+        ejerces ante ella (y si nos escribes, le pasamos tu petición).</li>
+    <li>Un asistente de inteligencia artificial lee y contesta los mensajes. Una persona puede tomar la conversación.</li>
+    <li>No vendemos datos, no los usamos para publicidad y no los usamos para entrenar modelos de inteligencia artificial.</li>
+    <li>Los datos se guardan y procesan principalmente en Estados Unidos, con los proveedores que se nombran aquí.</li>
+  </ul>
 </div>
 
-<h2>1. Quién responde por tus datos</h2>
+<nav class="indice" aria-label="Contenido">
+  <strong>Contenido</strong>
+  <ol>
+    <li><a href="#responsable">Quién es el responsable</a></li>
+    <li><a href="#papeles">En qué papel tratamos los datos</a></li>
+    <li><a href="#como-responsable">Datos que tratamos como responsables</a></li>
+    <li><a href="#como-encargado">Datos que tratamos por cuenta de las empresas</a></li>
+    <li><a href="#autorizacion">Tu autorización</a></li>
+    <li><a href="#ia">Inteligencia artificial</a></li>
+    <li><a href="#proveedores">Proveedores que intervienen</a></li>
+    <li><a href="#internacional">Datos fuera de Colombia</a></li>
+    <li><a href="#conservacion">Cuánto tiempo los guardamos</a></li>
+    <li><a href="#seguridad">Cómo protegemos los datos</a></li>
+    <li><a href="#derechos">Tus derechos y cómo ejercerlos</a></li>
+    <li><a href="#borrado">Borrar tus datos (también desde Facebook)</a></li>
+    <li><a href="#incidentes">Incidentes de seguridad</a></li>
+    <li><a href="#fuera">Si estás fuera de Colombia</a></li>
+    <li><a href="#web">Esta web: cookies y medición</a></li>
+    <li><a href="#menores">Menores de edad</a></li>
+    <li><a href="#autoridades">Peticiones de autoridades</a></li>
+    <li><a href="#cambios">Cambios y versiones</a></li>
+    <li><a href="#english">English summary</a></li>
+  </ol>
+</nav>
+
+<!-- ───────────────────────────────────────────────────────────── -->
+<h2 id="responsable">1. Quién es el responsable</h2>
 <table>
-  <tr><th>Responsable</th><td>Innova AI Assistance (Martín Botero Correa)</td></tr>
-  <tr><th>Correo</th><td><a href="mailto:innovaai34@gmail.com">innovaai34@gmail.com</a></td></tr>
-  <tr><th>WhatsApp</th><td><a href="https://wa.me/573054110761">+57 305 411 0761</a></td></tr>
+  <tr><th>Responsable</th><td>Martín Botero Correa, persona natural, cédula de ciudadanía 1054857509, que opera bajo el
+    nombre comercial <strong>Innova AI Assistance</strong></td></tr>
+  <tr><th>Domicilio</th><td>Av. Alberto Mendoza #81C-52, Manizales, Caldas, Colombia</td></tr>
+  <tr><th>Correo para datos personales</th><td><a href="mailto:innovaai34@gmail.com">innovaai34@gmail.com</a></td></tr>
+  <tr><th>WhatsApp y teléfono</th><td><a href="https://wa.me/573054110761">+57 305 411 0761</a></td></tr>
   <tr><th>Sitio</th><td><a href="https://innovaassistanceai.com.co">innovaassistanceai.com.co</a></td></tr>
-  <tr><th>Instagram</th><td><a href="https://instagram.com/innova_ai_assistance">@innova_ai_assistance</a></td></tr>
-  <tr><th>País</th><td>Colombia</td></tr>
+  <tr><th>Quién atiende las peticiones</th><td>Martín Botero Correa, por los canales de arriba</td></tr>
+</table>
+<p>
+  En esta política, «Innova», «nosotros» o «nuestro» se refieren a esa persona y a ese nombre comercial. Esta política
+  se rige por la Ley 1581 de 2012 y el Decreto 1377 de 2013, compilado en el Decreto 1074 de 2015.
+</p>
+
+<!-- ───────────────────────────────────────────────────────────── -->
+<h2 id="papeles">2. En qué papel tratamos los datos</h2>
+<p>Innova presta el <strong>Centro de Mando</strong>: un servicio en la nube con el que una empresa tiene un asistente
+de inteligencia artificial que atiende a sus clientes por WhatsApp, Instagram, Messenger o su web, y agentes que le
+ayudan con la contabilidad, el marketing y otras tareas. Por eso tratamos datos en dos papeles distintos, y la ley les
+da deberes distintos:</p>
+<table>
+  <tr><th>Papel</th><th>De quién son los datos</th><th>Quién decide y responde ante ti</th></tr>
+  <tr><td><strong>Responsable</strong> (decidimos para qué se usan)</td>
+      <td>Quien nos escribe a nosotros o llena el formulario de esta web; las personas con cuenta en el Centro de Mando;
+      quienes representan a las empresas que nos contratan.</td>
+      <td>Innova. Aplica toda esta política.</td></tr>
+  <tr><td><strong>Encargado</strong> (tratamos por cuenta de otro)</td>
+      <td>Los clientes, interesados, empleados y proveedores de cada empresa que usa el Centro de Mando.</td>
+      <td>La empresa. Ella fija para qué se usan, debe tener tu autorización y su propia política. Nosotros seguimos sus
+      instrucciones (sección 4).</td></tr>
 </table>
 
-<h2>2. Qué datos tratamos</h2>
-<p>Solo lo que nos das al escribirnos, o lo que el canal nos entrega junto con tu mensaje:</p>
+<!-- ───────────────────────────────────────────────────────────── -->
+<h2 id="como-responsable">3. Datos que tratamos como responsables, y para qué</h2>
+
+<h3>3.1 Si nos escribes o nos dejas tus datos</h3>
+<table>
+  <tr><th>Qué datos</th><th>Para qué</th></tr>
+  <tr><td>Tu número de teléfono o el identificador del canal (WhatsApp, Instagram, Messenger o el chat de esta web), y
+      tu nombre si lo das o si el canal lo muestra.</td>
+      <td>Saber con quién hablamos y poder contestarte.</td></tr>
+  <tr><td>Lo que nos escribes y lo que nos envías: texto, notas de voz, fotos y archivos.</td>
+      <td>Entender lo que necesitas, contestarte y continuar la conversación sin hacerte repetir.</td></tr>
+  <tr><td>Lo que pones en el formulario de esta web: nombre, empresa, tipo de negocio, WhatsApp o correo, y lo que
+      quieres resolver.</td>
+      <td>Contactarte para lo que pediste: una demostración, una propuesta, una cita.</td></tr>
+  <tr><td>Los datos de una cita o reunión que agendes con nosotros (fecha, hora, correo).</td>
+      <td>Agendarla y recordártela.</td></tr>
+  <tr><td>Fecha y hora de cada mensaje, y los datos técnicos que el canal entrega con él.</td>
+      <td>Llevar el orden de la conversación, prevenir abusos y resolver fallas.</td></tr>
+</table>
+
+<h3>3.2 Si tienes una cuenta en el Centro de Mando</h3>
+<table>
+  <tr><th>Qué datos</th><th>Para qué</th></tr>
+  <tr><td>Nombre, correo, la empresa a la que perteneces y tu rol.</td>
+      <td>Darte acceso, mostrarte solo los datos de tu empresa y permitirte lo que tu rol permite.</td></tr>
+  <tr><td>Tu contraseña, guardada con un cifrado de un solo sentido: nadie puede leerla, tampoco nosotros.</td>
+      <td>Comprobar que eres tú.</td></tr>
+  <tr><td>Los códigos de entrada que enviamos a tu correo y los equipos que marcas como «recordados».</td>
+      <td>Confirmar que eres tú cuando entras desde un equipo nuevo.</td></tr>
+  <tr><td>El registro de accesos y acciones: fecha, acción y dirección IP.</td>
+      <td>Seguridad, y poder saber quién hizo cada cambio.</td></tr>
+  <tr><td>La versión de esta política que aceptaste, con fecha e IP.</td>
+      <td>Tener prueba de tu autorización, como exige la ley.</td></tr>
+  <tr><td>Si conectas las cuentas de tu empresa con Meta o Google: tu identificador dentro de nuestra app y el token de
+      acceso que entrega la plataforma, guardado cifrado.</td>
+      <td>Leer, a nombre de tu empresa, lo que autorizaste en la pantalla de permisos. El detalle está en la
+      <a href="https://app.innovaassistanceai.com.co/legal/privacidad">política del Centro de Mando</a>.</td></tr>
+</table>
+
+<h3>3.3 Si representas a una empresa cliente</h3>
+<p>Nombre, cargo, documento de identidad y datos de contacto de quien contrata, firma o paga, y los datos de la
+empresa. Para celebrar y ejecutar el contrato, facturar, cobrar y cumplir nuestras obligaciones contables y
+tributarias.</p>
+
+<h3>3.4 Lo que no pedimos</h3>
 <ul>
-  <li><strong>Tu número de teléfono o identificador del canal</strong> por el que nos escribes
-      (WhatsApp, Instagram o el chat de esta web).</li>
-  <li><strong>Tu nombre</strong>, si lo das o si el canal lo muestra en tu perfil.</li>
-  <li><strong>El contenido de la conversación</strong>: lo que escribes, y las fotos, notas de voz
-      o archivos que nos envíes.</li>
-  <li><strong>Tu correo electrónico</strong>, solo si nos lo das.</li>
-  <li><strong>Datos técnicos</strong> del momento en que escribes: fecha, hora y, en el chat de la
-      web, la dirección IP desde la que te conectas.</li>
+  <li><strong>No te pedimos tu cédula</strong> para atenderte. Si alguna vez hiciera falta para una gestión concreta
+      (una factura, un contrato), te lo pediremos en ese momento y te diremos para qué.</li>
+  <li><strong>No pedimos datos sensibles</strong> (salud, origen racial o étnico, orientación política, convicciones
+      religiosas o filosóficas, pertenencia a sindicatos u organizaciones sociales, vida sexual, datos biométricos). Si
+      alguna vez te hiciéramos una pregunta sobre ellos, no estás obligado a contestarla. Si los escribes por tu cuenta,
+      quedarán en la conversación hasta que se borre; puedes pedir que se borren antes.</li>
 </ul>
-<p>
-  <strong>No te pedimos tu cédula</strong> para atenderte. Si alguna vez hiciera falta para una
-  gestión concreta —una factura, un contrato— te lo pediríamos en ese momento y te diríamos para
-  qué.
-</p>
-<p>
-  <strong>No tratamos datos sensibles</strong> (salud, origen étnico, opiniones políticas,
-  creencias, datos biométricos) ni pedimos que nos los des. Si los escribes por tu cuenta en una
-  conversación, quedarán en ella hasta que se borre; puedes pedirnos que la borremos antes.
-</p>
 
-<h2>3. Para qué los usamos</h2>
+<h3>3.5 Lo que nunca hacemos</h3>
 <ul>
-  <li><strong>Atenderte:</strong> responder tus preguntas, darte información sobre nuestros
-      servicios y hacerle seguimiento a lo que nos pediste.</li>
-  <li><strong>Continuar la conversación:</strong> recordar de qué hablamos para no hacerte repetir
-      lo mismo cada vez.</li>
-  <li><strong>Mejorar el servicio:</strong> entender qué preguntan nuestros clientes y dónde falla
-      el asistente.</li>
-  <li><strong>Cumplir la ley</strong> cuando una autoridad competente nos lo exija.</li>
+  <li>No vendemos, alquilamos ni cedemos datos personales a nadie.</li>
+  <li>No los usamos para publicidad de terceros.</li>
+  <li>No usamos los datos de una empresa para otra, ni los cruzamos entre empresas.</li>
+  <li>No usamos tus conversaciones ni los datos de las empresas para entrenar modelos de inteligencia artificial.</li>
+  <li>No te enviamos mensajes comerciales sin que lo hayas pedido o autorizado, y puedes pedirnos que paremos en
+      cualquier momento.</li>
 </ul>
-<p>
-  <strong>No usamos tus datos para publicidad de terceros, no los vendemos y no los cedemos</strong>
-  a nadie para que te ofrezca cosas.
-</p>
 
-<h2>4. Un asistente de inteligencia artificial lee tus mensajes</h2>
-<p>
-  Quien te responde primero es un asistente automático. Para entenderte y contestarte, el
-  contenido de tu conversación se procesa con modelos de inteligencia artificial de
-  <strong>OpenAI</strong> y con servicios de <strong>Cloudflare</strong>.
-</p>
-<p>
-  Una persona de nuestro equipo puede leer la conversación y responderte directamente cuando el
-  asistente no basta o cuando tú lo pides.
-</p>
+<!-- ───────────────────────────────────────────────────────────── -->
+<h2 id="como-encargado">4. Datos que tratamos por cuenta de las empresas (como encargados)</h2>
+<p>Cuando una empresa usa el Centro de Mando, tratamos datos de las personas que se relacionan con ella. Según los
+módulos que tenga activos y las cuentas que conecte:</p>
+<ul>
+  <li><strong>Sus clientes e interesados</strong>: lo que le escriben por WhatsApp, Instagram, Messenger o su web
+      (texto, notas de voz, imágenes y archivos), su número o identificador, su nombre de perfil, si autorizaron el
+      tratamiento, y lo que la empresa registre sobre ellos (seguimiento comercial, tareas, cobros, reservas).</li>
+  <li><strong>Sus proveedores</strong>: nombre o razón social, NIT o cédula, contacto y valores de las facturas y
+      recibos que llegan al correo o al Drive que la empresa conectó, para que el agente contable lleve la
+      contabilidad.</li>
+  <li><strong>Su equipo</strong>: los datos de las personas a las que la empresa da acceso al panel.</li>
+  <li><strong>Su público en redes</strong>: las métricas que Meta entrega de la página, el Instagram y las cuentas
+      publicitarias que la empresa eligió compartir.</li>
+</ul>
+<p>En todos estos casos:</p>
+<ul>
+  <li><strong>La empresa es la responsable.</strong> Ella decide para qué se usan tus datos, debe pedirte la
+      autorización y debe tener su propia política de datos. El asistente de cada empresa habla en nombre de ella, no
+      de Innova.</li>
+  <li><strong>Nosotros solo seguimos sus instrucciones</strong>, para prestarle el servicio que contrató, bajo un
+      <a href="acuerdo-de-transmision.html">acuerdo de transmisión de datos</a> que nos obliga a tratarlos conforme a
+      la ley, a protegerlos y a guardar confidencialidad. No los usamos para nada propio.</li>
+  <li><strong>Tus derechos los ejerces ante la empresa.</strong> Si nos escribes a nosotros, le pasaremos tu petición
+      a la empresa y la ayudaremos a responderte a tiempo.</li>
+  <li>Le damos a cada empresa herramientas para cumplir: su asistente puede pedirte la autorización al empezar la
+      conversación con un enlace a la política de la empresa, y quien administra la cuenta puede ver el registro de
+      autorizaciones, descargar tus datos y borrarlos si lo pides.</li>
+</ul>
 
-<h2>5. Quién más interviene</h2>
-<p>
-  Para que el servicio funcione, tus datos pasan por proveedores que actúan por cuenta nuestra.
-  Todos están fuera de Colombia, así que <strong>hay transferencia internacional de datos</strong>
-  y al aceptar esta política la estás autorizando:
-</p>
+<!-- ───────────────────────────────────────────────────────────── -->
+<h2 id="autorizacion">5. Tu autorización</h2>
+<p>Te pedimos autorización antes de tratar tus datos, o a más tardar al recogerlos, de una forma de la que quede
+prueba:</p>
+<ul>
+  <li><strong>En el chat</strong> (WhatsApp, Instagram, Messenger, web): el asistente te muestra el enlace a esta
+      política y te pregunta si aceptas. Guardamos qué respondiste, por qué canal, cuándo y con qué enlace de política.
+      Si no aceptas, el asistente lo respeta y no insiste <span class="pendiente">[decidir qué hace después: hoy el código se contradice — ver BORRADOR-CAMBIOS.md]</span>.</li>
+  <li><strong>En el formulario de esta web</strong>: marcando la casilla «Acepto la política de tratamiento de
+      datos».</li>
+  <li><strong>En el Centro de Mando</strong>: marcando la casilla de aceptación al crear tu cuenta o aceptar una
+      invitación. Guardamos la versión, la fecha y la IP.</li>
+</ul>
+<p>Tu silencio nunca se toma como autorización. Al autorizar, aceptas también que tus datos se traten con los
+proveedores de la sección 7 y fuera de Colombia, como explica la sección 8.</p>
+<p>No necesitamos tu autorización en los casos que la ley exceptúa, por ejemplo cuando una autoridad la pide en
+ejercicio de sus funciones legales o un juez lo ordena (Ley 1581 de 2012, artículo 10).</p>
+
+<!-- ───────────────────────────────────────────────────────────── -->
+<h2 id="ia">6. Inteligencia artificial</h2>
+<ul>
+  <li><strong>Quien te responde primero es un asistente automático.</strong> Para entender tu mensaje y redactar la
+      respuesta, el contenido de la conversación se envía a modelos de inteligencia artificial de los proveedores de la
+      sección 7. Si mandas una nota de voz, una imagen o un documento, también se procesa con esos modelos para
+      entenderlo.</li>
+  <li><strong>Una persona puede tomar la conversación</strong> cuando el asistente no basta o cuando tú lo pides.</li>
+  <li><strong>Para evitar abusos</strong>, el asistente puede pausar por unas horas una conversación con mensajes repetidos o abusivos.</li>
+  <li><strong>El asistente puede equivocarse.</strong> Lo que te diga sobre precios, disponibilidad o condiciones lo
+      confirma la empresa.</li>
+  <li><strong>No tomamos solo de forma automática decisiones que te afecten jurídicamente.</strong> El asistente y los
+      agentes informan, organizan, recomiendan y preparan; lo que tiene efecto afuera, como publicar, activar una
+      campaña, gastar dinero o enviar mensajes masivos, lo aprueba una persona de la empresa.</li>
+  <li><strong>No entrenamos modelos con tus datos</strong>, y usamos los servicios de inteligencia artificial en su
+      modalidad para empresas (API), cuyas condiciones disponen que lo que se les envía no se usa para entrenar sus
+      modelos.</li>
+</ul>
+
+<!-- ───────────────────────────────────────────────────────────── -->
+<h2 id="proveedores">7. Proveedores que intervienen</h2>
+<p>Para que el servicio funcione, los datos pasan por proveedores que actúan por cuenta nuestra (o, en el caso de las
+plataformas que una empresa conecta, por cuenta de ella). Cada uno recibe solo lo que necesita para su función:</p>
 <table>
   <tr><th>Proveedor</th><th>Para qué</th><th>Dónde</th></tr>
-  <tr><td>Cloudflare</td><td>Alojamiento del servicio y de la base de datos donde se guardan las conversaciones</td><td>Estados Unidos / red global</td></tr>
-  <tr><td>OpenAI</td><td>El modelo de inteligencia artificial que entiende y redacta las respuestas</td><td>Estados Unidos</td></tr>
-  <tr><td>Meta (WhatsApp, Instagram)</td><td>El canal por el que nos escribes, si usas esas aplicaciones</td><td>Estados Unidos / Irlanda</td></tr>
-  <tr><td>Dualhook</td><td>Intermediario técnico que conecta nuestro número de WhatsApp con Meta</td><td>Fuera de Colombia</td></tr>
-  <tr><td>Google</td><td>Agenda, cuando programamos una cita contigo</td><td>Estados Unidos</td></tr>
-  <tr><td>Resend</td><td>Envío de correos, cuando hay que escribirte uno</td><td>Estados Unidos</td></tr>
+  <tr><td>Cloudflare, Inc.</td><td>Alojamiento del servicio, bases de datos, almacenamiento de archivos, búsqueda en la
+      base de conocimiento, algunos modelos de inteligencia artificial y la recepción del correo del dominio.</td>
+      <td>Estados Unidos y red global</td></tr>
+  <tr><td>OpenAI, L.L.C.</td><td>Modelos de inteligencia artificial que entienden los mensajes, redactan respuestas,
+      leen documentos e imágenes y transcriben notas de voz.</td>
+      <td>Estados Unidos</td></tr>
+  <tr><td>Meta Platforms (WhatsApp, Instagram, Messenger, Facebook)</td><td>Los canales por los que se escribe, y las
+      páginas y cuentas publicitarias que una empresa conecta.</td><td>Estados Unidos / Irlanda</td></tr>
+  <tr><td>Dualhook</td><td>Intermediario técnico que conecta algunos números de WhatsApp con Meta.</td>
+      <td>Fuera de Colombia <span class="pendiente">[confirmar país]</span></td></tr>
+  <tr><td>Composio</td><td>Intermediario técnico de la conexión con Google, solo cuando una empresa conecta sus cuentas
+      de Google.</td><td>Estados Unidos</td></tr>
+  <tr><td>Google</td><td>Gmail, Drive, Hojas de cálculo, Calendario y las demás herramientas que una empresa conecta, y
+      nuestra propia agenda de citas.</td><td>Estados Unidos</td></tr>
+  <tr><td>Resend</td><td>Envío de los correos del Centro de Mando (invitaciones, códigos de entrada, avisos).</td>
+      <td>Estados Unidos</td></tr>
 </table>
-<p>
-  Estos proveedores tratan tus datos únicamente para prestarnos su servicio, no para fines
-  propios.
-</p>
+<p>Cuando una empresa conecta su Google o su Meta, el uso de esa información se limita a la tarea que la empresa le
+pidió al agente. El uso que Innova hace de la información recibida de las API de Google cumple la
+<a href="https://developers.google.com/terms/api-services-user-data-policy">Política de datos de usuario de los
+servicios de API de Google</a>, incluidos los requisitos de uso limitado.</p>
+<p>Si sumamos un proveedor que trate datos personales, actualizaremos esta lista y avisaremos antes a las empresas
+clientes.</p>
 
-<h2>6. Cuánto tiempo los guardamos</h2>
-<p>
-  <strong>Un año desde tu último mensaje.</strong> Si pasa un año sin que nos escribas, se borra
-  automáticamente toda tu conversación: los mensajes, los archivos que enviaste y tus datos de
-  contacto. No hay que pedirlo, ocurre solo.
-</p>
-<p>
-  Si vuelves a escribirnos, el plazo empieza de nuevo desde ese día, para que no perdamos el hilo
-  de lo que hablamos contigo.
-</p>
-<p>
-  Elegimos un año porque es el tiempo en que una conversación comercial sigue teniendo sentido.
-  Guardar más tiempo, sin un motivo, sería guardar por guardar.
-</p>
-
-<h2>7. Tus derechos</h2>
-<p>Sobre tus datos personales puedes, en cualquier momento y gratis:</p>
+<!-- ───────────────────────────────────────────────────────────── -->
+<h2 id="internacional">8. Datos fuera de Colombia</h2>
+<p>Los proveedores de la sección 7 están fuera de Colombia, principalmente en Estados Unidos. Por eso tus datos se
+envían y se guardan fuera del país. Lo hacemos:</p>
 <ul>
-  <li><strong>Saber qué tenemos tuyo</strong> y pedirnos una copia.</li>
-  <li><strong>Corregir</strong> lo que esté mal o incompleto.</li>
-  <li><strong>Pedir que lo borremos</strong>, cuando no haya una obligación legal que nos impida
-      hacerlo.</li>
-  <li><strong>Retirar tu autorización</strong>. Ten en cuenta que, sin ella, no podremos seguir
-      atendiéndote por estos canales.</li>
-  <li><strong>Presentar una queja</strong> ante la Superintendencia de Industria y Comercio, si
-      consideras que no hemos cumplido.</li>
+  <li>con tu autorización expresa, que das al aceptar esta política;</li>
+  <li>solo hacia los proveedores nombrados, para que presten el servicio por cuenta nuestra o de la empresa, bajo sus
+      condiciones de tratamiento de datos y de seguridad;</li>
+  <li>teniendo en cuenta que la Superintendencia de Industria y Comercio ha incluido a Estados Unidos entre los países
+      con un nivel adecuado de protección de datos personales.</li>
 </ul>
 
-<h3>Cómo los ejerces</h3>
-<p>
-  Escríbenos a <a href="mailto:innovaai34@gmail.com">innovaai34@gmail.com</a> o dínoslo por el
-  mismo <a href="https://wa.me/573054110761">WhatsApp</a>. Basta con que nos digas qué quieres y
-  desde qué número o correo nos escribiste, para poder identificar tus datos. No tienes que
-  explicar por qué.
-</p>
-<p>
-  <strong>Plazos:</strong> respondemos las consultas en un máximo de diez días hábiles y los
-  reclamos en quince días hábiles, como exige la ley. Si necesitáramos más tiempo, te avisamos
-  antes de que se cumpla el plazo y te explicamos por qué.
-</p>
+<!-- ───────────────────────────────────────────────────────────── -->
+<h2 id="conservacion">9. Cuánto tiempo los guardamos</h2>
+<p>Solo el tiempo necesario para la finalidad, o el que la ley nos obligue. Después se borran.</p>
+<table>
+  <tr><th>Qué</th><th>Cuánto tiempo</th></tr>
+  <tr><td>Conversaciones con Innova (mensajes, archivos y datos de contacto) y datos del formulario de la web</td>
+      <td>Cada mensaje y cada archivo se borra al año de enviado. La conversación entera y tus datos de contacto se borran al año de tu último mensaje.</td></tr>
+  <tr><td>Cuentas del Centro de Mando y su registro de accesos</td>
+      <td>Mientras la cuenta exista. Al terminar el servicio de la empresa, se borran con el resto de sus datos (fila
+      siguiente).</td></tr>
+  <tr><td>Datos que tratamos por cuenta de una empresa</td>
+      <td>Mientras la empresa tenga el servicio, salvo que ella los borre antes. Al terminar, la empresa tiene 30 días
+      para descargarlos; después se borran.</td></tr>
+  <tr><td>Tokens de acceso de Meta y Google</td>
+      <td>Mientras la conexión esté activa. Al desconectar, se borran.</td></tr>
+  <tr><td>Copias de seguridad</td>
+      <td>Se renuevan solas: lo que se borra desaparece también de ellas en un máximo de
+      <span class="pendiente">[60]</span> días. Solo se usan para recuperar el servicio ante una falla.</td></tr>
+  <tr><td>Prueba de tu autorización y de las peticiones que atendimos</td>
+      <td>Mientras tratemos tus datos y el tiempo que la ley nos exija para demostrar que cumplimos.</td></tr>
+  <tr><td>Datos de facturación de las empresas clientes</td>
+      <td>El tiempo que exijan las normas contables y tributarias.</td></tr>
+</table>
 
-<h2>8. Cómo los protegemos</h2>
+<!-- ───────────────────────────────────────────────────────────── -->
+<h2 id="seguridad">10. Cómo protegemos los datos</h2>
 <ul>
-  <li>Las conversaciones viajan cifradas y se guardan en infraestructura con acceso restringido.</li>
-  <li>El acceso al panel donde se leen exige usuario y contraseña propios; las contraseñas se
-      guardan cifradas y nadie, ni nosotros, puede leerlas.</li>
-  <li>Cada acceso y cada cambio quedan registrados.</li>
-  <li>Ninguna medida es infalible. Si ocurriera un incidente que afecte tus datos, lo reportaremos
-      a la autoridad y te lo comunicaremos.</li>
+  <li>Toda la información viaja cifrada (HTTPS).</li>
+  <li>Las contraseñas se guardan con un cifrado de un solo sentido, y los tokens de acceso a otras plataformas, cifrados.</li>
+  <li>Los datos de cada empresa van separados: cada asistente tiene su propia base de datos, y el panel comprueba en
+      cada pantalla que quien la abre pertenece a esa empresa.</li>
+  <li>Permisos por rol dentro de cada empresa.</li>
+  <li>Al entrar al Centro de Mando desde un equipo nuevo, los dueños de cada empresa y el personal de Innova confirman
+      con un código que llega a su correo. Las sesiones tienen una duración máxima y hay límites de intentos.</li>
+  <li>Cada acceso del personal de Innova a los datos de una empresa queda registrado, y el dueño de la empresa lo ve.</li>
+  <li>Los avisos que nos llegan de las plataformas se verifican (con su firma o con una llave secreta) antes de aceptarlos.</li>
+  <li>Hacemos copias de seguridad y hemos probado recuperarlas.</li>
+</ul>
+<p>Ninguna medida es infalible. Si ocurre un incidente, actuamos como dice la sección 13.</p>
+
+<!-- ───────────────────────────────────────────────────────────── -->
+<h2 id="derechos">11. Tus derechos y cómo ejercerlos</h2>
+<p>Como titular de tus datos personales tienes derecho, de forma gratuita, a (Ley 1581 de 2012, artículo 8):</p>
+<ul>
+  <li><strong>Conocer, actualizar y rectificar</strong> tus datos, también si están incompletos o son inexactos.</li>
+  <li><strong>Pedir prueba de la autorización</strong> que nos diste.</li>
+  <li><strong>Saber cómo hemos usado</strong> tus datos.</li>
+  <li><strong>Revocar la autorización y pedir que borremos</strong> tus datos, cuando no tengamos un deber legal o
+      contractual de conservarlos.</li>
+  <li><strong>Acceder gratis</strong> a tus datos.</li>
+  <li><strong>Presentar quejas ante la Superintendencia de Industria y Comercio</strong> (SIC), después de haber hecho tu
+      consulta o reclamo ante nosotros.</li>
 </ul>
 
-<h2>9. Menores de edad</h2>
-<p>
-  Nuestros servicios se dirigen a empresas y a personas mayores de edad. No recogemos a sabiendas
-  datos de menores. Si detectamos que lo hemos hecho sin la autorización de quien ejerce la patria
-  potestad, los borramos.
-</p>
+<h3>Cómo hacerlo</h3>
+<p>Escríbenos a <a href="mailto:innovaai34@gmail.com">innovaai34@gmail.com</a> o al
+<a href="https://wa.me/573054110761">WhatsApp +57 305 411 0761</a>. Dinos:</p>
+<ol>
+  <li>quién eres, y desde qué número, cuenta o correo nos escribiste, para encontrar tus datos;</li>
+  <li>qué pides;</li>
+  <li>un correo o teléfono para contestarte.</li>
+</ol>
+<p>También pueden hacerlo tus causahabientes, tu representante o tu apoderado. Para proteger tus datos, podemos pedirte
+que confirmes tu identidad antes de entregarte información o de borrarla. No tienes que explicar por qué lo pides.</p>
 
-<h2>10. Cambios en esta política</h2>
-<p>
-  Cuando cambiemos esta política, publicaremos la nueva versión aquí con su fecha, y
-  <strong>las versiones anteriores seguirán disponibles</strong> para que siempre se pueda saber a
-  qué texto se dio la autorización en cada momento.
-</p>
+<h3>Plazos</h3>
+<ul>
+  <li><strong>Consultas</strong> (qué tenemos, cómo lo usamos): las respondemos en máximo <strong>10 días hábiles</strong>
+      desde que las recibimos. Si no alcanzamos, te avisamos antes, con el motivo, y te respondemos en máximo 5 días
+      hábiles más (Ley 1581 de 2012, artículo 14).</li>
+  <li><strong>Reclamos</strong> (corregir, actualizar, borrar, revocar, o un incumplimiento): los resolvemos en máximo
+      <strong>15 días hábiles</strong> desde el día siguiente a recibirlos. Si no alcanzamos, te avisamos antes, con el
+      motivo, y los resolvemos en máximo 8 días hábiles más. Si al reclamo le falta información, te pedimos que la
+      completes en los 5 días siguientes; si pasan 2 meses sin que la envíes, entendemos que desististe. Mientras se
+      resuelve, tus datos quedan marcados como «reclamo en trámite» (Ley 1581 de 2012, artículo 15).</li>
+</ul>
+<p>Si tus datos los tratamos por cuenta de una empresa (sección 4), le pasamos tu petición a esa empresa, te lo decimos y
+la ayudamos a responderte dentro de estos plazos.</p>
+
+<!-- ───────────────────────────────────────────────────────────── -->
+<h2 id="borrado">12. Borrar tus datos (también desde Facebook)</h2>
+<p>Además de pedirlo por correo o WhatsApp como dice la sección 11:</p>
+<ul>
+  <li>Si conectaste Facebook, Instagram, tus anuncios, WhatsApp Business o Google al Centro de Mando, las instrucciones
+      para quitar el acceso y pedir el borrado, incluida la forma de hacerlo desde la configuración de Facebook, están en
+      <a href="https://app.innovaassistanceai.com.co/legal/eliminar-datos">app.innovaassistanceai.com.co/legal/eliminar-datos</a>.
+      Allí recibes un código para seguir tu solicitud.</li>
+  <li>Si le escribiste a una empresa que usa el Centro de Mando, pídeselo a ella: quien administra su cuenta puede borrar
+      tus mensajes, archivos, ficha y autorización desde tu conversación.</li>
+</ul>
+<p>Lo que exista dentro de las propias cuentas de Meta o Google no lo borramos nosotros; se borra allí.</p>
+
+<!-- ───────────────────────────────────────────────────────────── -->
+<h2 id="incidentes">13. Incidentes de seguridad</h2>
+<p>Si ocurre una violación de seguridad que ponga en riesgo datos personales (pérdida, robo o acceso no autorizado),
+la informaremos a la Superintendencia de Industria y Comercio como exige la ley (Ley 1581 de 2012, artículo 17,
+literal n, y artículo 18, literal k), avisaremos a las empresas afectadas para que puedan cumplir sus propios deberes, y
+te lo comunicaremos cuando el incidente pueda afectarte.</p>
+
+<!-- ───────────────────────────────────────────────────────────── -->
+<h2 id="fuera">14. Si estás fuera de Colombia</h2>
+<p>Innova está en Colombia y esta política se rige por la ley colombiana. Si vives en otro país, la ley de tu país
+puede darte derechos adicionales (por ejemplo, en la Unión Europea, Brasil, México, Perú, Chile, Argentina o algunos
+estados de Estados Unidos). Puedes ejercerlos por los mismos canales de la sección 11, y los atenderemos en lo que esa
+ley nos exija.</p>
+<p>Si representas a una empresa que trata datos de personas en la Unión Europea, el Espacio Económico Europeo o el
+Reino Unido, escríbenos <strong>antes</strong> de conectar esos datos: usar el servicio con ellos requiere firmar un
+acuerdo de tratamiento adicional con las cláusulas contractuales que esas normas exigen.</p>
+
+<!-- ───────────────────────────────────────────────────────────── -->
+<h2 id="web">15. Esta web: cookies y medición</h2>
+<ul>
+  <li>Esta web <strong>no usa cookies</strong> de publicidad ni de seguimiento, ni herramientas de medición de
+      terceros.</li>
+  <li>Contamos visitas de forma anónima: qué página se abrió, desde qué página se llegó, el ancho de la pantalla y qué
+      pasos se dieron (abrir la demostración, llegar al formulario, enviarlo). No guardamos la IP ni lo que escribes en
+      la demostración, el formulario o la calculadora.</li>
+  <li>Tu navegador guarda el idioma que elegiste, para mostrarte la web así la próxima vez.</li>
+  <li>El chat de esta web lo prestamos nosotros mismos, desde nuestro propio dominio.</li>
+  <li>El Centro de Mando usa solo cookies técnicas, necesarias para funcionar: la de la sesión y las que confirman la
+      entrada desde un equipo reconocido. No usa cookies de publicidad.</li>
+</ul>
+
+<!-- ───────────────────────────────────────────────────────────── -->
+<h2 id="menores">16. Menores de edad</h2>
+<p>Nuestros servicios son para empresas y para personas mayores de edad. No recogemos a sabiendas datos de niños, niñas
+o adolescentes. Si detectamos que lo hicimos sin la autorización de su representante legal, los borramos. Las empresas
+que usan el Centro de Mando no deben usarlo para recoger datos de menores, salvo que cumplan los requisitos especiales
+de la ley.</p>
+
+<!-- ───────────────────────────────────────────────────────────── -->
+<h2 id="autoridades">17. Peticiones de autoridades</h2>
+<p>Solo entregamos datos personales a una autoridad cuando la pide en ejercicio de sus funciones legales o por orden
+judicial. Antes revisamos que la petición sea legal y entregamos solo lo necesario. Si la ley lo permite, avisamos a la
+empresa a la que pertenecen los datos.</p>
+
+<!-- ───────────────────────────────────────────────────────────── -->
+<h2 id="cambios">18. Cambios y versiones</h2>
+<p>Si cambiamos esta política, publicaremos aquí la nueva versión con su fecha. Si el cambio es importante (por
+ejemplo, una nueva finalidad o un nuevo proveedor que trate tus datos), te lo comunicaremos antes de que rija, y si
+cambia la finalidad te pediremos una nueva autorización. <strong>Las versiones anteriores seguirán disponibles</strong>
+para que siempre se pueda saber a qué texto se dio la autorización en cada momento.</p>
+<p>Las bases de datos de Innova estarán vigentes mientras se cumplan las finalidades descritas aquí y durante los plazos
+de la sección 9.</p>
 <p>Versiones publicadas:</p>
 <ul>
-  <li><strong>Versión 2026-10</strong> — vigente desde el 21 de octubre de 2026 (esta).</li>
-  <li><strong>Versión del 8 de septiembre de 2026</strong> — la anterior. Se reemplazó porque no
-      mencionaba que un proveedor de inteligencia artificial procesa el contenido de las
-      conversaciones, y porque el plazo de conservación pasó a ser un año concreto en vez de
-      indefinido.</li>
+  <li><strong>Versión 2026-11</strong>, vigente desde <span class="pendiente">[fecha de publicación]</span> (esta). Cambió
+      porque Innova pasó de atender solo su propio chat a prestar el Centro de Mando a otras empresas: ahora explica los
+      dos papeles (responsable y encargado), identifica al responsable con su documento y domicilio, actualiza la lista de
+      proveedores, explica la transferencia internacional, la conservación por tipo de dato, las medidas de seguridad, el
+      borrado desde Facebook y los derechos de quienes están fuera de Colombia.</li>
+  <li><a href="politica-de-datos-2026-10.html"><strong>Versión 2026-10</strong></a>, vigente desde el 21 de octubre de
+      2026.</li>
+  <li><strong>Versión del 8 de septiembre de 2026</strong>. Se reemplazó porque no mencionaba que un proveedor de
+      inteligencia artificial procesa el contenido de las conversaciones, y porque el plazo de conservación pasó a ser un
+      año concreto en vez de indefinido.</li>
 </ul>
+<p>Ver también: <a href="acuerdo-de-transmision.html">Acuerdo de transmisión de datos (Innova como encargado)</a> ·
+<a href="https://app.innovaassistanceai.com.co/legal/privacidad">Política del Centro de Mando</a> ·
+<a href="https://app.innovaassistanceai.com.co/legal/terminos">Términos del servicio</a>.</p>
+
+<!-- ───────────────────────────────────────────────────────────── -->
+<section class="en" id="english" lang="en">
+<h2>English summary</h2>
+<p>This is a summary for international clients and users. The Spanish text above is the binding version.</p>
+<ul>
+  <li><strong>Controller:</strong> Martín Botero Correa, an individual (Colombian ID 1054857509) doing business as
+      Innova AI Assistance, Av. Alberto Mendoza #81C-52, Manizales, Caldas, Colombia ·
+      <a href="mailto:innovaai34@gmail.com">innovaai34@gmail.com</a> · +57 305 411 0761. Governed by Colombian Law 1581
+      of 2012 and Decree 1377 of 2013 (compiled in Decree 1074 of 2015).</li>
+  <li><strong>Two roles.</strong> We are the <em>controller</em> for people who contact Innova directly, use our website
+      form, or hold a Centro de Mando account. We are a <em>processor</em> for the personal data of each client
+      business's customers, employees and suppliers: the business is the controller, must obtain its customers' consent
+      and have its own policy, and we act only on its instructions under our
+      <a href="acuerdo-de-transmision.html">data transmission agreement</a> (in Spanish).</li>
+  <li><strong>AI.</strong> An AI assistant reads and answers messages; a human can take over. Agents recommend and
+      draft; actions with external effect (publishing, launching campaigns, spending money, bulk messaging) need
+      approval from a person at the business. We do not use personal data to train AI models.</li>
+  <li><strong>Providers and transfers.</strong> Cloudflare, OpenAI, Meta, Dualhook, Composio, Google and Resend, mainly in
+      the United States. Data is therefore transferred outside Colombia, with your express consent.</li>
+  <li><strong>We never</strong> sell personal data, use it for third-party advertising, or mix one business's data with
+      another's.</li>
+  <li><strong>Retention.</strong> Only as long as needed for the purpose or required by law. Conversations with Innova:
+      each message and file is deleted one year after it was sent, and the whole conversation one year after the last
+      message. When a business leaves the service it has 30 days to download its data, which is
+      then deleted.</li>
+  <li><strong>Your rights.</strong> Access, update, correct, delete, revoke consent, obtain proof of consent, and complain
+      to Colombia's Superintendence of Industry and Commerce (SIC). Write to
+      <a href="mailto:innovaai34@gmail.com">innovaai34@gmail.com</a>. Inquiries are answered within 10 business days
+      (extendable by 5); claims within 15 business days (extendable by 8). If your data is held on behalf of a client
+      business, we forward your request to it.</li>
+  <li><strong>Outside Colombia.</strong> Your local law (for example the EU GDPR or Brazil's LGPD) may give you additional
+      rights; use the same contact. We do not claim certification under those laws. Businesses that process data of
+      people in the EU/EEA/UK must contact us before connecting that data, because an additional data processing
+      agreement with standard contractual clauses is required.</li>
+  <li><strong>Data deletion (including from Facebook):</strong>
+      <a href="https://app.innovaassistanceai.com.co/legal/en/data-deletion">app.innovaassistanceai.com.co/legal/en/data-deletion</a>.</li>
+  <li><strong>Children.</strong> Our services are for businesses and adults.</li>
+</ul>
+</section>
 
 <p style="margin-top:40px;opacity:.6;font-size:13.5px">
-  Política de tratamiento de la información de Innova AI Assistance, conforme a la Ley 1581 de 2012
-  y el Decreto 1377 de 2013.
+  Política de tratamiento de la información de Innova AI Assistance, conforme a la Ley 1581 de 2012 y al Decreto 1377
+  de 2013, compilado en el Decreto 1074 de 2015.
 </p>
 
 </main>
