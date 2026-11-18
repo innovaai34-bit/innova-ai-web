@@ -34,8 +34,6 @@
   .doc .indice ol{margin:6px 0 0;columns:2;column-gap:28px;}
   .doc .indice li{font-size:14.5px;margin:3px 0;break-inside:avoid;}
   .doc .en{border-top:1px solid rgba(255,255,255,.14);margin-top:48px;padding-top:8px;}
-  /* Lo que Martín tiene que decidir antes de publicar. Se ve a propósito. */
-  .doc .pendiente{background:rgba(255,200,80,.16);border-bottom:1px dashed rgba(255,200,80,.7);padding:0 3px;}
   @media(max-width:600px){.doc{padding:32px 18px 60px}.doc h1{font-size:25px}.doc .indice ol{columns:1}
     .doc table{display:block;overflow-x:auto}}
 </style>
@@ -46,7 +44,7 @@
 <a class="volver" href="/">← Volver a Innova AI Assistance</a>
 
 <h1>Política de tratamiento de datos personales</h1>
-<div class="version">Versión 2026-11 · Vigente desde: <span class="pendiente">[fecha de publicación]</span> · <a href="#english">English summary</a></div>
+<div class="version">Versión 2026-11 · Vigente desde: {{FECHA_PUBLICACION}} · <a href="#english">English summary</a></div>
 
 <p>
   Esta política explica qué datos personales tratamos en <strong>Innova AI Assistance</strong>, en qué papel lo
@@ -100,7 +98,8 @@
   <tr><th>Responsable</th><td>Martín Botero Correa, persona natural, cédula de ciudadanía 1054857509, que opera bajo el
     nombre comercial <strong>Innova AI Assistance</strong></td></tr>
   <tr><th>Domicilio</th><td>Av. Alberto Mendoza #81C-52, Manizales, Caldas, Colombia</td></tr>
-  <tr><th>Correo para datos personales</th><td><a href="mailto:innovaai34@gmail.com">innovaai34@gmail.com</a></td></tr>
+  <tr><th>Correo para datos personales</th><td><a href="mailto:innovaai34@gmail.com">innovaai34@gmail.com</a> (canal principal).
+    También recibimos en <a href="mailto:gerencia@innovaassistanceai.com.co">gerencia@innovaassistanceai.com.co</a>.</td></tr>
   <tr><th>WhatsApp y teléfono</th><td><a href="https://wa.me/573054110761">+57 305 411 0761</a></td></tr>
   <tr><th>Sitio</th><td><a href="https://innovaassistanceai.com.co">innovaassistanceai.com.co</a></td></tr>
   <tr><th>Quién atiende las peticiones</th><td>Martín Botero Correa, por los canales de arriba</td></tr>
@@ -229,11 +228,17 @@ prueba:</p>
 <ul>
   <li><strong>En el chat</strong> (WhatsApp, Instagram, Messenger, web): el asistente te muestra el enlace a esta
       política y te pregunta si aceptas. Guardamos qué respondiste, por qué canal, cuándo y con qué enlace de política.
-      Si no aceptas, el asistente lo respeta y no insiste <span class="pendiente">[decidir qué hace después: hoy el código se contradice — ver BORRADOR-CAMBIOS.md]</span>.</li>
+      Si no aceptas, el asistente lo respeta y no insiste: dejamos constancia de que no aceptaste y te seguimos
+      contestando preguntas generales, pero no te pedimos datos de contacto, no los guardamos en ningún registro de
+      interesados o clientes, y tu número o identificador del canal se usa solo para contestarte en esa conversación,
+      nunca para escribirte después.</li>
   <li><strong>En el formulario de esta web</strong>: marcando la casilla «Acepto la política de tratamiento de
       datos».</li>
-  <li><strong>En el Centro de Mando</strong>: marcando la casilla de aceptación al crear tu cuenta o aceptar una
-      invitación. Guardamos la versión, la fecha y la IP.</li>
+  <li><strong>En el Centro de Mando</strong>: quien crea la cuenta de una empresa acepta, al registrarse, esta política,
+      los <a href="https://app.innovaassistanceai.com.co/legal/terminos">términos del servicio</a> y el
+      <a href="acuerdo-de-transmision.html">acuerdo de transmisión de datos</a>. Las personas que la empresa invita aceptan
+      esta política al aceptar la invitación. Guardamos qué versión se aceptó, la fecha y la IP. A las cuentas que ya
+      existían les pedimos que acepten la versión nueva la próxima vez que entren.</li>
 </ul>
 <p>Tu silencio nunca se toma como autorización. Al autorizar, aceptas también que tus datos se traten con los
 proveedores de la sección 7 y fuera de Colombia, como explica la sección 8.</p>
@@ -274,7 +279,7 @@ plataformas que una empresa conecta, por cuenta de ella). Cada uno recibe solo l
   <tr><td>Meta Platforms (WhatsApp, Instagram, Messenger, Facebook)</td><td>Los canales por los que se escribe, y las
       páginas y cuentas publicitarias que una empresa conecta.</td><td>Estados Unidos / Irlanda</td></tr>
   <tr><td>Dualhook</td><td>Intermediario técnico que conecta algunos números de WhatsApp con Meta.</td>
-      <td>Fuera de Colombia <span class="pendiente">[confirmar país]</span></td></tr>
+      <td>Según su propia política</td></tr>
   <tr><td>Composio</td><td>Intermediario técnico de la conexión con Google, solo cuando una empresa conecta sus cuentas
       de Google.</td><td>Estados Unidos</td></tr>
   <tr><td>Google</td><td>Gmail, Drive, Hojas de cálculo, Calendario y las demás herramientas que una empresa conecta, y
@@ -317,8 +322,11 @@ envían y se guardan fuera del país. Lo hacemos:</p>
   <tr><td>Tokens de acceso de Meta y Google</td>
       <td>Mientras la conexión esté activa. Al desconectar, se borran.</td></tr>
   <tr><td>Copias de seguridad</td>
-      <td>Se renuevan solas: lo que se borra desaparece también de ellas en un máximo de
-      <span class="pendiente">[60]</span> días. Solo se usan para recuperar el servicio ante una falla.</td></tr>
+      <td>Hacemos una copia diaria, que se guarda 30 días, y una mensual, que se guarda 12 meses, cifradas por el
+      proveedor donde se almacenan. Solo se usan para recuperar el servicio ante una falla. Cuando borramos un dato por
+      tu petición o por fin del plazo, se borra de inmediato de los sistemas en uso; en las copias sigue hasta que la copia
+      que lo contiene cumpla su plazo y se elimine (como máximo 12 meses), y <strong>nunca se restaura para volver a
+      usarse</strong>: si alguna vez restauramos una copia, volvemos a borrar lo que ya se había borrado.</td></tr>
   <tr><td>Prueba de tu autorización y de las peticiones que atendimos</td>
       <td>Mientras tratemos tus datos y el tiempo que la ley nos exija para demostrar que cumplimos.</td></tr>
   <tr><td>Datos de facturación de las empresas clientes</td>
@@ -335,9 +343,12 @@ envían y se guardan fuera del país. Lo hacemos:</p>
   <li>Permisos por rol dentro de cada empresa.</li>
   <li>Al entrar al Centro de Mando desde un equipo nuevo, los dueños de cada empresa y el personal de Innova confirman
       con un código que llega a su correo. Las sesiones tienen una duración máxima y hay límites de intentos.</li>
-  <li>Cada acceso del personal de Innova a los datos de una empresa queda registrado, y el dueño de la empresa lo ve.</li>
+  <li>El personal de soporte de Innova solo entra a los datos de una empresa con permiso de su dueño, que lo da y lo
+      quita desde el Centro de Mando. La única excepción es un acceso de emergencia, limitado a atender un incidente de
+      seguridad o a cumplir una orden de autoridad competente, con el motivo por escrito. Todo acceso queda registrado, el
+      dueño lo ve, y el de emergencia se le notifica después.</li>
   <li>Los avisos que nos llegan de las plataformas se verifican (con su firma o con una llave secreta) antes de aceptarlos.</li>
-  <li>Hacemos copias de seguridad y hemos probado recuperarlas.</li>
+  <li>Hacemos copias de seguridad cifradas y hemos probado recuperarlas.</li>
 </ul>
 <p>Ninguna medida es infalible. Si ocurre un incidente, actuamos como dice la sección 13.</p>
 
@@ -387,7 +398,8 @@ la ayudamos a responderte dentro de estos plazos.</p>
   <li>Si conectaste Facebook, Instagram, tus anuncios, WhatsApp Business o Google al Centro de Mando, las instrucciones
       para quitar el acceso y pedir el borrado, incluida la forma de hacerlo desde la configuración de Facebook, están en
       <a href="https://app.innovaassistanceai.com.co/legal/eliminar-datos">app.innovaassistanceai.com.co/legal/eliminar-datos</a>.
-      Allí recibes un código para seguir tu solicitud.</li>
+      Si quitas la app desde Facebook, la app pierde el acceso en ese momento, recibes un código para seguir tu solicitud,
+      y borramos los tokens y lo que tengamos asociado a ti en máximo 15 días hábiles.</li>
   <li>Si le escribiste a una empresa que usa el Centro de Mando, pídeselo a ella: quien administra su cuenta puede borrar
       tus mensajes, archivos, ficha y autorización desde tu conversación.</li>
 </ul>
@@ -447,7 +459,7 @@ para que siempre se pueda saber a qué texto se dio la autorización en cada mom
 de la sección 9.</p>
 <p>Versiones publicadas:</p>
 <ul>
-  <li><strong>Versión 2026-11</strong>, vigente desde <span class="pendiente">[fecha de publicación]</span> (esta). Cambió
+  <li><strong>Versión 2026-11</strong>, vigente desde {{FECHA_PUBLICACION}} (esta). Cambió
       porque Innova pasó de atender solo su propio chat a prestar el Centro de Mando a otras empresas: ahora explica los
       dos papeles (responsable y encargado), identifica al responsable con su documento y domicilio, actualiza la lista de
       proveedores, explica la transferencia internacional, la conservación por tipo de dato, las medidas de seguridad, el
@@ -479,6 +491,15 @@ de la sección 9.</p>
   <li><strong>AI.</strong> An AI assistant reads and answers messages; a human can take over. Agents recommend and
       draft; actions with external effect (publishing, launching campaigns, spending money, bulk messaging) need
       approval from a person at the business. We do not use personal data to train AI models.</li>
+  <li><strong>Acceptance.</strong> Business owners accept this policy, the Terms of Service and the data transmission
+      agreement when signing up; we store the version, date and IP. Existing accounts are asked to accept the new version
+      at their next sign-in.</li>
+  <li><strong>Support access.</strong> Innova support accesses a business's data only with the owner's permission, except
+      a narrowly limited emergency access for security incidents or legal orders; every access is logged and visible to the
+      owner, and emergency access is notified afterwards.</li>
+  <li><strong>Backups.</strong> Daily copies kept 30 days and monthly copies kept 12 months, encrypted at rest. Deleted
+      data is removed from live systems immediately, ages out of backups on that schedule, and is never restored back into
+      use.</li>
   <li><strong>Providers and transfers.</strong> Cloudflare, OpenAI, Meta, Dualhook, Composio, Google and Resend, mainly in
       the United States. Data is therefore transferred outside Colombia, with your express consent.</li>
   <li><strong>We never</strong> sell personal data, use it for third-party advertising, or mix one business's data with

@@ -30,8 +30,6 @@
   .doc .indice{border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:14px 18px;margin:22px 0;}
   .doc .indice ol{margin:6px 0 0;columns:2;column-gap:28px;}
   .doc .indice li{font-size:14.5px;margin:3px 0;break-inside:avoid;}
-  /* Lo que Martín tiene que decidir antes de publicar. Se ve a propósito. */
-  .doc .pendiente{background:rgba(255,200,80,.16);border-bottom:1px dashed rgba(255,200,80,.7);padding:0 3px;}
   @media(max-width:600px){.doc{padding:32px 18px 60px}.doc h1{font-size:25px}.doc .indice ol{columns:1}
     .doc table{display:block;overflow-x:auto}}
 </style>
@@ -42,7 +40,7 @@
 <a class="volver" href="politica-de-datos.html">← Política de tratamiento de datos personales</a>
 
 <h1>Acuerdo de transmisión de datos personales</h1>
-<div class="version">Anexo a los términos del servicio del Centro de Mando · Versión 2026-11 · Vigente desde: <span class="pendiente">[fecha de publicación]</span></div>
+<div class="version">Anexo a los términos del servicio del Centro de Mando · Versión 2026-11 · Vigente desde: {{FECHA_PUBLICACION}}</div>
 
 <div class="caja">
   <strong>Para qué sirve este documento.</strong> Cuando una empresa usa el Centro de Mando, sus
@@ -166,7 +164,7 @@ uno solo para lo que allí se describe. Innova:</p>
 <ul>
   <li>exigirá a cada proveedor obligaciones de seguridad y confidencialidad equivalentes a las de este acuerdo, en la
       medida en que sus condiciones de servicio lo permitan;</li>
-  <li>avisará a la empresa por correo, con al menos <span class="pendiente">[30]</span> días de anticipación, antes de
+  <li>avisará a la empresa por correo, con al menos 30 días de anticipación, antes de
       sumar un proveedor que vaya a tratar datos personales de sus titulares. Si la empresa no está de acuerdo, podrá
       terminar el servicio sin penalidad antes de que el cambio rija;</li>
   <li>responderá ante la empresa por el cumplimiento de sus proveedores en los términos de la cláusula 14.</li>
@@ -191,7 +189,7 @@ servicio, y todas están obligadas a guardar confidencialidad.</p>
 <h2 id="incidentes">9. Incidentes de seguridad</h2>
 <p>Si Innova confirma un incidente que afecte datos de la empresa (pérdida, robo, acceso o divulgación no autorizada),
 se lo comunicará al correo del dueño de la cuenta <strong>sin demora injustificada y a más tardar
-<span class="pendiente">[72 horas]</span></strong> después de confirmarlo, con lo que se sepa en ese momento: qué pasó,
+72 horas</strong> después de confirmarlo, con lo que se sepa en ese momento: qué pasó,
 qué datos y cuántos titulares pueden estar afectados, qué se hizo para contenerlo y qué se recomienda. Innova
 informará a la Superintendencia de Industria y Comercio como le corresponde al encargado (Ley 1581 de 2012,
 artículo 18, literal k) y ayudará a la empresa a hacer su propio reporte y a avisar a sus titulares si hace falta.</p>
@@ -199,7 +197,7 @@ artículo 18, literal k) y ayudará a la empresa a hacer su propio reporte y a a
 <h2 id="derechos">10. Peticiones de los titulares</h2>
 <ul>
   <li>Si un cliente de la empresa le escribe a Innova para ejercer sus derechos sobre datos que Innova trata por
-      cuenta de la empresa, Innova le pasará la petición a la empresa en máximo <span class="pendiente">[2]</span> días
+      cuenta de la empresa, Innova le pasará la petición a la empresa en máximo 2 días
       hábiles y le dirá al titular que la responsable es la empresa. No la contestará por su cuenta salvo que la
       empresa se lo pida.</li>
   <li>Innova ayudará a la empresa a responder a tiempo. Desde el Centro de Mando la empresa puede borrar los datos de un
@@ -210,14 +208,17 @@ artículo 18, literal k) y ayudará a la empresa a hacer su propio reporte y a a
 </ul>
 
 <h2 id="acceso">11. Acceso del soporte de Innova</h2>
-<p class="pendiente">[Elegir UNA de las dos redacciones antes de publicar. Ver BORRADOR-CAMBIOS.md.]</p>
-<p><strong>Opción A — mientras dure la etapa de lanzamiento:</strong> el equipo de soporte de Innova puede entrar a los
-datos de la empresa para resolver problemas técnicos sin pedir permiso cada vez. Cada entrada queda registrada y el
-dueño la ve en «Personas y accesos» del Centro de Mando. Innova avisará por correo antes de terminar esta etapa, y desde
-entonces regirá la opción B.</p>
-<p><strong>Opción B — permiso del dueño:</strong> el equipo de soporte de Innova solo entra a los datos de la empresa con
-permiso del dueño, que lo da y lo quita en «Personas y accesos» (24 horas o 7 días). Para una falla grave puede entrar
-hasta 2 horas sin ese permiso, escribiendo el motivo. Toda entrada queda registrada y el dueño la ve.</p>
+<ul>
+  <li><strong>Con permiso del dueño.</strong> El equipo de soporte de Innova solo entra a los datos de la empresa con
+      permiso del dueño de la cuenta, que lo da y lo quita en «Personas y accesos» del Centro de Mando, por un tiempo
+      limitado.</li>
+  <li><strong>Emergencia, en dos casos y nada más:</strong> para atender un incidente de seguridad que ponga en riesgo los
+      datos de la empresa o el servicio, o para cumplir una orden de autoridad competente. Quien entra escribe el motivo,
+      el acceso dura lo mínimo necesario, y Innova se lo notifica al dueño después (salvo que la orden de la autoridad lo
+      prohíba).</li>
+  <li><strong>Registro.</strong> Toda entrada del soporte queda registrada con fecha, persona y motivo, y el dueño la
+      ve en el Centro de Mando.</li>
+</ul>
 
 <h2 id="fin">12. Al terminar el servicio</h2>
 <ol>
@@ -226,9 +227,11 @@ hasta 2 horas sin ese permiso, escribiendo el motivo. Toda entrada queda registr
   <li>Pasados esos 30 días, Innova <strong>suprime</strong> los datos de la empresa y de sus titulares: conversaciones,
       archivos, contactos, documentos, registros y cuentas de su equipo, y desconecta las cuentas de Meta y Google que
       la empresa había conectado.</li>
-  <li>Las copias de seguridad que contengan esos datos se borran solas a medida que se renuevan, en un máximo de
-      <span class="pendiente">[60]</span> días adicionales. Mientras existan, solo se usan para recuperar el servicio
-      ante una falla y no se consultan para nada más.</li>
+  <li>Las copias de seguridad son diarias, que se guardan 30 días, y mensuales, que se guardan 12 meses, cifradas por el
+      proveedor donde se almacenan. Los datos suprimidos salen de los sistemas en uso de inmediato y de las copias cuando
+      la copia que los contiene cumple su plazo (como máximo 12 meses). Mientras tanto, las copias solo se usan para
+      recuperar el servicio ante una falla, no se consultan para nada más, y lo suprimido <strong>nunca se restaura para
+      volver a usarse</strong>: si se restaura una copia, se vuelve a suprimir.</li>
   <li>Innova conserva solo lo que la ley le obliga a guardar sobre su relación comercial con la empresa (por ejemplo,
       sus propias facturas de cobro) y una constancia de que el borrado se hizo, sin datos de los titulares.</li>
   <li>Lo que vive dentro de las cuentas propias de la empresa (su Drive, su Meta, su Administrador de anuncios) sigue
@@ -236,7 +239,7 @@ hasta 2 horas sin ese permiso, escribiendo el motivo. Toda entrada queda registr
 </ol>
 
 <h2 id="prueba">13. Información y verificación</h2>
-<p>A pedido escrito de la empresa, y como mucho <span class="pendiente">[una vez al año]</span> salvo que haya un
+<p>A pedido escrito de la empresa, y como mucho una vez al año salvo que haya un
 incidente, Innova le entregará la información razonable que necesite para demostrar que este acuerdo se cumple: las
 medidas de seguridad vigentes, la lista de proveedores, y el registro de accesos del personal de Innova a sus datos.
 Innova también entregará esa información a la Superintendencia de Industria y Comercio cuando la pida.</p>
@@ -245,8 +248,11 @@ Innova también entregará esa información a la Superintendencia de Industria y
 <p>Cada parte responde por el cumplimiento de sus propios deberes legales. Innova responde ante la empresa por los daños
 que cause por incumplir este acuerdo o tratar los datos fuera de sus instrucciones. La empresa responde por no tener la
 autorización de sus titulares, por las instrucciones que dé y por el uso que haga de las herramientas del Centro de
-Mando. <span class="pendiente">[Límite de responsabilidad, si se quiere poner uno: lo define el abogado. No se puede
-limitar lo que la ley no permite limitar.]</span></p>
+Mando.</p>
+<p>La responsabilidad total de Innova frente a la empresa por este acuerdo, por cualquier causa, no superará el valor que
+la empresa le haya pagado a Innova por el servicio en los 12 meses anteriores al hecho que la origina. Este límite no
+aplica en caso de dolo o culpa grave de Innova, ni a lo que la ley no permita limitar, y no afecta los derechos de los
+titulares frente a la autoridad ni las sanciones que esta imponga.</p>
 
 <h2 id="extranjero">15. Empresas fuera de Colombia</h2>
 <p>Si la empresa está fuera de Colombia, o trata datos de personas que viven en otro país, puede que la ley de ese país
@@ -257,10 +263,13 @@ que correspondan); este acuerdo, por sí solo, no lo reemplaza.</p>
 
 <h2 id="vigencia">16. Vigencia, cambios y ley aplicable</h2>
 <ul>
-  <li>Este acuerdo rige desde que la empresa acepta los términos del servicio y mientras Innova trate datos por cuenta de
+  <li>La empresa acepta este acuerdo, junto con la política de datos y los términos del servicio, al crear su cuenta
+      en el Centro de Mando; Innova guarda la versión aceptada, la fecha y la IP. Las empresas que ya tenían cuenta lo
+      aceptan la próxima vez que entran.</li>
+  <li>Este acuerdo rige desde que la empresa lo acepta y mientras Innova trate datos por cuenta de
       ella, incluido el periodo de la cláusula 12.</li>
   <li>Si Innova lo cambia, publicará la nueva versión aquí con su fecha y avisará a la empresa por correo con al menos
-      <span class="pendiente">[30]</span> días de anticipación. Si la empresa no está de acuerdo, puede terminar el
+      30 días de anticipación. Si la empresa no está de acuerdo, puede terminar el
       servicio antes de que rija.</li>
   <li>Se rige por las leyes de la República de Colombia, en particular la Ley 1581 de 2012 y el Decreto 1074 de 2015
       (Libro 2, Parte 2, Título 2, Capítulo 25).</li>
