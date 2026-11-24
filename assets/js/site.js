@@ -110,43 +110,25 @@
   document.body.prepend(sentinel);
   onVisible(sentinel, function (v) { nav.classList.toggle("scrolled", !v); }, { threshold: 0 });
 
+  /* ---------- en qué bloque estás ----------
+     El menú marca el bloque que está en pantalla: bajando se sabe dónde se está. */
+  var navMap = {};
+  links.querySelectorAll('a[href^="#"]').forEach(function (a) { navMap[a.getAttribute("href").slice(1)] = a; });
+  if ("IntersectionObserver" in window) {
+    var blockIO = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        Object.keys(navMap).forEach(function (k) { navMap[k].classList.toggle("on", k === e.target.id); if (k === e.target.id) navMap[k].setAttribute("aria-current", "true"); else navMap[k].removeAttribute("aria-current"); });
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    ["top", "plataforma", "sectores", "resultados", "empieza"].forEach(function (id) { if ($(id)) blockIO.observe($(id)); });
+  }
+
   /* ---------- aparición al hacer scroll ---------- */
   var revealIO = "IntersectionObserver" in window ? new IntersectionObserver(function (es) {
     es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); revealIO.unobserve(e.target); } });
   }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }) : null;
   function observeReveals() { document.querySelectorAll(".reveal:not(.in)").forEach(function (n) { if (revealIO) revealIO.observe(n); else n.classList.add("in"); }); }
-
-  /* ---------- hero: conversación en vivo ---------- */
-  var heroRun = 0, heroVisible = true;
-  async function playHero() {
-    var my = ++heroRun, alive = function () { return my === heroRun; };
-    var thread = $("heroThread"), win = $("heroWindow"), opp = $("heroOpp"), notes = t("hero.notes");
-    function clear() { thread.textContent = ""; opp.classList.remove("show"); win.classList.remove("is-typing", "opp-on"); }
-    function note(i) { var n = el("div", "note " + (i === 0 ? "r" : "l")); n.appendChild(icon(notes[i][0])); n.appendChild(el("span", "", notes[i][1])); thread.appendChild(n); }
-    function showOpp() { win.classList.add("opp-on"); opp.classList.add("show"); }
-    var script = t("hero.chat");
-    if (REDUCED) { clear(); script.forEach(function (m, i) { thread.appendChild(bubble(m[0], m[1])); if (i < 2) note(i); }); showOpp(); return; }
-    while (alive()) {
-      clear();
-      await sleep(600);
-      for (var i = 0; i < script.length && alive(); i++) {
-        while (!heroVisible && alive()) await sleep(300);
-        var m = script[i];
-        if (m[0] === "in") { await sleep(500); thread.appendChild(bubble("in", m[1])); }
-        else {
-          win.classList.add("is-typing"); var dots = typingDots(); thread.appendChild(dots);
-          await sleep(1300); if (!alive()) return;
-          dots.remove(); win.classList.remove("is-typing"); thread.appendChild(bubble("out", m[1]));
-        }
-        if (i < 2) { await sleep(450); if (!alive()) return; note(i); }
-        await sleep(m[0] === "in" ? 700 : 1500);
-      }
-      if (!alive()) return;
-      showOpp();
-      await sleep(5200);
-    }
-  }
-  onVisible($("heroDemo"), function (v) { heroVisible = v; }, { threshold: 0.2 });
 
   /* ---------- no es un chatbot ---------- */
   function buildCompare() {
@@ -274,44 +256,119 @@
     if (btn) { btn.click(); return; }
     window.open("https://wa.me/" + WA_NUMBER, "_blank", "noopener");
   });
-  once($("lab"), function () { lab.started = true; medir("demo"); selectIndustry(lab.industry, false); }, 0.25);
+  // La demo abre con los agentes; el chat del asistente arranca cuando se elige su pestaña.
 
-  /* ---------- cómo piensa ---------- */
+  /* ---------- cómo funciona ---------- */
   var flowRun = 0;
-  function buildFlow() {
-    var ch = $("mindChecks"); ch.textContent = "";
-    t("mind.checks").forEach(function (c) { var li = el("li"); li.appendChild(icon("check-circle")); li.appendChild(el("b", "", c[0])); li.appendChild(el("span", "", c[1])); ch.appendChild(li); });
-    var ac = $("mindActions"); ac.textContent = "";
-    t("mind.actions").forEach(function (a) { var li = el("li"); li.dataset.state = a[2]; li.appendChild(icon(a[0])); li.appendChild(el("span", "", a[1])); if (a[3]) li.appendChild(el("small", "", a[3])); ac.appendChild(li); });
+  function buildCaps() {
     var caps = $("caps"); caps.textContent = "";
     t("caps").forEach(function (g) {
       var d = el("div", "cap"); var h = el("h3"); h.appendChild(icon(g[0])); h.appendChild(el("span", "", g[1])); d.appendChild(h);
       var ul = el("ul"); g[2].forEach(function (x) { var li = el("li"); li.appendChild(icon("check")); li.appendChild(el("span", "", x)); ul.appendChild(li); }); d.appendChild(ul);
       caps.appendChild(d);
     });
-    if (flowPlayed) playFlow(true);
   }
-  var flowPlayed = false;
-  async function playFlow(instant) {
-    var my = ++flowRun, alive = function () { return my === flowRun; };
-    var stages = document.querySelectorAll("#flow .stage"), checks = $("mindChecks").children, acts = $("mindActions").children;
-    var fast = instant || REDUCED;
+  async function playFlow() {
+    var my = ++flowRun, stages = document.querySelectorAll("#flow .stage");
     stages.forEach(function (s) { s.classList.remove("on", "active"); });
-    Array.prototype.forEach.call(checks, function (c) { c.classList.remove("ok"); });
-    Array.prototype.forEach.call(acts, function (a) { a.classList.remove("ok", "standby"); });
-    function step(i) { stages.forEach(function (s, k) { s.classList.toggle("active", k === i); }); stages[i].classList.add("on"); }
-    step(0); await sleep(fast ? 0 : 900); if (!alive()) return;
-    step(1);
-    for (var i = 0; i < checks.length; i++) { await sleep(fast ? 0 : 420); if (!alive()) return; checks[i].classList.add("ok"); }
-    await sleep(fast ? 0 : 500); if (!alive()) return;
-    step(2); await sleep(fast ? 0 : 1100); if (!alive()) return;
-    step(3);
-    for (var j = 0; j < acts.length; j++) { await sleep(fast ? 0 : 380); if (!alive()) return; acts[j].classList.add(acts[j].dataset.state === "standby" ? "standby" : "ok"); }
-    await sleep(fast ? 0 : 600); if (!alive()) return;
+    for (var i = 0; i < stages.length; i++) {
+      if (my !== flowRun) return;
+      stages.forEach(function (s, k) { s.classList.toggle("active", k === i); });
+      stages[i].classList.add("on");
+      await sleep(REDUCED ? 0 : 1100);
+    }
     stages.forEach(function (s) { s.classList.remove("active"); });
   }
-  once($("flow"), function () { flowPlayed = true; playFlow(false); }, 0.35);
-  $("flowReplay").addEventListener("click", function () { flowPlayed = true; playFlow(false); });
+  once($("flow"), function () { playFlow(); }, 0.35);
+  $("flowReplay").addEventListener("click", function () { playFlow(); });
+
+  /* ---------- tu equipo ---------- */
+  function buildTeam() {
+    var box = $("team"); box.textContent = "";
+    t("team").forEach(function (m, i) {
+      var a = el("article", "tm tm-" + m.cls + " reveal"); a.style.setProperty("--i", i);
+      var top = el("div", "tm-top");
+      var ic = el("span", "tm-ic"); ic.appendChild(icon(m.icon)); top.appendChild(ic);
+      var nm = el("div"); nm.appendChild(el("span", "tm-kind", m.kind)); nm.appendChild(el("h3", "", m.name)); top.appendChild(nm);
+      if (m.tag) top.appendChild(el("span", "tm-tag", m.tag));
+      a.appendChild(top);
+      a.appendChild(el("p", "tm-what", m.what));
+      var tl = el("div", "tm-row"); tl.appendChild(el("b", "", t("team.tools")));
+      var ul = el("ul", "tm-tools"); m.tools.forEach(function (x) { ul.appendChild(el("li", "", x)); }); tl.appendChild(ul); a.appendChild(tl);
+      var g = el("div", "tm-row"); g.appendChild(el("b", "", t("team.gives"))); g.appendChild(el("p", "", m.gives)); a.appendChild(g);
+      var n = el("div", "tm-row tm-never"); n.appendChild(el("b", "", t("team.never"))); var np = el("p"); np.appendChild(icon("shield-check")); np.appendChild(el("span", "", m.never)); n.appendChild(np); a.appendChild(n);
+      box.appendChild(a);
+    });
+    observeReveals();
+  }
+
+  /* ---------- demo: encargar a un agente ---------- */
+  var alab = { idx: 0, run: 0, started: false };
+  function buildAlabList() {
+    var box = $("alabList"); box.textContent = "";
+    t("alab").forEach(function (d, i) {
+      var b = el("button", "alab-btn alab-" + d.cls); b.type = "button"; b.setAttribute("role", "tab"); b.id = "alab-tab-" + i;
+      b.setAttribute("aria-selected", i === alab.idx ? "true" : "false"); b.tabIndex = i === alab.idx ? 0 : -1;
+      var ic = el("span", "alab-ic"); ic.appendChild(icon(d.icon)); b.appendChild(ic);
+      var tx = el("span", "alab-tx"); tx.appendChild(el("b", "", d.who)); tx.appendChild(el("small", "", d.task)); b.appendChild(tx);
+      b.addEventListener("click", function () { medir("agente", d.key, true); playAgent(i); });
+      b.addEventListener("keydown", function (e) { tabKeys(e, box, i); });
+      box.appendChild(b);
+    });
+  }
+  async function playAgent(i) {
+    alab.idx = i; alab.started = true;
+    var my = ++alab.run, alive = function () { return my === alab.run; };
+    var d = t("alab")[i];
+    $("alabList").querySelectorAll("[role=tab]").forEach(function (b, k) { b.setAttribute("aria-selected", k === i ? "true" : "false"); b.tabIndex = k === i ? 0 : -1; });
+    var work = document.querySelector(".alab-work"); work.className = "alab-work alab-" + d.cls;
+    var av = $("alabAv"); av.textContent = ""; av.appendChild(icon(d.icon));
+    $("alabWho").textContent = d.who; $("alabBiz").textContent = d.biz; $("alabTask").textContent = d.task;
+    var tools = $("alabTools"); tools.textContent = ""; d.tools.forEach(function (x) { tools.appendChild(el("li", "", x)); });
+    var steps = $("alabSteps"); steps.textContent = "";
+    var res = $("alabResult"); res.textContent = ""; res.classList.remove("show");
+    var fast = REDUCED;
+    for (var k = 0; k < d.steps.length; k++) {
+      await sleep(fast ? 0 : (k ? 900 : 400)); if (!alive()) return;
+      var st = d.steps[k], li = el("li", "alab-step working");
+      var ic = el("span", "as-ic"); ic.appendChild(icon(st[0])); li.appendChild(ic);
+      var tx = el("div"); tx.appendChild(el("b", "", st[1])); tx.appendChild(el("span", "", st[2])); li.appendChild(tx);
+      steps.appendChild(li);
+      await sleep(fast ? 0 : 650); if (!alive()) return;
+      li.classList.remove("working"); li.classList.add("done");
+    }
+    await sleep(fast ? 0 : 500); if (!alive()) return;
+    var r = d.result, card = el("div", "ar-card");
+    var head = el("div", "ar-head"); head.appendChild(el("span", "ar-k", r.k)); head.appendChild(el("span", "ar-status", r.status)); card.appendChild(head);
+    card.appendChild(el("h4", "", r.t));
+    var dl = el("dl", "ar-rows"); r.rows.forEach(function (x) { var w = el("div"); w.appendChild(el("dt", "", x[0])); w.appendChild(el("dd", "", x[1])); dl.appendChild(w); }); card.appendChild(dl);
+    if (r.critic) { var c = el("p", "ar-critic"); c.appendChild(icon("magnifying-glass")); c.appendChild(el("span", "", r.critic)); card.appendChild(c); }
+    var acts = el("div", "ar-acts");
+    var ok = el("button", "btn btn-primary btn-sm", r.ok); ok.type = "button";
+    var adj = el("button", "btn btn-ghost btn-sm", r.adjust); adj.type = "button";
+    var msg = el("p", "ar-msg"); msg.setAttribute("role", "status");
+    function answer(text, okd) { msg.textContent = ""; msg.appendChild(icon(okd ? "check-circle" : "arrows-clockwise")); msg.appendChild(el("span", "", text)); msg.classList.add("show"); ok.disabled = adj.disabled = true; card.classList.add(okd ? "approved" : "adjusting"); }
+    ok.addEventListener("click", function () { medir("agente_aprobar", d.key, true); answer(r.okMsg, true); });
+    adj.addEventListener("click", function () { answer(r.adjustMsg, false); });
+    acts.appendChild(ok); acts.appendChild(adj); card.appendChild(acts); card.appendChild(msg);
+    res.appendChild(card); res.classList.add("show");
+  }
+  $("alabReplay").addEventListener("click", function () { playAgent(alab.idx); });
+  once($("agentLab"), function () { if (!alab.started) { medir("demo_agentes"); playAgent(alab.idx); } }, 0.25);
+  function setMode(agent) {
+    $("modeAsis").setAttribute("aria-selected", agent ? "false" : "true"); $("modeAsis").tabIndex = agent ? -1 : 0;
+    $("modeAgent").setAttribute("aria-selected", agent ? "true" : "false"); $("modeAgent").tabIndex = agent ? 0 : -1;
+    $("lab").hidden = agent; $("agentLab").hidden = !agent;
+    if (agent) { medir("demo_agentes"); if (!alab.started) playAgent(alab.idx); }
+    else if (!lab.started) { lab.started = true; medir("demo"); selectIndustry(lab.industry, false); }
+  }
+  $("modeAsis").addEventListener("click", function () { setMode(false); });
+  $("modeAgent").addEventListener("click", function () { setMode(true); });
+  [$("modeAsis"), $("modeAgent")].forEach(function (b) {
+    b.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight" || e.key === "ArrowLeft") { e.preventDefault(); var other = b.id === "modeAsis" ? $("modeAgent") : $("modeAsis"); other.focus(); other.click(); }
+    });
+  });
 
   /* ---------- ADN ---------- */
   var dnaVisible = false, dnaIdx = 0;
@@ -379,13 +436,17 @@
     var head = el("div", "ip-head"); var av = el("span", "avatar"); av.appendChild(icon(d.icon)); head.appendChild(av); head.appendChild(el("h3", "", d.name)); p.appendChild(head);
     var g = el("div", "ip-grid");
     var b1 = el("div", "ip-block"); b1.appendChild(el("h4", "", t("ind.problem"))); b1.appendChild(el("p", "", d.problem)); g.appendChild(b1);
+    if (d.agents && d.agents.length) {
+      var b5 = el("div", "ip-block ip-agents"); b5.appendChild(el("h4", "", t("ind.agents"))); var ul2 = el("ul");
+      d.agents.forEach(function (x) { var li = el("li"); li.appendChild(icon("brain")); li.appendChild(el("span", "", x)); ul2.appendChild(li); }); b5.appendChild(ul2); g.appendChild(b5);
+    }
     var b2 = el("div", "ip-block"); b2.appendChild(el("h4", "", t("ind.does"))); var ul = el("ul");
     d.does.forEach(function (x) { var li = el("li"); li.appendChild(icon("check")); li.appendChild(el("span", "", x)); ul.appendChild(li); }); b2.appendChild(ul); g.appendChild(b2);
     var b3 = el("div", "ip-block ip-chat"); b3.appendChild(el("h4", "", t("ind.chat")));
     d.chat.forEach(function (m) { b3.appendChild(bubble(m[0], m[1])); }); g.appendChild(b3);
     var b4 = el("div", "ip-benefit"); var bp = el("p"); bp.appendChild(el("b", "", t("ind.benefit") + ":")); bp.appendChild(document.createTextNode(d.benefit)); b4.appendChild(bp);
     var tryBtn = el("a", "btn btn-ghost btn-sm"); tryBtn.href = "#demo"; tryBtn.appendChild(el("span", "", t("ind.try"))); tryBtn.appendChild(icon("arrow-right"));
-    tryBtn.addEventListener("click", function () { lab.started = true; selectIndustry(d.key, true); });
+    tryBtn.addEventListener("click", function () { setMode(false); lab.started = true; selectIndustry(d.key, true); });
     b4.appendChild(tryBtn); g.appendChild(b4);
     p.appendChild(g);
     if (!silent) { p.classList.remove("swap"); void p.offsetWidth; p.classList.add("swap"); }
@@ -550,8 +611,8 @@
   $("f-acepta").addEventListener("change", function () { setErr("acepta", ""); });
 
   /* ---------- arranque ---------- */
-  builders.push(buildCompare, buildFlow, buildDna, buildOrbit, buildIndustries, calcRoi, buildCases, buildTimeline, buildChips,
-    function () { playHero(); },
+  builders.push(buildCompare, buildCaps, buildTeam, buildDna, buildOrbit, buildIndustries, calcRoi, buildCases, buildTimeline, buildChips,
+    function () { buildAlabList(); if (alab.started) playAgent(alab.idx); },
     function () {
       buildLabTabs();
       if (lab.started) { selectIndustry(lab.industry, false); return; }
