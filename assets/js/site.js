@@ -2,7 +2,7 @@
 (function () {
   "use strict";
 
-  var CONTACT_ENDPOINT = "https://forja-starter-71742d.innovaai34.workers.dev/contact";
+  var CONTACT_ENDPOINT = "https://asistente.innovaassistanceai.com.co/contact";
   var WA_NUMBER = "573054110761";
   var ICONS = "assets/icons.svg";
   var REDUCED = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -21,7 +21,7 @@
      el problema.
 
      Si falla, falla en silencio: una página no se rompe por no poder contar. */
-  var MEDIR = "https://centro-mando-innova.innovaai34.workers.dev/t";
+  var MEDIR = "https://app.innovaassistanceai.com.co/t";
   var medidos = {};
   function medir(evento, detalle, repetible) {
     try {
